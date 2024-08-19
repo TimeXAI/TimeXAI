@@ -44,6 +44,7 @@ sys.path.insert(0, os.path.abspath("../sphinxext"))
 # }
 
 
+
 extensions = [
     'sphinx.ext.autodoc', 
     'sphinx.ext.coverage', 
@@ -100,8 +101,19 @@ templates_path = ["../_templates"]
 nb_execution_mode = "auto"
 nb_execution_excludepatterns = ["*.ipynb"]
 nb_kernel_rgx_aliases = {".*": "python3"}
-myst_heading_anchors = None
-myst_enable_extensions = ["colon_fence", "deflist", "dollarmath", "amsmath"]
+#myst_heading_anchors = None
+#myst_enable_extensions = ["colon_fence", "deflist", "dollarmath", "amsmath"]
+
+myst_enable_extensions = [
+    "dollarmath",
+    "amsmath",
+    "deflist",
+    "html_admonition",
+    "html_image",
+]
+
+# Ensure heading_anchors is explicitly set
+myst_heading_anchors = 2  # or another integer value
 
 # copybutton config: strip console characters
 copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
