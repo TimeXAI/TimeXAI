@@ -47,14 +47,14 @@ dataset = load_dataset("archive/uk_dale", streaming=True)
 ```
 By following these simple steps, you can leverage the power of the framework's energy data archive. Whether you need to forecast energy consumption or perform disaggregation analysis, this comprehensive dataset provides the necessary foundation for your tasks.
 
-**XGen Time Series.** The framework also includes an extensive implementation of diverse generative models, all integrated within a unified platform. This integration allows for benchmark experiments and seamless model comparisons by training the models using a consistent autoencoding neural network architecture. Furthermore, the framework offers a unique "make your own generative time series" feature, enabling you to train any of these models using your own dataset and customize the neural networks according to your specific needs. This flexibility empowers you to tailor the models to your specific requirements and explore various possibilities in generative time series analysis.
+**TimeXAI.** The framework also includes an extensive implementation of diverse generative models, all integrated within a unified platform. This integration allows for benchmark experiments and seamless model comparisons by training the models using a consistent autoencoding neural network architecture. Furthermore, the framework offers a unique "make your own generative time series" feature, enabling you to train any of these models using your own dataset and customize the neural networks according to your specific needs. This flexibility empowers you to tailor the models to your specific requirements and explore various possibilities in generative time series analysis.
 
 
 Additionally, the library integrates popular experiment monitoring tools such as [wandb](https://wandb.ai/), [mlflow](https://mlflow.org/), and [comet-ml](https://www.comet.com/signup?utm_source=XGen&utm_medium=partner&utm_campaign=AMS_US_EN_SNUP_XGen_Comet_Integration) 🧪. It also allows for easy model sharing and loading from the [HuggingFace Hub](https://huggingface.co/XGenTimeSeries) 🤗 with just a few lines of code.
 
 **Note**
-> Your ```XGen Time Series``` now supports distributed training using PyTorch's DDP (Distributed Data Parallel). With this new feature, you can now train your preferred Generative Time Series models faster and on custom datasets, all with just a few lines of code. This allows for improved scalability and accelerated training across multiple GPUs or even distributed systems.
-> To showcase the enhanced performance, we have conducted a comprehensive benchmarking analysis. You can find the detailed results in the benchmark section of our documentation. This benchmark highlights the significant speed-up achieved by leveraging the distributed training capabilities of XGen Time Series.
+> Your ```TimeXAI``` now supports distributed training using PyTorch's DDP (Distributed Data Parallel). With this new feature, you can now train your preferred Generative Time Series models faster and on custom datasets, all with just a few lines of code. This allows for improved scalability and accelerated training across multiple GPUs or even distributed systems.
+> To showcase the enhanced performance, we have conducted a comprehensive benchmarking analysis. You can find the detailed results in the benchmark section of our documentation. This benchmark highlights the significant speed-up achieved by leveraging the distributed training capabilities of TimeXAI.
 > Take advantage of XGen 0.2's distributed training support and experience accelerated training for your Generative Time Series models. Visit our documentation and explore the benchmark section to learn more about the performance improvements and how to make the most out of this latest release.
 
 
@@ -160,7 +160,7 @@ pipeline(
 
 At the end of training, the best model weights, model configuration and training configuration are stored in a `final_model` folder available in  `my_model/MODEL_NAME_training_YYYY-MM-DD_hh-mm-ss` (with `my_model` being the `output_dir` argument of the `BaseTrainerConfig`). If you further set the `steps_saving` argument to a certain value, folders named `checkpoint_epoch_k` containing the best model weights, optimizer, scheduler, configuration and training configuration at epoch *k* will also appear in `my_model/MODEL_NAME_training_YYYY-MM-DD_hh-mm-ss`.
 
-##  Training on XGen Time Series datasets
+##  Training on TimeXAI datasets
 We also provide a training script example [here](https://github.com/XgenTimeSeries/xgen-timeseries/tree/main/examples/scripts/training.py) that can be used to train the models on benchmarks datasets (Ukdale, Refit, Redd    ).
 
 ```bash
@@ -328,7 +328,7 @@ $ wandb login
 ```
 
 ### Use `WandbCallback` for logs
-Launching an experiment with time-real logs with `wandb` in XGen Time Series is pretty simple. The only thing a user needs to do is create a `WandbCallback` instance: 
+Launching an experiment with time-real logs with `wandb` in TimeXAI is pretty simple. The only thing a user needs to do is create a `WandbCallback` instance: 
 
 ```python
 # Create your callback
@@ -457,7 +457,7 @@ If you find this work useful or use it in your research, please consider citing 
 @software{Oublal_XGen_Time_Series_2023,
 author = {Oublal, Khalid and Ladjal, Said and Benhaiem, David and le-borgne, Emmanuel and Roueff, François},
 month = jun,
-title = {{XGen Time Series}},
+title = {{TimeXAI}},
 url = {https://xgentimeseries.github.io/},
 version = {0.1.2},
 year = {2023}
