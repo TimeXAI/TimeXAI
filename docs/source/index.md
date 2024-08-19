@@ -28,15 +28,15 @@ h3:not(#hero h3) {
 </style>
 
 (homepage)=
-# XGenTS: Exploratory analysis of Energy models
+# TimeXAI: Exploratory analysis of Energy models
 
 <div id="hero">
 
 <div id="hero-left">  <!-- Start Hero Left -->
-  <h2 style="font-size: 50px; font-weight: bold; margin: 2rem auto 0;">XGen Time Series</h2>
+  <h2 style="font-size: 50px; font-weight: bold; margin: 2rem auto 0;">TimeXAI</h2>
   <h3 style="font-weight: bold; margin-top: 0;">An eXplainable framework for Generative Time Series</h3>
   <p>
-  Designed to improve the performance of existing models using generated data. It generates novel datasets based on past or current real-world data, enabling the model to learn and improve from this valuable additional information. XGenTS also serves as an archive for a wide range of energy-related datasets. <br> 
+  Designed to improve the performance of existing models using generated data. It generates novel datasets based on past or current real-world data, enabling the model to learn and improve from this valuable additional information. TimeXAI also serves as an archive for a wide range of energy-related datasets. <br> 
   It's based on PyTorch and can be installed using pip.
 	  
   </p>
@@ -84,7 +84,7 @@ Analysis bottelneck Generative model `model.explain()`
 :class-card: example-gallery
 
 :::{div} example-img-plot-overlay
-Energy and electric mobility dataset `XGenTS.dataset('streaming')`
+Energy and electric mobility dataset `TimeXAI.dataset('streaming')`
 :::
 
 :::{image} _static/images/archive.png
@@ -98,7 +98,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
 </div>  <!-- End Hero -->
 
 
-### XGen Time Series ```Archive```
+### TimeXAI ```Archive```
 
 <table id="customers">
   <thead>
@@ -115,13 +115,13 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
   </thead>
   <tbody>
     <tr>
-      <td>XGenTS-ESS(Ours)</td>
+      <td>TimeXAI-ESS(Ours)</td>
       <td>1Hz</td>
       <td>6 month</td>
       <td>Residential</td>
       <td>France</td>
       <td>I,V, P,Q, S</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="https://xgentimeseries.github.io/xgen-timeseries/ess_datasets/index.html" target="_blank"> [1]</a> </td>
     </tr>
     <tr>
@@ -131,7 +131,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Residential</td>
       <td>UK</td>
       <td>P, S</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="https://datashare.ed.ac.uk/handle/10283/3647" target="_blank"> [2]</a> </td>
     </tr>
     <tr>
@@ -141,7 +141,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Residential</td>
       <td>South Korea</td>
       <td>P,Q</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="https://www.nature.com/articles/s41597-019-0212-5" target="_blank"> [3]</a> </td>
     </tr>
     <tr>
@@ -151,7 +151,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Residential</td>
       <td>Brazil</td>
       <td>P, S</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="https://pessoal.dainf.ct.utfpr.edu.br/douglasrenaux/LIT_Dataset/" target="_blank"> [4]</a> </td>
     </tr>
     <tr>
@@ -161,7 +161,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Residential</td>
       <td>Canada</td>
       <td>P, S,I</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="http://ampds.org/" target="_blank"> [5]</a> </td>
     </tr>
     <tr>
@@ -171,7 +171,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Individual appliance</td>
       <td>France</td>
       <td>I,V</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="https://coolldataset.github.io/" target="_blank"> [6]</a> </td>
     </tr>
     <tr>
@@ -181,7 +181,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Individual appliance</td>
       <td>Multiples</td>
       <td>I</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="https://www.cs.cit.tum.de/dis/resources/whited/" target="_blank"> [7]</a> </td>
     </tr>
     <tr>
@@ -191,7 +191,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Residential</td>
       <td>US</td>
       <td>P</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="https://pureportal.strath.ac.uk/en/datasets/refit-electrical-load-measurements-cleaned" target="_blank"> [8]</a> </td>
     </tr>
     <tr>
@@ -201,7 +201,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Residential</td>
       <td>US</td>
       <td>P,S</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="https://ieee-dataport.org/" target="_blank"> [9]</a> </td>
     </tr>
     <tr>
@@ -211,7 +211,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Residential</td>
       <td>UK</td>
       <td>I,V, P,Q, S</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="https://www.nature.com/articles/sdata20157" target="_blank"> [10]</a> </td>
     </tr>
     <tr>
@@ -221,7 +221,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Residential</td>
       <td>Netherlands</td>
       <td>P</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="https://www.st.ewi.tudelft.nl/~akshay/dred/" target="_blank"> [11]</a> </td>
     </tr>
     <tr>
@@ -231,7 +231,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Individual appliance</td>
       <td>US</td>
       <td>I,V</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="https://energy.duke.edu/content/plug-load-appliance-identification-dataset-plaid" target="_blank"> [12]</a> </td>
     </tr>
      <tr>
@@ -241,7 +241,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Residential</td>
       <td>Switzerland</td>
       <td>I,V, P, pf</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="https://sites.google.com/view/activities-prediction-202b/project-homepage/eco-dataset" target="_blank"> [13]</a> </td>
     </tr>
      <tr>
@@ -251,7 +251,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Residential</td>
       <td>India</td>
       <td>I, V, P, Q, S, pf</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="https://iawe.github.io/" target="_blank"> [14]</a> </td>
     </tr>
      <tr>
@@ -261,7 +261,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Individual appliance</td>
       <td>Germany</td>
       <td>P</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="https://github.com/areinhardt/tracebase" target="_blank"> [15]</a> </td>
     </tr>
      <tr>
@@ -271,7 +271,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Residential</td>
       <td>US</td>
       <td>I, V, P</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="https://tokhub.github.io/dbecd/links/redd.html" target="_blank"> [16]</a> </td>
     </tr>
      <tr>
@@ -281,7 +281,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Residential</td>
       <td>US</td>
       <td>I,V</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td><a href="https://tokhub.github.io/dbecd/links/Blued.html" target="_blank"> [17]</a> </td>
     </tr>
      <tr>
@@ -291,7 +291,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
       <td>Residential</td>
       <td>Belgium</td>
       <td>P</td>
-      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/XGenTS-001145324.hdf5">HDF5 file</a></td>
+      <td><a href="https://github.com/oublalkhalid/XGen/raw/main/_static/TimeXAI-001145324.hdf5">HDF5 file</a></td>
       <td> <a href="https://opennetzero.org/dataset/electricity-maps" target="_blank"> [18]</a> </td>
     </tr>
   </tbody>
@@ -299,7 +299,7 @@ Energy and electric mobility dataset `XGenTS.dataset('streaming')`
 
 
 ## Sponsors and Institutional Partners
-<p style="font-weight: bold; margin-top: 0;"> With gratitude to <a href="https://www.ip-paris.fr/">Institute Polytechnique de Paris</a>, <a href="https://www.ox.ac.uk/">Oxford Institute of Mathematics</a>, OneTech TotalEnergies for generously supporting the development and maintenance of XGen Time Series.</p>
+<p style="font-weight: bold; margin-top: 0;"> With gratitude to <a href="https://www.ip-paris.fr/">Institute Polytechnique de Paris</a>, <a href="https://www.ox.ac.uk/">Oxford Institute of Mathematics</a>, OneTech TotalEnergies for generously supporting the development and maintenance of TimeXAI.</p>
   
 This work is licensed under a
 [Creative Commons Attribution 4.0 International License][cc-by].
@@ -325,7 +325,7 @@ This work is licensed under a
 :hidden:
 
 Getting Started<getting_started/index>
-XGenTS Archive<archive/index>
+TimeXAI Archive<archive/index>
 ESS dataset<ess_datasets/index>
 <!-- API Reference<api/index> -->
 Community <community>
