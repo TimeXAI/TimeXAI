@@ -4,6 +4,6 @@ To run the **benchmark tests** do the following:
 
 ```bash
 $ pip install asv
-$ cd XGenTS
+$ cd TimeXAI
 $ asv run
 ```

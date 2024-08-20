@@ -1,8 +1,8 @@
 # How to make a new release
 
-XGenTS uses the following process to cut a new release of the library.
+TimeXAI uses the following process to cut a new release of the library.
 
-1. Bump the version number in `XGenTS/__init__.py`
+1. Bump the version number in `TimeXAI/__init__.py`
 
    ```diff
    - __version = "0.12.0"
@@ -19,11 +19,11 @@ XGenTS uses the following process to cut a new release of the library.
 
    Empty subheadings for the "unreleased" development version don't need to be included yet.
 
-3. Check versions in `requirements.txt` and `setup.py` files. XGenTS aims to follow the recommendations in [SPEC-0](https://scientific-python.org/specs/spec-0000/) from scientific python.
+3. Check versions in `requirements.txt` and `setup.py` files. TimeXAI aims to follow the recommendations in [SPEC-0](https://scientific-python.org/specs/spec-0000/) from scientific python.
 
 4. Open a Pull Request including these changes. Make sure all CI tests pass, adding commits if necessary. Even if CI is passing on main, there might be new releases of dependencies that break CI.
 
-5. Add a release in the Github [release page](https://github.com/XGenTS-devs/XGenTS/releases) once the PR is merged.
+5. Add a release in the Github [release page](https://github.com/TimeXAI-devs/TimeXAI/releases) once the PR is merged.
 
 6. After the release on Github, the CI system will complete the rest of the steps. Including making any wheels and uploading the new version to PyPI.
 
@@ -45,4 +45,4 @@ XGenTS uses the following process to cut a new release of the library.
    ### Documentation
    ```
 
-9. If the versions were updated in step 3, update also the [conda forge recipe](https://github.com/conda-forge/XGenTS-feedstock).
+9. If the versions were updated in step 3, update also the [conda forge recipe](https://github.com/conda-forge/TimeXAI-feedstock).

@@ -118,7 +118,7 @@ We compare the corresponding classes in our dataset with the most widely used da
 :caption: How to use?
 Installation
 Introduction
-XarrayforXGenTS
+XarrayforTimeXAI
 CreatingInferenceData
 WorkingWithInferenceData
 ```

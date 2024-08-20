@@ -6,7 +6,7 @@ requests. This is particularly the case for simple fixes, such as typos
 or tweaks to documentation, which do not require a heavy investment
 of time and attention.
 
-Contributors are also encouraged to contribute new code to enhance XGenTS's
+Contributors are also encouraged to contribute new code to enhance TimeXAI's
 functionality, also via pull requests.
 Please consult the documentation (on this same {ref}`website <homepage>`)
 to ensure that any new contribution does not strongly overlap with existing
@@ -19,7 +19,7 @@ on the new feature.
 Before starting work on a pull request double-check that no one else
 is working on the ticket in both issue tickets and pull requests.
 
-XGenTS is a community-driven project and always has multiple people working
+TimeXAI is a community-driven project and always has multiple people working
 on it simultaneously. These guidelines define a set of rules to ensure
 that we all make the most of our time and we don't have two contributors
 working on the same changes. Let's see what to do when you encounter the following scenarios:
@@ -61,14 +61,14 @@ The different formatting and aim between numpydoc style type description and
 [type hints](https://docs.python.org/3/library/typing.html)
 should be noted. numpydoc style targets docstrings and aims to be human
 readable whereas type hints target function definitions and `.pyi` files and
-aim to help third party tools such as type checkers or IDEs. XGenTS does not
+aim to help third party tools such as type checkers or IDEs. TimeXAI does not
 require functions to include type hints
 however contributions including them are welcome.
 
 ## Documentation for user facing methods
-If changes are made to a method documented in the {ref}`XGenTS API Guide <api>`
+If changes are made to a method documented in the {ref}`TimeXAI API Guide <api>`
 please consider adding inline documentation examples.
-You can refer to {func}`az.plot_posterior <XGenTS.plot_posterior>` for a good example.
+You can refer to {func}`az.plot_posterior <TimeXAI.plot_posterior>` for a good example.
 
 ### Tests
 Section in construction

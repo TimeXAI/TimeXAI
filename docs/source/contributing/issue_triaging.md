@@ -2,13 +2,13 @@
 # Issue Triaging
 
 
-As a community-driven, open source collective, we value all user contributions at XGenTS. While most users often tend to look for ways to contribute code via PRs, we welcome and encourage help with issue triaging.
+As a community-driven, open source collective, we value all user contributions at TimeXAI. While most users often tend to look for ways to contribute code via PRs, we welcome and encourage help with issue triaging.
 
 We consider issue triaging an integral part of the library development. It is the main communication
-channel between contributors and users of XGenTS. Moreover, it is a task that gives contributors
+channel between contributors and users of TimeXAI. Moreover, it is a task that gives contributors
 more flexibility than contributing code.
 
-This page aims to describe how to get started as an issue triager with XGenTS and provide some
+This page aims to describe how to get started as an issue triager with TimeXAI and provide some
 guidelines related to the task.
 
 :::{note}
@@ -20,9 +20,9 @@ and has also had a couple of [follow-up blogpost](https://ropensci.org/tags/labe
 issue triaging.
 :::
 
-## How to subscribe to XGenTS issues
+## How to subscribe to TimeXAI issues
 
-The first step for you to get started would be to make sure you subscribe and get notifications of any new issue published on XGenTS's GitHub repo. You can then chose to work on it at the moment or come back to it later. Staying subscribed will ensure you are notified whenever issues are created or updated and therefore, see where your help might be needed.
+The first step for you to get started would be to make sure you subscribe and get notifications of any new issue published on TimeXAI's GitHub repo. You can then chose to work on it at the moment or come back to it later. Staying subscribed will ensure you are notified whenever issues are created or updated and therefore, see where your help might be needed.
 
 If you are not familiar on how to set up notifications on GitHub, please check the following - [Setting Up Notifications on GitHub](https://docs.github.com/en/github/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications#configuring-your-watch-settings-for-an-individual-repository).
 Once you are set up, you can [view your subscriptions](https://docs.github.com/en/github/managing-subscriptions-and-notifications-on-github/managing-subscriptions-for-activity-on-github/viewing-your-subscriptions) and [manage your subscritions](https://docs.github.com/en/github/managing-subscriptions-and-notifications-on-github/managing-subscriptions-for-activity-on-github/managing-your-subscriptions) to ensure you are not being inundated with the volume and are getting notifications only to issues of your interest.
@@ -47,26 +47,26 @@ Make sure the issue contains a [minimal reproducible example](https://stackoverf
 Ensure the issue is clear and has references, if needed.
 : If an issue is not completely clear, you can comment by asking for clarifications or
   adding extra references so the issue is clear enough for someone else to start working on.
-  One example would be [#1694 (comment)](https://github.com/XGenTS-devs/XGenTS/issues/1694#issuecomment-840683745)
+  One example would be [#1694 (comment)](https://github.com/TimeXAI-devs/TimeXAI/issues/1694#issuecomment-840683745)
 
 Suggest fixes or workarounds.
 : In some cases, the issue might be a usage question more than an issue (for example
-  [#1758](https://github.com/XGenTS-devs/XGenTS/issues/1758)), in which case it can be answered directly,
+  [#1758](https://github.com/TimeXAI-devs/TimeXAI/issues/1758)), in which case it can be answered directly,
   in some other cases it might be a version mismatch (i.e. users expecting a fresh out of the oven
   feature to be present in the latest version when it's only available on GitHub development
-  version like in [#1773](https://github.com/XGenTS-devs/XGenTS/issues/1773)).
+  version like in [#1773](https://github.com/TimeXAI-devs/TimeXAI/issues/1773)).
   Or there may even be a not ideal yet acceptable workaround for users to avoid the issue
-  before it's fixed (for example [#1467](https://github.com/XGenTS-devs/XGenTS/issues/1467)).
+  before it's fixed (for example [#1467](https://github.com/TimeXAI-devs/TimeXAI/issues/1467)).
 
 Guide newcomers
-: It is also important to introduce people who comment on XGenTS issues for the first time to the
+: It is also important to introduce people who comment on TimeXAI issues for the first time to the
   community, as well as helping people find issues to work on that match their interest
   and abilities.
 
 :::{note}
 If you regularly help with issue triaging you'll probably be asked to join the team and be given
-some triaging or write permissions on the XGenTS GitHub repo. This would allow you to label and
-assign issues in the XGenTS repo.
+some triaging or write permissions on the TimeXAI GitHub repo. This would allow you to label and
+assign issues in the TimeXAI repo.
 
-You can read more about our team and how to join in the {ref}`XGenTS_org:our_team` page.
+You can read more about our team and how to join in the {ref}`TimeXAI_org:our_team` page.
 :::
