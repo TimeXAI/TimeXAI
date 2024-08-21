@@ -1,0 +1,685 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Written content formatting reference &#8212; TimeXAI  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=581237fb" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-codeautolink.css?v=125d5c1c" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css?v=572af1d6" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=45766ed9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=fb0c83f7"></script>
+    <script src="../_static/doctools.js?v=a6d80eb4"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contributing/syntax_guide';</script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="True"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="TimeXAI  documentation - Home"/>
+    <script>document.write(`<img src="../_static/logo_dark.png" class="logo__image only-dark" alt="TimeXAI  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/XgenTimeSeries/xgen-timeseries" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/XgenTimeSeries/xgen-timeseries" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Written...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="written-content-formatting-reference">
+<span id="syntax-guide"></span><h1>Written content formatting reference<a class="headerlink" href="#written-content-formatting-reference" title="Link to this heading">#</a></h1>
+<section id="adding-targets">
+<h2>Adding targets<a class="headerlink" href="#adding-targets" title="Link to this heading">#</a></h2>
+<p>Adding custom targets or anchors to the headings is really helpful for cross-referencing. They allow us to link to the heading using a simple syntax.
+They are defined using this syntax:</p>
+<p>::::{tab-set}</p>
+<p>:::{tab-item} rST
+:sync: rst</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">_mytarget</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>:::</p>
+<p>:::{tab-item} MyST (Markdown)
+:sync: myst</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">mytarget</span><span class="p">)</span><span class="o">=</span>
+</pre></div>
+</div>
+<p>:::</p>
+<p>::::</p>
+<p>They are referred using this syntax:</p>
+<p>::::{tab-set}</p>
+<p>:::{tab-item} rST
+:sync: rst</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:ref:`mytarget`
+</pre></div>
+</div>
+<p>:::</p>
+<p>:::{tab-item} MyST (Markdown)
+:sync: myst</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{ref}`mytarget`
+</pre></div>
+</div>
+<p>:::</p>
+<p>::::</p>
+<p>For adding anchors in <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files, Markdown syntax will be used in the markdown cells of <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files.</p>
+<p>:::{seealso}
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/referencing.html#ref-role" title="(in Sphinx v8.1.0)"><span>Cross-referencing arbitrary locations</span></a>
+Sphinx documentation about the <code class="docutils literal notranslate"><span class="pre">ref</span></code> role.</p>
+<p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#hyperlink-targets">Hyperlink targets</a>
+Docutils documentation on targets (another name for anchors) with extensive detail on how and when
+they can be used.</p>
+<p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html#targets-and-cross-referencing">MyST targets and cross-referencing docs</a>
+:::</p>
+</section>
+<section id="backticks-for-highlighting-code-keywords">
+<h2>Backticks for highlighting code keywords<a class="headerlink" href="#backticks-for-highlighting-code-keywords" title="Link to this heading">#</a></h2>
+<p>For highlighting inline code keywords or file names, backticks are used. In Markdown single backticks are used while in rST double backticks are used. For example, for highlighting the file name <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>, we will use this syntax:</p>
+<p>:::::{tab-set}
+::::{tab-item} rST</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>``conf.py``
+</pre></div>
+</div>
+<p>::::
+::::{tab-item} MyST (Markdown)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`conf.py`
+</pre></div>
+</div>
+<p>::::
+:::::</p>
+</section>
+<section id="table-of-content-tree">
+<h2>Table of content tree<a class="headerlink" href="#table-of-content-tree" title="Link to this heading">#</a></h2>
+<p>All documentation generated with sphinx is structured via <code class="docutils literal notranslate"><span class="pre">toctrees</span></code>.
+Sphinx prints a warning if a file is not part of any toctree unless
+that file is marked as an orphan.</p>
+<p>The hierarchy defined via toctrees (and not the file hierarchy!) is
+the one that defines the nabvar and the contents of the left sidebar.
+Keeping the toctrees organized and up to date ensures the sphinx
+build works, that the generated documentation is correctly ordered
+and can be navigated and that all pages can be reached.
+It also enables navigation to the <strong>Previous</strong> and <strong>Next</strong> pages in the footer.</p>
+<p>Follow this syntax for adding the table of content:</p>
+<p>:::::{tab-set}
+::::{tab-item} rST</p>
+<div class="highlight-rST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+    developer_guide
+    doc_guide
+</pre></div>
+</div>
+<p>::::
+::::{tab-item} MyST (Markdown)</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>:::{toctree}
+developer_guide
+doc_guide
+:::
+</pre></div>
+</div>
+<p>::::
+:::::</p>
+<p>Read more about the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#toctree-directive" title="(in Sphinx v8.1.0)"><span class="xref std std-ref">Sphinx toctree directive</span></a>.</p>
+</section>
+<section id="adding-references">
+<span id="id1"></span><h2>Adding references<a class="headerlink" href="#adding-references" title="Link to this heading">#</a></h2>
+<p>In TimeXAI docs, we use <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#confval-intersphinx_mapping" title="(in Sphinx v8.1.0)"><code class="docutils literal notranslate"><span class="pre">intersphinx_mapping</span></code></a> to add references to other libraries functions and objects.
+The <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx" title="(in Sphinx v8.1.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">intersphinx</span></code></a> ensures us that cross-references to the target project exist.
+It is the only way to link for multiversioned docs to link to themselves.
+It raises a warning if the target references are changed or removed.
+This way we don’t need to add the long exact links.
+It saves a lot of time and effort.</p>
+<section id="hyperlinks">
+<h3>Hyperlinks<a class="headerlink" href="#hyperlinks" title="Link to this heading">#</a></h3>
+<p>Complementary functions such as <code class="xref py py-func docutils literal notranslate"><span class="pre">TimeXAI.compare()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">TimeXAI.plot_compare()</span></code> should reference
+each other in their docstrings using a hyperlink, not only by name. The same
+should happen with external functions whose usage is assumed to be known; a
+clear example of this situation are docstrings on <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> passed to bokeh or
+matplotlib methods. This section covers how to reference functions from any
+part of the docstring. Read more about it <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html" title="(in Sphinx v8.1.0)"><span class="xref std std-doc">here</span></a>.</p>
+<section id="reference-external-libraries">
+<span id="reference-external-libs"></span><h4>Reference external libraries<a class="headerlink" href="#reference-external-libraries" title="Link to this heading">#</a></h4>
+<p>Sphinx is configured to ease referencing libraries TimeXAI relies heavily on by
+using <a class="reference external" href="https://docs.readthedocs.io/en/stable/guides/intersphinx.html">intersphinx</a>.
+See guidance on the reference about how to link to objects from external
+libraries and the value of intersphinx_mapping in <a class="reference external" href="https://github.com/TimeXAI-devs/TimeXAI/blob/main/docs/source/conf.py">conf.py</a> for the complete and up to date list of libraries that can be referenced.</p>
+<p>In TimeXAI docs, you can add references to functions and objects of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">bokeh</span></code>, <code class="docutils literal notranslate"><span class="pre">xarray</span></code>, etc following the simple syntax. Let’s try adding a function of few libraries, i.e., <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.Dataset.sel.html#xarray.Dataset.sel" title="(in xarray v2024.7.1.dev0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">xarray.Dataset.sel()</span></code></a>, <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="(in Matplotlib v3.9.2)"><code class="xref py py-func docutils literal notranslate"><span class="pre">matplotlib.pyplot.subplots()</span></code></a> and
+<code class="xref py py-func docutils literal notranslate"><span class="pre">bokeh.plotting.figure()</span></code>.</p>
+<p>:::::{tab-set}
+::::{tab-item} rST</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:meth:`xarray.Dataset.sel`
+:func:`matplotlib.pyplot.subplots`
+:func:`bokeh.plotting.figure`
+</pre></div>
+</div>
+<p>::::
+::::{tab-item} MyST (Markdown)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{meth}`xarray.Dataset.sel`
+{func}`matplotlib.pyplot.subplots`
+{func}`bokeh.plotting.figure`
+</pre></div>
+</div>
+<p>::::
+:::::</p>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">:key:</span></code> before
+the reference must match the kind of object that is being referenced, it
+generally will not be <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> nor <code class="docutils literal notranslate"><span class="pre">:doc:</span></code>. For
+example, for functions <code class="docutils literal notranslate"><span class="pre">:func:</span></code> has to be used and for class methods
+<code class="docutils literal notranslate"><span class="pre">:meth:</span></code>. The complete list of keys can be found <a class="reference external" href="https://github.com/sphinx-docs/sphinx/blob/685e3fdb49c42b464e09ec955e1033e2a8729fff/sphinx/domains/python.py#L845-L881">here</a>.</p>
+<p>The extension <a class="reference external" href="https://sphobjinv.readthedocs.io/en/latest/">sphobjinv</a> can
+also be helpful in order to get the exact type and name of a reference. Below
+is an example on getting a reference from matplotlib docs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sphobjinv suggest -t 90 -u https://matplotlib.org/objects.inv &quot;axes.plot&quot;
+
+Remote inventory found.
+
+:py:method:`matplotlib.axes.Axes.plot`
+:py:method:`matplotlib.axes.Axes.plot_date`
+:std:doc:`api/_as_gen/matplotlib.axes.Axes.plot`
+:std:doc:`api/_as_gen/matplotlib.axes.Axes.plot_date`
+</pre></div>
+</div>
+<p>We can therefore link to matplotlib docs on <code class="docutils literal notranslate"><span class="pre">Axes.plot</span></code> from any docstring
+using:</p>
+<p>:::::{tab-set}
+::::{tab-item} rST</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:meth:`mpl:matplotlib.axes.Axes.plot`
+</pre></div>
+</div>
+<p>::::
+::::{tab-item} MyST (Markdown)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{meth}`mpl:matplotlib.axes.Axes.plot`
+</pre></div>
+</div>
+<p>::::
+:::::</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">intersphinx_mappings</span></code>
+defined for TimeXAI can be seen in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.
+Moreover, the intersphinx key is optional. Thus, the pattern to get sphinx to generate links is:</p>
+<p>:::::{tab-set}
+::::{tab-item} rST</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:type_id:`(intersphinx_key:)object_id`
+</pre></div>
+</div>
+<p>::::
+::::{tab-item} MyST (Markdown)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{type_id}`(intersphinx_key:)object_id`
+</pre></div>
+</div>
+<p>::::
+:::::</p>
+<p>with the part between brackets being optional. See the docstring on
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">to_dataframe()</span></code> and
+<a class="reference external" href="https://python.TimeXAI.org/en/latest/_modules/TimeXAI/data/inference_data.html#InferenceData.to_dataframe">its source</a> for an example.</p>
+</section>
+<section id="referencing-timexai-objects">
+<span id="reference-timexai-objects"></span><h4>Referencing TimeXAI objects<a class="headerlink" href="#referencing-timexai-objects" title="Link to this heading">#</a></h4>
+<p>The same can be done to refer to TimeXAI functions, in which case,
+<code class="docutils literal notranslate"><span class="pre">:func:`TimeXAI.loo`</span> </code> is enough, there is no need to use intersphinx.
+Moreover, using <code class="docutils literal notranslate"><span class="pre">:func:`~TimeXAI.loo`</span> </code> will only show <code class="docutils literal notranslate"><span class="pre">loo</span></code> as link text
+due to the preceding <code class="docutils literal notranslate"><span class="pre">~</span></code>.</p>
+</section>
+</section>
+</section>
+<section id="code-tabs">
+<h2>Code tabs<a class="headerlink" href="#code-tabs" title="Link to this heading">#</a></h2>
+<p>You will find code tabs on every other page in TimeXAI docs. As we have two main types of files, i.e, <code class="docutils literal notranslate"><span class="pre">.rst</span></code> and <code class="docutils literal notranslate"><span class="pre">.md</span></code>, we often use two code tabs to show the functionalities in both rST and Markdown.</p>
+<section id="synchronised-tabs">
+<h3>Synchronised Tabs<a class="headerlink" href="#synchronised-tabs" title="Link to this heading">#</a></h3>
+<p>TimeXAI docs are using <code class="docutils literal notranslate"><span class="pre">sphinx-design</span></code> extension for adding sync code tabs in <a class="reference external" href="https://github.com/TimeXAI-devs/TimeXAI/blob/main/docs/source/conf.py#L61">conf.py</a>. You can check the syntax and more info about it
+at <a class="reference external" href="https://sphinx-design.readthedocs.io/en/sbt-theme/tabs.html#synchronised-tabs">Synchronised Tabs</a>. Using this extension saves us from a lot of raw-html code. Sphinx provides this extension to make our work easy and or code more concise.</p>
+</section>
+</section>
+<section id="extensions">
+<h2>Extensions<a class="headerlink" href="#extensions" title="Link to this heading">#</a></h2>
+<p>Sphinx supports a lot of extensions to improve and customize the doc features. TimeXAI makes use of these builtin and external extensions to add extra roles. See the <a class="reference external" href="https://sphinx-primer.readthedocs.io/en/latest/extensions/used_extensions.html" title="(in Sphinx Primer v0.3)"><span class="xref std std-doc">Extensions in TimeXAI</span></a>.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-targets">Adding targets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backticks-for-highlighting-code-keywords">Backticks for highlighting code keywords</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-content-tree">Table of content tree</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-references">Adding references</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperlinks">Hyperlinks</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-external-libraries">Reference external libraries</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#referencing-timexai-objects">Referencing TimeXAI objects</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-tabs">Code tabs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synchronised-tabs">Synchronised Tabs</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extensions">Extensions</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+<div id="searchbox"></div></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/TimeXAI-devs/TimeXAI/edit/main/docs/source/contributing/syntax_guide.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/contributing/syntax_guide.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+
+<script>
+  $(document).ready(function () {
+    const content = $('<div class="alert-danger">TimeXAI docs will now be available at <a href="https://python.TimeXAI.org">python.TimeXAI.org</a>!</div>')
+    $('#banner').append(content);
+  })
+</script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, TimeXAI devs.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
