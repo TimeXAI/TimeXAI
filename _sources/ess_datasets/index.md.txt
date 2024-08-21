@@ -1,5 +1,5 @@
 (archive)= 
-## ESS Dataset: A Novel Curated Dataset for Fine-grained Analysis TimeXAI-ESS
+## ESS Dataset: A Novel Curated Dataset for Fine-grained Analysis XGen-ESS
 
 :::{tip}
 This is our new dataset (ESS V0.2) {ref}`Installation`.
@@ -107,7 +107,7 @@ We compare the corresponding classes in our dataset with the most widely used da
 
 | Sr. | Dataset            | Country | Houses | Classes | Variety     | Purpose of Appliances                                                                                                                      |
 |-----|--------------------|---------|--------|---------|-------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 1   | TimeXAI-ESS (ours)   | France  | 7 ↑    | 19 ↑    | Residential | lighting, TV, laptop, play\_station, stove, washing\_machine, oven, refrigerator, kettle, microwave, dishwasher, water\_heater, freezer, outlets, microwave, heater, clothes\_dryer, PC |
+| 1   | XGen-ESS (ours)   | France  | 7 ↑    | 19 ↑    | Residential | lighting, TV, laptop, play\_station, stove, washing\_machine, oven, refrigerator, kettle, microwave, dishwasher, water\_heater, freezer, outlets, microwave, heater, clothes\_dryer, PC |
 | 1   | REDD [20]         | USA     | 6      | 10      | Residential | electronics, lighting, refrigerator, disposal, dishwasher, crazy-washer, washer-dryer, outlets, microwave oven, heater, stove, clothes-dryer, AC                                                |
 | 2   | BLUED              | USA     | 1-3    | ~13     | Residential | Desklamp, chopper, refrigerator, A/V system, computer, laptop, receiver/DVR/Blueray player, compressor, monitor, TV, hair-dryer, iron, lights                                                      |
 | 3   | UK-DALE [32]      | UK      | 5      | 1--5    | Residential | Fridge freezer, home theatre PC, dishwasher, washer-dryer, kettle                                                                       |
@@ -118,7 +118,7 @@ We compare the corresponding classes in our dataset with the most widely used da
 :caption: How to use?
 Installation
 Introduction
-XarrayforTimeXAI
+XarrayforXGenTS
 CreatingInferenceData
 WorkingWithInferenceData
 ```

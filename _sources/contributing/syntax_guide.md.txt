@@ -114,7 +114,7 @@ Read more about the {ref}`Sphinx toctree directive <sphinx:toctree-directive>`.
 (adding_references)=
 ## Adding references
 
-In TimeXAI docs, we use {confval}`sphinx:intersphinx_mapping` to add references to other libraries functions and objects.
+In XGenTS docs, we use {confval}`sphinx:intersphinx_mapping` to add references to other libraries functions and objects.
 The {mod}`~sphinx.ext.intersphinx` ensures us that cross-references to the target project exist.
 It is the only way to link for multiversioned docs to link to themselves.
 It raises a warning if the target references are changed or removed.
@@ -122,7 +122,7 @@ This way we don't need to add the long exact links.
 It saves a lot of time and effort.
 
 ### Hyperlinks
-Complementary functions such as {func}`TimeXAI.compare` and {func}`TimeXAI.plot_compare` should reference
+Complementary functions such as {func}`XGenTS.compare` and {func}`XGenTS.plot_compare` should reference
 each other in their docstrings using a hyperlink, not only by name. The same
 should happen with external functions whose usage is assumed to be known; a
 clear example of this situation are docstrings on `kwargs` passed to bokeh or
@@ -132,12 +132,12 @@ part of the docstring. Read more about it {doc}`here <sphinx:usage/restructuredt
 (reference_external_libs)=
 #### Reference external libraries
 
-Sphinx is configured to ease referencing libraries TimeXAI relies heavily on by
+Sphinx is configured to ease referencing libraries XGenTS relies heavily on by
 using [intersphinx](https://docs.readthedocs.io/en/stable/guides/intersphinx.html).
 See guidance on the reference about how to link to objects from external
-libraries and the value of intersphinx_mapping in [conf.py](https://github.com/TimeXAI-devs/TimeXAI/blob/main/docs/source/conf.py) for the complete and up to date list of libraries that can be referenced.
+libraries and the value of intersphinx_mapping in [conf.py](https://github.com/XGenTS-devs/XGenTS/blob/main/docs/source/conf.py) for the complete and up to date list of libraries that can be referenced.
 
-In TimeXAI docs, you can add references to functions and objects of `matplotlib`, `bokeh`, `xarray`, etc following the simple syntax. Let's try adding a function of few libraries, i.e., {meth}`xarray.Dataset.sel`, {func}`matplotlib.pyplot.subplots` and
+In XGenTS docs, you can add references to functions and objects of `matplotlib`, `bokeh`, `xarray`, etc following the simple syntax. Let's try adding a function of few libraries, i.e., {meth}`xarray.Dataset.sel`, {func}`matplotlib.pyplot.subplots` and
 {func}`bokeh.plotting.figure`.
 
 :::::{tab-set}
@@ -195,7 +195,7 @@ using:
 :::::
 
 The `intersphinx_mappings`
-defined for TimeXAI can be seen in `conf.py`.
+defined for XGenTS can be seen in `conf.py`.
 Moreover, the intersphinx key is optional. Thus, the pattern to get sphinx to generate links is:
 
 :::::{tab-set}
@@ -212,25 +212,25 @@ Moreover, the intersphinx key is optional. Thus, the pattern to get sphinx to ge
 :::::
 
 with the part between brackets being optional. See the docstring on
-{meth}`~TimeXAI.InferenceData.to_dataframe` and
-[its source](https://python.TimeXAI.org/en/latest/_modules/TimeXAI/data/inference_data.html#InferenceData.to_dataframe) for an example.
+{meth}`~XGenTS.InferenceData.to_dataframe` and
+[its source](https://python.XGenTS.org/en/latest/_modules/XGenTS/data/inference_data.html#InferenceData.to_dataframe) for an example.
 
-(reference_TimeXAI_objects)=
-#### Referencing TimeXAI objects
+(reference_XGenTS_objects)=
+#### Referencing XGenTS objects
 
-The same can be done to refer to TimeXAI functions, in which case,
-``:func:`TimeXAI.loo` `` is enough, there is no need to use intersphinx.
-Moreover, using ``:func:`~TimeXAI.loo` `` will only show ``loo`` as link text
+The same can be done to refer to XGenTS functions, in which case,
+``:func:`XGenTS.loo` `` is enough, there is no need to use intersphinx.
+Moreover, using ``:func:`~XGenTS.loo` `` will only show ``loo`` as link text
 due to the preceding ``~``.
 
 ## Code tabs
 
-You will find code tabs on every other page in TimeXAI docs. As we have two main types of files, i.e, `.rst` and `.md`, we often use two code tabs to show the functionalities in both rST and Markdown.
+You will find code tabs on every other page in XGenTS docs. As we have two main types of files, i.e, `.rst` and `.md`, we often use two code tabs to show the functionalities in both rST and Markdown.
 
 ### Synchronised Tabs
-TimeXAI docs are using `sphinx-design` extension for adding sync code tabs in [conf.py](https://github.com/TimeXAI-devs/TimeXAI/blob/main/docs/source/conf.py#L61). You can check the syntax and more info about it
+XGenTS docs are using `sphinx-design` extension for adding sync code tabs in [conf.py](https://github.com/XGenTS-devs/XGenTS/blob/main/docs/source/conf.py#L61). You can check the syntax and more info about it
 at [Synchronised Tabs](https://sphinx-design.readthedocs.io/en/sbt-theme/tabs.html#synchronised-tabs). Using this extension saves us from a lot of raw-html code. Sphinx provides this extension to make our work easy and or code more concise.
 
 
 ## Extensions
-Sphinx supports a lot of extensions to improve and customize the doc features. TimeXAI makes use of these builtin and external extensions to add extra roles. See the {doc}`Extensions in TimeXAI <sphinx-primer:extensions/used_extensions>`.
+Sphinx supports a lot of extensions to improve and customize the doc features. XGenTS makes use of these builtin and external extensions to add extra roles. See the {doc}`Extensions in XGenTS <sphinx-primer:extensions/used_extensions>`.

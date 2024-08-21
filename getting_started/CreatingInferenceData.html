@@ -1,63 +1,70 @@
 
 <!DOCTYPE html>
 
-<html data-content_root="../" data-theme="light" lang="en">
+<html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Creating InferenceData — TimeXAI  documentation</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.19: https://docutils.sourceforge.io/" name="generator"/>
+<title>Creating InferenceData — XGenTS  documentation</title>
 <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
 <!-- Loaded before other Sphinx assets -->
-<link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
-<link href="../_static/pygments.css?v=581237fb" rel="stylesheet" type="text/css"/>
-<link href="../_static/plot_directive.css?v=7f9a90b1" rel="stylesheet" type="text/css"/>
-<link href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" rel="stylesheet" type="text/css"/>
-<link href="../_static/copybutton.css?v=76b2166b" rel="stylesheet" type="text/css"/>
-<link href="../_static/sphinx-codeautolink.css?v=125d5c1c" rel="stylesheet" type="text/css"/>
-<link href="../_static/jupyter-sphinx.css?v=572af1d6" rel="stylesheet" type="text/css"/>
+<link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/plot_directive.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/copybutton.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-codeautolink.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/jupyter-sphinx.css" rel="stylesheet" type="text/css"/>
 <link href="../_static/thebelab.css" rel="stylesheet" type="text/css"/>
-<link href="../_static/sphinx-design.min.css?v=95c83b7e" rel="stylesheet" type="text/css"/>
-<link href="../_static/custom.css?v=45766ed9" rel="stylesheet" type="text/css"/>
+<link href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/custom.css" rel="stylesheet" type="text/css"/>
 <!-- Pre-loaded scripts that we'll load fully later -->
-<link as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" rel="preload"/>
-<link as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" rel="preload"/>
-<script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/documentation_options.js?v=fb0c83f7"></script>
-<script src="../_static/doctools.js?v=a6d80eb4"></script>
-<script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-<script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-<script src="../_static/copybutton.js?v=30646c52"></script>
+<link as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" rel="preload"/>
+<link as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" rel="preload"/>
+<script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/sphinx_highlight.js"></script>
+<script src="../_static/clipboard.min.js"></script>
+<script src="../_static/copybutton.js"></script>
 <script src="../_static/thebelab-helper.js"></script>
-<script src="../_static/design-tabs.js?v=f930bc37"></script>
+<script src="../_static/design-tabs.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
 <script>DOCUMENTATION_OPTIONS.pagename = 'getting_started/CreatingInferenceData';</script>
-<link href="../_static/favicon.ico" rel="icon"/>
+<link href="../_static/favicon.ico" rel="shortcut icon"/>
 <link href="../about.html" rel="author" title="About these documents"/>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="../search.html" rel="search" title="Search"/>
+<link href="ConversionGuideEmcee.html" rel="next" title="Converting emcee objects to InferenceData"/>
+<link href="XarrayforXGenTS.html" rel="prev" title="Introduction to xarray, InferenceData, and netCDF for XGenTS"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="en" name="docsearch:language"/>
 <meta content="True" name="docbuild:last-update"/>
 </head>
 <body data-bs-root-margin="0px 0px -60%" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-default-mode="light" data-offset="180">
-<div class="skip-link d-print-none" id="pst-skip-link"><a href="#main-content">Skip to main content</a></div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div id="pst-scroll-pixel-helper"></div>
 <button class="btn rounded-pill" id="pst-back-to-top" type="button">
-<i class="fa-solid fa-arrow-up"></i>Back to top</button>
-<input class="sidebar-toggle" id="pst-primary-sidebar-checkbox" type="checkbox"/>
-<label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-<input class="sidebar-toggle" id="pst-secondary-sidebar-checkbox" type="checkbox"/>
-<label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+<i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+<input class="sidebar-toggle" id="__primary" name="__primary" type="checkbox"/>
+<label class="overlay overlay-primary" for="__primary"></label>
+<input class="sidebar-toggle" id="__secondary" name="__secondary" type="checkbox"/>
+<label class="overlay overlay-secondary" for="__secondary"></label>
 <div class="search-button__wrapper">
 <div class="search-button__overlay"></div>
 <div class="search-button__search-container">
@@ -67,26 +74,55 @@
 <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
 </div>
-<div class="pst-async-banner-revealer d-none">
-<aside aria-label="Version warning" class="d-none d-print-none" id="bd-header-version-warning"></aside>
-</div>
-<header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<nav class="bd-header navbar navbar-expand-lg bd-navbar">
 <div class="bd-header__inner bd-page-width">
-<button aria-label="Site navigation" class="pst-navbar-icon sidebar-toggle primary-toggle">
+<label class="sidebar-toggle primary-toggle" for="__primary">
 <span class="fa-solid fa-bars"></span>
-</button>
+</label>
 <div class="col-lg-3 navbar-header-items__start">
 <div class="navbar-item">
 <a class="navbar-brand logo" href="../index.html">
-<img alt="TimeXAI  documentation - Home" class="logo__image only-light" src="../_static/logo.png"/>
-<script>document.write(`<img src="../_static/logo_dark.png" class="logo__image only-dark" alt="TimeXAI  documentation - Home"/>`);</script>
+<img alt="Logo image" class="logo__image only-light" src="../_static/logo.png"/>
+<script>document.write(`<img src="../_static/logo_dark.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
 </a></div>
 </div>
 <div class="col-lg-9 navbar-header-items">
 <div class="me-auto navbar-header-items__center">
-<div class="navbar-item">
-<nav>
+<div class="navbar-item"><nav class="navbar-nav">
+<p aria-label="Site Navigation" aria-level="1" class="sidebar-header-items__title" role="heading">
+    Site Navigation
+  </p>
 <ul class="bd-navbar-elements navbar-nav">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="index.html">
+                        Getting Started
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../archive/index.html">
+                        XGenTS Archive
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../ess_datasets/index.html">
+                        ESS dataset
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../community.html">
+                        Community
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../contributing/index.html">
+                        Contributing
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../about.html">
+                        About us
+                      </a>
+</li>
 </ul>
 </nav></div>
 </div>
@@ -94,7 +130,7 @@
 <div class="navbar-item navbar-persistent--container">
 <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -105,16 +141,16 @@
 <div class="navbar-item">
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
-<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links navbar-nav">
 <li class="nav-item">
-<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i>
+<a class="nav-link" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><span><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i></span>
 <span class="sr-only">GitHub</span></a>
 </li>
 </ul></div>
@@ -123,7 +159,7 @@ document.write(`
 <div class="navbar-persistent--mobile">
 <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -131,19 +167,51 @@ document.write(`
  `);
  </script>
 </div>
-<button aria-label="On this page" class="pst-navbar-icon sidebar-toggle secondary-toggle">
+<label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
 <span class="fa-solid fa-outdent"></span>
-</button>
+</label>
 </div>
-</header>
+</nav>
 <div class="bd-container">
 <div class="bd-container__inner bd-page-width">
 <div class="bd-sidebar-primary bd-sidebar">
 <div class="sidebar-header-items sidebar-primary__section">
 <div class="sidebar-header-items__center">
-<div class="navbar-item">
-<nav>
+<div class="navbar-item"><nav class="navbar-nav">
+<p aria-label="Site Navigation" aria-level="1" class="sidebar-header-items__title" role="heading">
+    Site Navigation
+  </p>
 <ul class="bd-navbar-elements navbar-nav">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="index.html">
+                        Getting Started
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../archive/index.html">
+                        XGenTS Archive
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../ess_datasets/index.html">
+                        ESS dataset
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../community.html">
+                        Community
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../contributing/index.html">
+                        Contributing
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../about.html">
+                        About us
+                      </a>
+</li>
 </ul>
 </nav></div>
 </div>
@@ -151,24 +219,23 @@ document.write(`
 <div class="navbar-item">
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
-<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links navbar-nav">
 <li class="nav-item">
-<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i>
+<a class="nav-link" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><span><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i></span>
 <span class="sr-only">GitHub</span></a>
 </li>
 </ul></div>
 </div>
 </div>
 <div class="sidebar-primary-items__start sidebar-primary__section">
-<div class="sidebar-primary-item">
-<nav aria-label="Section Navigation" class="bd-docs-nav bd-links">
+<div class="sidebar-primary-item"><nav aria-label="Section Navigation" class="bd-docs-nav bd-links">
 <p aria-level="1" class="bd-links__title" role="heading">Section Navigation</p>
 <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="ConversionGuideEmcee.html">Converting emcee objects to InferenceData</a></li>
@@ -180,20 +247,21 @@ document.write(`
 </div>
 <div id="rtd-footer-container"></div>
 </div>
-<main class="bd-main" id="main-content" role="main">
+<main class="bd-main" id="main-content">
 <div class="bd-content">
 <div class="bd-article-container">
-<div class="bd-header-article d-print-none">
+<div class="bd-header-article">
 <div class="header-article-items header-article__inner">
 <div class="header-article-items__start">
 <div class="header-article-item">
-<nav aria-label="Breadcrumb" class="d-print-none">
+<nav aria-label="Breadcrumb">
 <ul class="bd-breadcrumbs">
 <li class="breadcrumb-item breadcrumb-home">
 <a aria-label="Home" class="nav-link" href="../index.html">
 <i class="fa-solid fa-home"></i>
 </a>
 </li>
+<li class="breadcrumb-item"><a class="nav-link" href="index.html">Getting Started 🤗</a></li>
 <li aria-current="page" class="breadcrumb-item active">Creating...</li>
 </ul>
 </nav>
@@ -202,9 +270,9 @@ document.write(`
 </div>
 </div>
 <div id="searchbox"></div>
-<article class="bd-article">
+<article class="bd-article" role="main">
 <section class="tex2jax_ignore mathjax_ignore" id="creating-inferencedata">
-<span id="id1"></span><h1>Creating InferenceData<a class="headerlink" href="#creating-inferencedata" title="Link to this heading">#</a></h1>
+<span id="id1"></span><h1>Creating InferenceData<a class="headerlink" href="#creating-inferencedata" title="Permalink to this heading">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">InferenceData</span></code> is the central data format for XGenTS. <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code> itself is just a container that maintains references to one or more <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code>s. See the <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code> structure specification <a class="reference internal" href="../schema/schema.html#schema"><span class="std std-ref">here</span></a>. For more on xarray, you can get the details <a class="reference internal" href="XarrayforXGenTS.html#xarray-for-xgents"><span class="std std-ref">here</span></a>. Below are various ways to generate an <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code> object.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -215,7 +283,7 @@ document.write(`
 </div>
 </div>
 <section id="from-1d-numpy-array">
-<h2>From 1D numpy array<a class="headerlink" href="#from-1d-numpy-array" title="Link to this heading">#</a></h2>
+<h2>From 1D numpy array<a class="headerlink" href="#from-1d-numpy-array" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">size</span> <span class="o">=</span> <span class="mi">100</span>
@@ -970,7 +1038,7 @@ dl.xr-attrs {
 </div>
 </section>
 <section id="from-nd-numpy-array">
-<h2>From nD numpy array<a class="headerlink" href="#from-nd-numpy-array" title="Link to this heading">#</a></h2>
+<h2>From nD numpy array<a class="headerlink" href="#from-nd-numpy-array" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
@@ -1744,7 +1812,7 @@ dl.xr-attrs {
 </div>
 </section>
 <section id="from-a-dictionary">
-<h2>From a dictionary<a class="headerlink" href="#from-a-dictionary" title="Link to this heading">#</a></h2>
+<h2>From a dictionary<a class="headerlink" href="#from-a-dictionary" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datadict</span> <span class="o">=</span> <span class="p">{</span>
@@ -2588,7 +2656,7 @@ dl.xr-attrs {
 </div>
 </section>
 <section id="from-dictionary-with-coords-and-dims">
-<h2>From dictionary with coords and dims<a class="headerlink" href="#from-dictionary-with-coords-and-dims" title="Link to this heading">#</a></h2>
+<h2>From dictionary with coords and dims<a class="headerlink" href="#from-dictionary-with-coords-and-dims" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datadict</span> <span class="o">=</span> <span class="p">{</span>
@@ -3419,7 +3487,7 @@ dl.xr-attrs {
 </div>
 </section>
 <section id="from-dataframe">
-<h2>From Dataframe<a class="headerlink" href="#from-dataframe" title="Link to this heading">#</a></h2>
+<h2>From Dataframe<a class="headerlink" href="#from-dataframe" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://pandas.pydata.org/pandas-docs/stable/index.html#module-pandas" title="pandas"><span class="nn">pandas</span></a> <span class="k">as</span> <span class="nn">pd</span>
@@ -4200,7 +4268,7 @@ dl.xr-attrs {
 </div>
 </section>
 <section id="from-pymc3">
-<h2>From PyMC3<a class="headerlink" href="#from-pymc3" title="Link to this heading">#</a></h2>
+<h2>From PyMC3<a class="headerlink" href="#from-pymc3" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pymc3</span> <span class="k">as</span> <span class="nn">pm</span>
@@ -10211,7 +10279,7 @@ dl.xr-attrs {
 </div>
 </section>
 <section id="from-pystan">
-<h2>From PyStan<a class="headerlink" href="#from-pystan" title="Link to this heading">#</a></h2>
+<h2>From PyStan<a class="headerlink" href="#from-pystan" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pystan</span>
@@ -12600,7 +12668,7 @@ dl.xr-attrs {
 </div>
 </section>
 <section id="from-pyro">
-<h2>From Pyro<a class="headerlink" href="#from-pyro" title="Link to this heading">#</a></h2>
+<h2>From Pyro<a class="headerlink" href="#from-pyro" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyro</span>
@@ -16297,11 +16365,11 @@ dl.xr-attrs {
 </div>
 </section>
 <section id="from-emcee">
-<h2>From emcee<a class="headerlink" href="#from-emcee" title="Link to this heading">#</a></h2>
+<h2>From emcee<a class="headerlink" href="#from-emcee" title="Permalink to this heading">#</a></h2>
 <p>Please refer to <a class="reference internal" href="ConversionGuideEmcee.html#emcee-conversion"><span class="std std-ref">Converting emcee objects to InferenceData</span></a> for details.</p>
 </section>
 <section id="from-cmdstanpy">
-<h2>From CmdStanPy<a class="headerlink" href="#from-cmdstanpy" title="Link to this heading">#</a></h2>
+<h2>From CmdStanPy<a class="headerlink" href="#from-cmdstanpy" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cmdstanpy</span> <span class="kn">import</span> <span class="n">CmdStanModel</span>
@@ -18690,10 +18758,10 @@ dl.xr-attrs {
 </div>
 </section>
 <section id="from-cmdstan">
-<h2>From CmdStan<a class="headerlink" href="#from-cmdstan" title="Link to this heading">#</a></h2>
+<h2>From CmdStan<a class="headerlink" href="#from-cmdstan" title="Permalink to this heading">#</a></h2>
 <p>See <code class="xref py py-func docutils literal notranslate"><span class="pre">from_cmdstan()</span></code> for details.</p>
 <section id="cmdstan-helpers">
-<h3>CmdStan helpers<a class="headerlink" href="#cmdstan-helpers" title="Link to this heading">#</a></h3>
+<h3>CmdStan helpers<a class="headerlink" href="#cmdstan-helpers" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save for CmdStan example (needs CmdStanPy run)</span>
@@ -21307,7 +21375,7 @@ dl.xr-attrs {
 </section>
 </section>
 <section id="from-numpyro">
-<h2>From NumPyro<a class="headerlink" href="#from-numpyro" title="Link to this heading">#</a></h2>
+<h2>From NumPyro<a class="headerlink" href="#from-numpyro" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpyro</span>
@@ -24604,9 +24672,9 @@ dl.xr-attrs {
 </div>
 </section>
 <section id="from-pyjags">
-<h2>From PyJAGS<a class="headerlink" href="#from-pyjags" title="Link to this heading">#</a></h2>
+<h2>From PyJAGS<a class="headerlink" href="#from-pyjags" title="Permalink to this heading">#</a></h2>
 <section id="import-package">
-<h3>Import Package<a class="headerlink" href="#import-package" title="Link to this heading">#</a></h3>
+<h3>Import Package<a class="headerlink" href="#import-package" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyjags</span>
@@ -24616,9 +24684,9 @@ dl.xr-attrs {
 </div>
 </section>
 <section id="jags-model-code">
-<h3>JAGS Model Code<a class="headerlink" href="#jags-model-code" title="Link to this heading">#</a></h3>
+<h3>JAGS Model Code<a class="headerlink" href="#jags-model-code" title="Permalink to this heading">#</a></h3>
 <section id="prior-model">
-<h4>Prior Model<a class="headerlink" href="#prior-model" title="Link to this heading">#</a></h4>
+<h4>Prior Model<a class="headerlink" href="#prior-model" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eight_school_prior_model_code</span> <span class="o">=</span> <span class="s2">""" </span>
@@ -24636,7 +24704,7 @@ dl.xr-attrs {
 </div>
 </section>
 <section id="posterior-model">
-<h4>Posterior Model<a class="headerlink" href="#posterior-model" title="Link to this heading">#</a></h4>
+<h4>Posterior Model<a class="headerlink" href="#posterior-model" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eight_school_posterior_model_code</span> <span class="o">=</span> <span class="s2">""" </span>
@@ -24665,9 +24733,9 @@ dl.xr-attrs {
 </section>
 </section>
 <section id="construct-jags-model-and-run-adaptation-steps">
-<h3>Construct JAGS Model and Run Adaptation Steps<a class="headerlink" href="#construct-jags-model-and-run-adaptation-steps" title="Link to this heading">#</a></h3>
+<h3>Construct JAGS Model and Run Adaptation Steps<a class="headerlink" href="#construct-jags-model-and-run-adaptation-steps" title="Permalink to this heading">#</a></h3>
 <section id="id2">
-<h4>Prior Model<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<h4>Prior Model<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jags_prior_model</span> <span class="o">=</span> <span class="n">pyjags</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span>
@@ -24679,7 +24747,7 @@ dl.xr-attrs {
 </div>
 </section>
 <section id="id3">
-<h4>Posterior Model<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<h4>Posterior Model<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jags_posterior_model</span> <span class="o">=</span> <span class="n">pyjags</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span>
@@ -24701,7 +24769,7 @@ dl.xr-attrs {
 </section>
 </section>
 <section id="draw-1000-burn-in-samples-and-5000-actual-samples-per-chain">
-<h3>Draw 1000 Burn-In Samples and 5000 Actual Samples per Chain<a class="headerlink" href="#draw-1000-burn-in-samples-and-5000-actual-samples-per-chain" title="Link to this heading">#</a></h3>
+<h3>Draw 1000 Burn-In Samples and 5000 Actual Samples per Chain<a class="headerlink" href="#draw-1000-burn-in-samples-and-5000-actual-samples-per-chain" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jags_prior_samples</span> <span class="o">=</span> <span class="n">jags_prior_model</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">5000</span> <span class="o">+</span> <span class="mi">1000</span><span class="p">,</span> <span class="nb">vars</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
@@ -24718,7 +24786,7 @@ sampling: iterations 24000 of 24000, elapsed 0:00:00, remaining 0:00:00
 </div>
 </section>
 <section id="convert-pyjags-samples-dictionary-to-xgents-inference-data-object">
-<h3>Convert PyJAGS Samples Dictionary to XGenTS Inference Data Object<a class="headerlink" href="#convert-pyjags-samples-dictionary-to-xgents-inference-data-object" title="Link to this heading">#</a></h3>
+<h3>Convert PyJAGS Samples Dictionary to XGenTS Inference Data Object<a class="headerlink" href="#convert-pyjags-samples-dictionary-to-xgents-inference-data-object" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyjags_data</span> <span class="o">=</span> <span class="n">az</span><span class="o">.</span><span class="n">from_pyjags</span><span class="p">(</span>
@@ -27510,17 +27578,32 @@ dl.xr-attrs {
 </section>
 </section>
 </article>
-<footer class="prev-next-footer d-print-none">
+<footer class="prev-next-footer">
+<!-- Previous / next buttons -->
 <div class="prev-next-area">
+<a class="left-prev" href="XarrayforXGenTS.html" title="previous page">
+<i class="fa-solid fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title">Introduction to xarray, InferenceData, and netCDF for XGenTS</p>
+</div>
+</a>
+<a class="right-next" href="ConversionGuideEmcee.html" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title">Converting emcee objects to InferenceData</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
 </div>
 </footer>
 </div>
 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 <div class="sidebar-secondary-item">
-<div class="page-toc tocsection onthispage" id="pst-page-navigation-heading-2">
+<div class="page-toc tocsection onthispage">
 <i class="fa-solid fa-list"></i> On this page
   </div>
-<nav aria-labelledby="pst-page-navigation-heading-2" class="bd-toc-nav page-toc">
+<nav class="bd-toc-nav page-toc">
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-1d-numpy-array">From 1D numpy array</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-nd-numpy-array">From nD numpy array</a></li>
@@ -27559,7 +27642,7 @@ dl.xr-attrs {
 <div id="searchbox"></div></div>
 <div class="sidebar-secondary-item">
 <div class="tocsection editthispage">
-<a href="https://github.com/TimeXAI-devs/TimeXAI/edit/main/docs/source/getting_started/CreatingInferenceData.ipynb">
+<a href="https://github.com/XGenTS-devs/XGenTS/edit/main/docs/source/getting_started/CreatingInferenceData.ipynb">
 <i class="fa-solid fa-pencil"></i>
       
       
@@ -27585,11 +27668,11 @@ dl.xr-attrs {
 </div>
 </div>
 <!-- Scripts loaded after <body> so the DOM is not blocked -->
-<script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 <script>
   $(document).ready(function () {
-    const content = $('<div class="alert-danger">TimeXAI docs will now be available at <a href="https://python.TimeXAI.org">python.TimeXAI.org</a>!</div>')
+    const content = $('<div class="alert-danger">XGenTS docs will now be available at <a href="https://python.XGenTS.org">python.XGenTS.org</a>!</div>')
     $('#banner').append(content);
   })
 </script>
@@ -27599,15 +27682,14 @@ dl.xr-attrs {
 <div class="footer-item">
 <p class="copyright">
     
-      © Copyright 2023, TimeXAI devs.
+      © Copyright 2023, XGenTS devs.
       <br>
 </br></p>
 </div>
 </div>
 <div class="footer-items__end">
-<div class="footer-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+<div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
 </p></div>
 </div>
 </div>

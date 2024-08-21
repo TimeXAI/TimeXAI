@@ -17,7 +17,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "import timexai as xg\n",
+    "import xgen as xg\n",
     "import numpy as np\n",
     "import xarray as xr\n",
     "\n",
@@ -44,7 +44,7 @@
        "\n",
        "            <div>\n",
        "              <div class='xr-header'>\n",
-       "                <div class=\"xr-obj-type\">TimeXAI.InferenceData</div>\n",
+       "                <div class=\"xr-obj-type\">XGenTS.InferenceData</div>\n",
        "              </div>\n",
        "              <ul class=\"xr-sections group-sections\">\n",
        "              \n",
@@ -2397,7 +2397,7 @@
     }
    ],
    "source": [
-    "idata = az.load_TimeXAI_data(\"centered_eight\")\n",
+    "idata = az.load_XGenTS_data(\"centered_eight\")\n",
     "idata"
    ]
   },
@@ -2839,7 +2839,7 @@
     ":::{tip} \n",
     "You'll have noticed we stored the posterior group in a new variable: `post`. As `.copy()` was not called, now using `idata.posterior` or `post` is equivalent.\n",
     "\n",
-    "Use this to keep your code short yet easy to read. Store the groups you'll need very often as separate variables to use explicitly, but don't delete the InferenceData parent. You'll need it for many TimeXAI functions to work properly. For example: {func}`~TimeXAI.plot_pair` needs data from `sample_stats` group to show divergences, {func}`~TimeXAI.compare` needs data from both `log_likelihood` and `posterior` groups, {func}`~TimeXAI.plot_loo_pit` needs not 2 but 3 groups: `log_likelihood`, `posterior_predictive` and `posterior`.\n",
+    "Use this to keep your code short yet easy to read. Store the groups you'll need very often as separate variables to use explicitly, but don't delete the InferenceData parent. You'll need it for many XGenTS functions to work properly. For example: {func}`~XGenTS.plot_pair` needs data from `sample_stats` group to show divergences, {func}`~XGenTS.compare` needs data from both `log_likelihood` and `posterior` groups, {func}`~XGenTS.plot_loo_pit` needs not 2 but 3 groups: `log_likelihood`, `posterior_predictive` and `posterior`.\n",
     ":::"
    ]
   },
@@ -3711,7 +3711,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "You can also use {meth}`xarray.Dataset.stack` if you only want to combine the chain and draw dimensions. {func}`TimeXAI.extract` is a convenience function aimed at taking care of the most common subsetting operations with MCMC samples. It can:\n",
+    "You can also use {meth}`xarray.Dataset.stack` if you only want to combine the chain and draw dimensions. {func}`XGenTS.extract` is a convenience function aimed at taking care of the most common subsetting operations with MCMC samples. It can:\n",
     "- Combine chains and draws\n",
     "- Return a subset of variables (with optional filtering with regular expressions or string matching)\n",
     "- Return a subset of samples. Moreover by default it returns a random subset to prevent getting non-representative samples due to bad mixing.\n",
@@ -4712,7 +4712,7 @@
    "source": [
     "## Get a subset of chains\n",
     "\n",
-    "Let's keep only chain 0 and 2 here. For the subset to take effect on all relevant InferenceData groups: posterior, sample_stats, log_likelihood, posterior_predictive we will use the {meth}`TimeXAI.InferenceData.sel`, the method of InferenceData instead of {meth}`xarray.Dataset.sel`."
+    "Let's keep only chain 0 and 2 here. For the subset to take effect on all relevant InferenceData groups: posterior, sample_stats, log_likelihood, posterior_predictive we will use the {meth}`XGenTS.InferenceData.sel`, the method of InferenceData instead of {meth}`xarray.Dataset.sel`."
    ]
   },
   {
@@ -4726,7 +4726,7 @@
        "\n",
        "            <div>\n",
        "              <div class='xr-header'>\n",
-       "                <div class=\"xr-obj-type\">TimeXAI.InferenceData</div>\n",
+       "                <div class=\"xr-obj-type\">XGenTS.InferenceData</div>\n",
        "              </div>\n",
        "              <ul class=\"xr-sections group-sections\">\n",
        "              \n",
@@ -7077,7 +7077,7 @@
        "\n",
        "            <div>\n",
        "              <div class='xr-header'>\n",
-       "                <div class=\"xr-obj-type\">TimeXAI.InferenceData</div>\n",
+       "                <div class=\"xr-obj-type\">XGenTS.InferenceData</div>\n",
        "              </div>\n",
        "              <ul class=\"xr-sections group-sections\">\n",
        "              \n",
@@ -9455,7 +9455,7 @@
        "\n",
        "            <div>\n",
        "              <div class='xr-header'>\n",
-       "                <div class=\"xr-obj-type\">TimeXAI.InferenceData</div>\n",
+       "                <div class=\"xr-obj-type\">XGenTS.InferenceData</div>\n",
        "              </div>\n",
        "              <ul class=\"xr-sections group-sections\">\n",
        "              \n",
@@ -12628,7 +12628,7 @@
    "source": [
     "We use \"posterior pushfoward quantities\" to refer to quantities that are not variables in the posterior but deterministic computations using posterior variables. \n",
     "\n",
-    "You can use xarray for these pushforward operations and store them as a new variable in the posterior group. You'll then be able to plot them with TimeXAI functions, calculate stats and diagnostics on them (like the {func}`~TimeXAI.mcse`) or save and share the inferencedata object with the pushforward quantities included. \n",
+    "You can use xarray for these pushforward operations and store them as a new variable in the posterior group. You'll then be able to plot them with XGenTS functions, calculate stats and diagnostics on them (like the {func}`~XGenTS.mcse`) or save and share the inferencedata object with the pushforward quantities included. \n",
     "\n",
     "Compute the rolling mean of $\\log(\\tau)$ with {meth}`xarray.DataArray.rolling`, storing the result in the posterior"
    ]
@@ -12650,7 +12650,7 @@
     "\n",
     "Some examples of these advantages are specifying operations with named dimensions instead of positional ones (as seen in some previous sections), \n",
     "automatic alignment and broadcasting of arrays (as we'll see now),\n",
-    "or integration with Dask (as shown in the {ref}`dask_for_TimeXAI` guide).\n",
+    "or integration with Dask (as shown in the {ref}`dask_for_XGenTS` guide).\n",
     "\n",
     "In this cell you will compute pairwise differences between schools on their mean effects (variable `theta`).\n",
     "To do so, substract the variable theta after renaming the school dimension to the original variable. \n",
@@ -14453,7 +14453,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "After checking the {func}`~TimeXAI.mcse` and realizing you need more samples, you rerun the model with two chains\n",
+    "After checking the {func}`~XGenTS.mcse` and realizing you need more samples, you rerun the model with two chains\n",
     "and obtain an `idata_rerun` object."
    ]
   },
@@ -14474,7 +14474,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "You can combine the two into a single InferenceData object using {func}`TimeXAI.concat`:"
+    "You can combine the two into a single InferenceData object using {func}`XGenTS.concat`:"
    ]
   },
   {
@@ -14509,7 +14509,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "You can also add new groups to InferenceData objects with the {meth}`~TimeXAI.InferenceData.extend` (if the new groups are already in an InferenceData object) or with {meth}`~TimeXAI.InferenceData.add_groups` (if the new groups are dictionaries or `xarray.Dataset` objects)."
+    "You can also add new groups to InferenceData objects with the {meth}`~XGenTS.InferenceData.extend` (if the new groups are already in an InferenceData object) or with {meth}`~XGenTS.InferenceData.add_groups` (if the new groups are dictionaries or `xarray.Dataset` objects)."
    ]
   },
   {
@@ -14523,7 +14523,7 @@
        "\n",
        "            <div>\n",
        "              <div class='xr-header'>\n",
-       "                <div class=\"xr-obj-type\">TimeXAI.InferenceData</div>\n",
+       "                <div class=\"xr-obj-type\">XGenTS.InferenceData</div>\n",
        "              </div>\n",
        "              <ul class=\"xr-sections group-sections\">\n",
        "              \n",
@@ -15775,7 +15775,7 @@
        "        ...,\n",
        "        [ 1.57846099,  0.24653314],\n",
        "        [ 0.64302486,  1.42710376],\n",
-       "        [-1.01529472, -0.28215614]]])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-7f701334-95b0-40fd-ba25-766ff389c50d' class='xr-section-summary-in' type='checkbox'  ><label for='section-7f701334-95b0-40fd-ba25-766ff389c50d' class='xr-section-summary' >Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>created_at :</span></dt><dd>2022-03-05T03:51:18.666162</dd><dt><span>TimeXAI_version :</span></dt><dd>0.11.4</dd></dl></div></li></ul></div></div><br></div>\n",
+       "        [-1.01529472, -0.28215614]]])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-7f701334-95b0-40fd-ba25-766ff389c50d' class='xr-section-summary-in' type='checkbox'  ><label for='section-7f701334-95b0-40fd-ba25-766ff389c50d' class='xr-section-summary' >Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>created_at :</span></dt><dd>2022-03-05T03:51:18.666162</dd><dt><span>XGenTS_version :</span></dt><dd>0.11.4</dd></dl></div></li></ul></div></div><br></div>\n",
        "                      </ul>\n",
        "                  </div>\n",
        "            </li>\n",

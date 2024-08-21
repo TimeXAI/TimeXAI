@@ -1,63 +1,70 @@
 
 <!DOCTYPE html>
 
-<html data-content_root="../" data-theme="light" lang="en">
+<html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Introduction to xarray, InferenceData, and netCDF for XGenTS — TimeXAI  documentation</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.19: https://docutils.sourceforge.io/" name="generator"/>
+<title>Introduction to xarray, InferenceData, and netCDF for XGenTS — XGenTS  documentation</title>
 <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
 <!-- Loaded before other Sphinx assets -->
-<link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
-<link href="../_static/pygments.css?v=581237fb" rel="stylesheet" type="text/css"/>
-<link href="../_static/plot_directive.css?v=7f9a90b1" rel="stylesheet" type="text/css"/>
-<link href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" rel="stylesheet" type="text/css"/>
-<link href="../_static/copybutton.css?v=76b2166b" rel="stylesheet" type="text/css"/>
-<link href="../_static/sphinx-codeautolink.css?v=125d5c1c" rel="stylesheet" type="text/css"/>
-<link href="../_static/jupyter-sphinx.css?v=572af1d6" rel="stylesheet" type="text/css"/>
+<link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/plot_directive.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/copybutton.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-codeautolink.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/jupyter-sphinx.css" rel="stylesheet" type="text/css"/>
 <link href="../_static/thebelab.css" rel="stylesheet" type="text/css"/>
-<link href="../_static/sphinx-design.min.css?v=95c83b7e" rel="stylesheet" type="text/css"/>
-<link href="../_static/custom.css?v=45766ed9" rel="stylesheet" type="text/css"/>
+<link href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/custom.css" rel="stylesheet" type="text/css"/>
 <!-- Pre-loaded scripts that we'll load fully later -->
-<link as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" rel="preload"/>
-<link as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" rel="preload"/>
-<script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/documentation_options.js?v=fb0c83f7"></script>
-<script src="../_static/doctools.js?v=a6d80eb4"></script>
-<script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-<script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-<script src="../_static/copybutton.js?v=30646c52"></script>
+<link as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" rel="preload"/>
+<link as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" rel="preload"/>
+<script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/sphinx_highlight.js"></script>
+<script src="../_static/clipboard.min.js"></script>
+<script src="../_static/copybutton.js"></script>
 <script src="../_static/thebelab-helper.js"></script>
-<script src="../_static/design-tabs.js?v=f930bc37"></script>
+<script src="../_static/design-tabs.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
 <script>DOCUMENTATION_OPTIONS.pagename = 'getting_started/XarrayforXGenTS';</script>
-<link href="../_static/favicon.ico" rel="icon"/>
+<link href="../_static/favicon.ico" rel="shortcut icon"/>
 <link href="../about.html" rel="author" title="About these documents"/>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="../search.html" rel="search" title="Search"/>
+<link href="CreatingInferenceData.html" rel="next" title="Creating InferenceData"/>
+<link href="Introduction.html" rel="prev" title="Installation, XGenTS Quickstart 🤗"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="en" name="docsearch:language"/>
 <meta content="True" name="docbuild:last-update"/>
 </head>
 <body data-bs-root-margin="0px 0px -60%" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-default-mode="light" data-offset="180">
-<div class="skip-link d-print-none" id="pst-skip-link"><a href="#main-content">Skip to main content</a></div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div id="pst-scroll-pixel-helper"></div>
 <button class="btn rounded-pill" id="pst-back-to-top" type="button">
-<i class="fa-solid fa-arrow-up"></i>Back to top</button>
-<input class="sidebar-toggle" id="pst-primary-sidebar-checkbox" type="checkbox"/>
-<label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-<input class="sidebar-toggle" id="pst-secondary-sidebar-checkbox" type="checkbox"/>
-<label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+<i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+<input class="sidebar-toggle" id="__primary" name="__primary" type="checkbox"/>
+<label class="overlay overlay-primary" for="__primary"></label>
+<input class="sidebar-toggle" id="__secondary" name="__secondary" type="checkbox"/>
+<label class="overlay overlay-secondary" for="__secondary"></label>
 <div class="search-button__wrapper">
 <div class="search-button__overlay"></div>
 <div class="search-button__search-container">
@@ -67,26 +74,55 @@
 <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
 </div>
-<div class="pst-async-banner-revealer d-none">
-<aside aria-label="Version warning" class="d-none d-print-none" id="bd-header-version-warning"></aside>
-</div>
-<header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<nav class="bd-header navbar navbar-expand-lg bd-navbar">
 <div class="bd-header__inner bd-page-width">
-<button aria-label="Site navigation" class="pst-navbar-icon sidebar-toggle primary-toggle">
+<label class="sidebar-toggle primary-toggle" for="__primary">
 <span class="fa-solid fa-bars"></span>
-</button>
+</label>
 <div class="col-lg-3 navbar-header-items__start">
 <div class="navbar-item">
 <a class="navbar-brand logo" href="../index.html">
-<img alt="TimeXAI  documentation - Home" class="logo__image only-light" src="../_static/logo.png"/>
-<script>document.write(`<img src="../_static/logo_dark.png" class="logo__image only-dark" alt="TimeXAI  documentation - Home"/>`);</script>
+<img alt="Logo image" class="logo__image only-light" src="../_static/logo.png"/>
+<script>document.write(`<img src="../_static/logo_dark.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
 </a></div>
 </div>
 <div class="col-lg-9 navbar-header-items">
 <div class="me-auto navbar-header-items__center">
-<div class="navbar-item">
-<nav>
+<div class="navbar-item"><nav class="navbar-nav">
+<p aria-label="Site Navigation" aria-level="1" class="sidebar-header-items__title" role="heading">
+    Site Navigation
+  </p>
 <ul class="bd-navbar-elements navbar-nav">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="index.html">
+                        Getting Started
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../archive/index.html">
+                        XGenTS Archive
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../ess_datasets/index.html">
+                        ESS dataset
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../community.html">
+                        Community
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../contributing/index.html">
+                        Contributing
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../about.html">
+                        About us
+                      </a>
+</li>
 </ul>
 </nav></div>
 </div>
@@ -94,7 +130,7 @@
 <div class="navbar-item navbar-persistent--container">
 <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -105,16 +141,16 @@
 <div class="navbar-item">
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
-<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links navbar-nav">
 <li class="nav-item">
-<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i>
+<a class="nav-link" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><span><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i></span>
 <span class="sr-only">GitHub</span></a>
 </li>
 </ul></div>
@@ -123,7 +159,7 @@ document.write(`
 <div class="navbar-persistent--mobile">
 <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -131,19 +167,51 @@ document.write(`
  `);
  </script>
 </div>
-<button aria-label="On this page" class="pst-navbar-icon sidebar-toggle secondary-toggle">
+<label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
 <span class="fa-solid fa-outdent"></span>
-</button>
+</label>
 </div>
-</header>
+</nav>
 <div class="bd-container">
 <div class="bd-container__inner bd-page-width">
-<div class="bd-sidebar-primary bd-sidebar">
+<div class="bd-sidebar-primary bd-sidebar hide-on-wide">
 <div class="sidebar-header-items sidebar-primary__section">
 <div class="sidebar-header-items__center">
-<div class="navbar-item">
-<nav>
+<div class="navbar-item"><nav class="navbar-nav">
+<p aria-label="Site Navigation" aria-level="1" class="sidebar-header-items__title" role="heading">
+    Site Navigation
+  </p>
 <ul class="bd-navbar-elements navbar-nav">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="index.html">
+                        Getting Started
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../archive/index.html">
+                        XGenTS Archive
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../ess_datasets/index.html">
+                        ESS dataset
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../community.html">
+                        Community
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../contributing/index.html">
+                        Contributing
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../about.html">
+                        About us
+                      </a>
+</li>
 </ul>
 </nav></div>
 </div>
@@ -151,46 +219,40 @@ document.write(`
 <div class="navbar-item">
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
-<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links navbar-nav">
 <li class="nav-item">
-<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i>
+<a class="nav-link" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><span><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i></span>
 <span class="sr-only">GitHub</span></a>
 </li>
 </ul></div>
 </div>
 </div>
-<div class="sidebar-primary-items__start sidebar-primary__section">
-<div class="sidebar-primary-item">
-<nav aria-label="Section Navigation" class="bd-docs-nav bd-links">
-<p aria-level="1" class="bd-links__title" role="heading">Section Navigation</p>
-<div class="bd-toc-item navbar-nav"></div>
-</nav></div>
-</div>
 <div class="sidebar-primary-items__end sidebar-primary__section">
 </div>
 <div id="rtd-footer-container"></div>
 </div>
-<main class="bd-main" id="main-content" role="main">
+<main class="bd-main" id="main-content">
 <div class="bd-content">
 <div class="bd-article-container">
-<div class="bd-header-article d-print-none">
+<div class="bd-header-article">
 <div class="header-article-items header-article__inner">
 <div class="header-article-items__start">
 <div class="header-article-item">
-<nav aria-label="Breadcrumb" class="d-print-none">
+<nav aria-label="Breadcrumb">
 <ul class="bd-breadcrumbs">
 <li class="breadcrumb-item breadcrumb-home">
 <a aria-label="Home" class="nav-link" href="../index.html">
 <i class="fa-solid fa-home"></i>
 </a>
 </li>
+<li class="breadcrumb-item"><a class="nav-link" href="index.html">Getting Started 🤗</a></li>
 <li aria-current="page" class="breadcrumb-item active">Introduction...</li>
 </ul>
 </nav>
@@ -199,18 +261,18 @@ document.write(`
 </div>
 </div>
 <div id="searchbox"></div>
-<article class="bd-article">
+<article class="bd-article" role="main">
 <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-xarray-inferencedata-and-netcdf-for-xgents">
-<span id="xarray-for-xgents"></span><h1>Introduction to xarray, InferenceData, and netCDF for XGenTS<a class="headerlink" href="#introduction-to-xarray-inferencedata-and-netcdf-for-xgents" title="Link to this heading">#</a></h1>
+<span id="xarray-for-xgents"></span><h1>Introduction to xarray, InferenceData, and netCDF for XGenTS<a class="headerlink" href="#introduction-to-xarray-inferencedata-and-netcdf-for-xgents" title="Permalink to this heading">#</a></h1>
 <p>While XGenTS supports plotting from familiar data types, such as dictionaries and NumPy arrays, there are a couple of data structures central to XGenTS that are useful to know when using the library.</p>
 <p>They are</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v2024.7.1.dev0)"><code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code></a></p></li>
+<li><p><a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v2023.10.1.dev0)"><code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code></a></p></li>
 <li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">XGenTS.InferenceData</span></code></p></li>
 <li><p><a class="reference internal" href="#netcdf"><span class="std std-ref">netCDF</span></a></p></li>
 </ul>
 <section id="why-more-than-one-data-structure">
-<h2>Why more than one data structure?<a class="headerlink" href="#why-more-than-one-data-structure" title="Link to this heading">#</a></h2>
+<h2>Why more than one data structure?<a class="headerlink" href="#why-more-than-one-data-structure" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Bayesian_inference">Bayesian inference</a> generates numerous datasets that represent different aspects of the model. For example, in a single analysis, a Bayesian practitioner could end up with any of the following data.</p>
 <ul class="simple">
 <li><p>Prior Distribution for N number of variables</p></li>
@@ -224,13 +286,13 @@ document.write(`
 <p>For more detail, see the <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code> structure specification <a class="reference internal" href="../schema/schema.html#schema"><span class="std std-ref">here</span></a>.</p>
 </section>
 <section id="why-not-pandas-dataframes-or-numpy-arrays">
-<h2>Why not Pandas Dataframes or NumPy Arrays?<a class="headerlink" href="#why-not-pandas-dataframes-or-numpy-arrays" title="Link to this heading">#</a></h2>
+<h2>Why not Pandas Dataframes or NumPy Arrays?<a class="headerlink" href="#why-not-pandas-dataframes-or-numpy-arrays" title="Permalink to this heading">#</a></h2>
 <p>Data from <a class="reference external" href="https://en.wikipedia.org/wiki/Probabilistic_programming">probabilistic programming</a> is naturally high dimensional. To add to the complexity XGenTS must handle the data generated from multiple Bayesian modeling libraries, such as PyMC3 and PyStan. This application is handled by the <em>xarray</em> package quite well. The xarray package lets users manage high dimensional data with human readable dimensions and coordinates quite easily.</p>
 <p><img alt="InferenceData Structure" src="../_images/InferenceDataStructure.png"/></p>
 <p>Above is a visual representation of the data structures and their relationships. Although it seems more complex at a glance, the XGenTS devs believe that the usage of <em>xarray</em>, <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code>, and <em>netCDF</em> will simplify the handling, referencing, and serialization of data generated during Bayesian analysis.</p>
 </section>
 <section id="an-introduction-to-each">
-<h2>An introduction to each<a class="headerlink" href="#an-introduction-to-each" title="Link to this heading">#</a></h2>
+<h2>An introduction to each<a class="headerlink" href="#an-introduction-to-each" title="Permalink to this heading">#</a></h2>
 <p>To help get familiar with each, XGenTS includes some toy datasets. You can check the different ways to start an <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code> <a class="reference internal" href="CreatingInferenceData.html#creating-inferencedata"><span class="std std-ref">here</span></a>. For illustration purposes, here we have shown only one example provided by the library. To start an <code class="docutils literal notranslate"><span class="pre">az.InferenceData</span></code>, sample can be loaded from disk.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3381,7 +3443,7 @@ Attributes:
 <p>It should be noted that the observed dataset contains only 8 data variables. Moreover, it doesn’t have a chain and draw dimension or coordinates unlike posterior. This difference in sizes is the motivating reason behind <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code>. Rather than force multiple different sized arrays into one array, or have users manage multiple objects corresponding to different datasets, it is easier to hold references to each <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> in an <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code> object.</p>
 </section>
 <section id="netcdf">
-<span id="id1"></span><h2>NetCDF<a class="headerlink" href="#netcdf" title="Link to this heading">#</a></h2>
+<span id="id1"></span><h2>NetCDF<a class="headerlink" href="#netcdf" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/">NetCDF</a> is a standard for referencing array oriented files. In other words, while <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code>s, and by extension <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code>, are convenient for accessing arrays in Python memory, <em>netCDF</em> provides a convenient mechanism for persistence of model data on disk. In fact, the netCDF dataset was the inspiration for <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code> as netCDF4 supports the concept of groups. <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code> merely wraps <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> with the same functionality.</p>
 <p>Most users will not have to concern themselves with the <em>netCDF</em> standard but for completeness it is good to make its usage transparent. It is also worth noting that the netCDF4 file standard is interoperable with HDF5 which may be familiar from other contexts.</p>
 <p>Earlier in this tutorial <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code> was loaded from a <em>netCDF</em> file</p>
@@ -3408,10 +3470,10 @@ Attributes:
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="additional-reading">
-<h1>Additional Reading<a class="headerlink" href="#additional-reading" title="Link to this heading">#</a></h1>
+<h1>Additional Reading<a class="headerlink" href="#additional-reading" title="Permalink to this heading">#</a></h1>
 <p>Additional documentation and tutorials exist for xarray and netCDF4. Check the following links:</p>
 <section id="inferencedata">
-<h2><code class="docutils literal notranslate"><span class="pre">InferenceData</span></code><a class="headerlink" href="#inferencedata" title="Link to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">InferenceData</span></code><a class="headerlink" href="#inferencedata" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="WorkingWithInferenceData.html#working-with-inferencedata"><span class="std std-ref">Working with InferenceData</span></a>: Tutorial covering the most common operations with <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code> objects</p></li>
 <li><p><a class="reference internal" href="CreatingInferenceData.html#creating-inferencedata"><span class="std std-ref">Creating InferenceData</span></a>: Cookbook with examples of generating InferenceData objects from multiple sources, both external inference libraries like</p></li>
@@ -3420,34 +3482,49 @@ Attributes:
 </ul>
 </section>
 <section id="xarray">
-<h2>xarray<a class="headerlink" href="#xarray" title="Link to this heading">#</a></h2>
+<h2>xarray<a class="headerlink" href="#xarray" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>For getting to know xarray, check <a class="reference external" href="http://xarray.pydata.org/en/stable/why-xarray.html">xarray documentation</a></p></li>
-<li><p>Feel free to watch the Q/A session about xarray at <a class="reference external" href="https://www.youtube.com/watch?v=X0pAhJgySxk&amp;amp;t=949s">xarray lightning talk at SciPy 2015</a></p></li>
+<li><p>Feel free to watch the Q/A session about xarray at <a class="reference external" href="https://www.youtube.com/watch?v=X0pAhJgySxk&amp;t=949s">xarray lightning talk at SciPy 2015</a></p></li>
 </ul>
 </section>
 <section id="id2">
-<h2>NetCDF<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<h2>NetCDF<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Get to know the introduction of netCDF at the official website  of <a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/docs/.">NetCDF  documentation</a></p></li>
 <li><p>Netcdf4-python library is a used to read/write netCDF files in both netCDF4 and netCDF3 format. Learn more about it by visitng its API documentation at <a class="reference external" href="http://unidata.github.io/netcdf4-python/">NetCDF4 API documentation</a></p></li>
-<li><p>xarray provides direct serialization and IO to netCDF format. Learn how to read/write netCDF files directly as xarray objects at <a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/io.html#io-netcdf" title="(in xarray v2024.7.1.dev0)"><span class="xref std std-ref">NetCDF usage in xarray</span></a></p></li>
+<li><p>xarray provides direct serialization and IO to netCDF format. Learn how to read/write netCDF files directly as xarray objects at <a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/io.html#io-netcdf" title="(in xarray v2023.10.1.dev0)"><span class="xref std std-ref">NetCDF usage in xarray</span></a></p></li>
 <li><p>Check how to read/write netCDF4 files with HDF5 and vice versa at <a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/docs/interoperability_hdf5.html">NetCDF interoperability with HDF5</a></p></li>
 </ul>
 </section>
 </section>
 </article>
-<footer class="prev-next-footer d-print-none">
+<footer class="prev-next-footer">
+<!-- Previous / next buttons -->
 <div class="prev-next-area">
+<a class="left-prev" href="Introduction.html" title="previous page">
+<i class="fa-solid fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title">Installation, XGenTS Quickstart 🤗</p>
+</div>
+</a>
+<a class="right-next" href="CreatingInferenceData.html" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title">Creating InferenceData</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
 </div>
 </footer>
 </div>
 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 <div class="sidebar-secondary-item">
-<div class="page-toc tocsection onthispage" id="pst-page-navigation-heading-2">
+<div class="page-toc tocsection onthispage">
 <i class="fa-solid fa-list"></i> On this page
   </div>
-<nav aria-labelledby="pst-page-navigation-heading-2" class="bd-toc-nav page-toc">
+<nav class="bd-toc-nav page-toc">
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction to xarray, InferenceData, and netCDF for XGenTS</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-more-than-one-data-structure">Why more than one data structure?</a></li>
@@ -3468,7 +3545,7 @@ Attributes:
 <div id="searchbox"></div></div>
 <div class="sidebar-secondary-item">
 <div class="tocsection editthispage">
-<a href="https://github.com/TimeXAI-devs/TimeXAI/edit/main/docs/source/getting_started/XarrayforXGenTS.ipynb">
+<a href="https://github.com/XGenTS-devs/XGenTS/edit/main/docs/source/getting_started/XarrayforXGenTS.ipynb">
 <i class="fa-solid fa-pencil"></i>
       
       
@@ -3494,11 +3571,11 @@ Attributes:
 </div>
 </div>
 <!-- Scripts loaded after <body> so the DOM is not blocked -->
-<script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 <script>
   $(document).ready(function () {
-    const content = $('<div class="alert-danger">TimeXAI docs will now be available at <a href="https://python.TimeXAI.org">python.TimeXAI.org</a>!</div>')
+    const content = $('<div class="alert-danger">XGenTS docs will now be available at <a href="https://python.XGenTS.org">python.XGenTS.org</a>!</div>')
     $('#banner').append(content);
   })
 </script>
@@ -3508,15 +3585,14 @@ Attributes:
 <div class="footer-item">
 <p class="copyright">
     
-      © Copyright 2023, TimeXAI devs.
+      © Copyright 2023, XGenTS devs.
       <br>
 </br></p>
 </div>
 </div>
 <div class="footer-items__end">
-<div class="footer-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+<div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
 </p></div>
 </div>
 </div>

@@ -1,9 +1,9 @@
 (issue_reports)=
 # Issue reports
 
-We appreciate being notified of problems with the existing TimeXAI code.
+We appreciate being notified of problems with the existing XGenTS code.
 We prefer that issues be filed on the
-[Github Issue Tracker](https://github.com/TimeXAI-devs/TimeXAI/issues),
+[Github Issue Tracker](https://github.com/XGenTS-devs/XGenTS/issues),
 rather than on social media or by direct email to the developers.
 
 Please verify that your issue is not being currently addressed by other
@@ -11,7 +11,7 @@ issues or pull requests by using the GitHub search tool to look for keywords
 in the project issue tracker.
 
 When writing an issue, make sure to include any supporting information,
-in particular, the version of TimeXAI that you are using and how did you install it.
+in particular, the version of XGenTS that you are using and how did you install it.
 The issue tracker has several templates available to help in writing the issue
 and including useful supporting information.
 

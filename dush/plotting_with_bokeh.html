@@ -1,47 +1,50 @@
 
 <!DOCTYPE html>
 
-<html data-content_root="../" data-theme="light" lang="en">
+<html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Plotting with Bokeh — TimeXAI  documentation</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.19: https://docutils.sourceforge.io/" name="generator"/>
+<title>Plotting with Bokeh — XGenTS  documentation</title>
 <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
 <!-- Loaded before other Sphinx assets -->
-<link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
-<link href="../_static/pygments.css?v=581237fb" rel="stylesheet" type="text/css"/>
-<link href="../_static/plot_directive.css?v=7f9a90b1" rel="stylesheet" type="text/css"/>
-<link href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" rel="stylesheet" type="text/css"/>
-<link href="../_static/copybutton.css?v=76b2166b" rel="stylesheet" type="text/css"/>
-<link href="../_static/sphinx-codeautolink.css?v=125d5c1c" rel="stylesheet" type="text/css"/>
-<link href="../_static/jupyter-sphinx.css?v=572af1d6" rel="stylesheet" type="text/css"/>
+<link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/plot_directive.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/copybutton.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-codeautolink.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/jupyter-sphinx.css" rel="stylesheet" type="text/css"/>
 <link href="../_static/thebelab.css" rel="stylesheet" type="text/css"/>
-<link href="../_static/sphinx-design.min.css?v=95c83b7e" rel="stylesheet" type="text/css"/>
-<link href="../_static/custom.css?v=45766ed9" rel="stylesheet" type="text/css"/>
+<link href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/custom.css" rel="stylesheet" type="text/css"/>
 <!-- Pre-loaded scripts that we'll load fully later -->
-<link as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" rel="preload"/>
-<link as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" rel="preload"/>
-<script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/documentation_options.js?v=fb0c83f7"></script>
-<script src="../_static/doctools.js?v=a6d80eb4"></script>
-<script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-<script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-<script src="../_static/copybutton.js?v=30646c52"></script>
+<link as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" rel="preload"/>
+<link as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" rel="preload"/>
+<script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/sphinx_highlight.js"></script>
+<script src="../_static/clipboard.min.js"></script>
+<script src="../_static/copybutton.js"></script>
 <script src="../_static/thebelab-helper.js"></script>
-<script src="../_static/design-tabs.js?v=f930bc37"></script>
+<script src="../_static/design-tabs.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
 <script>DOCUMENTATION_OPTIONS.pagename = 'dush/plotting_with_bokeh';</script>
-<link href="../_static/favicon.ico" rel="icon"/>
+<link href="../_static/favicon.ico" rel="shortcut icon"/>
 <link href="../about.html" rel="author" title="About these documents"/>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="../search.html" rel="search" title="Search"/>
@@ -50,14 +53,16 @@
 <meta content="True" name="docbuild:last-update"/>
 </head>
 <body data-bs-root-margin="0px 0px -60%" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-default-mode="light" data-offset="180">
-<div class="skip-link d-print-none" id="pst-skip-link"><a href="#main-content">Skip to main content</a></div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div id="pst-scroll-pixel-helper"></div>
 <button class="btn rounded-pill" id="pst-back-to-top" type="button">
-<i class="fa-solid fa-arrow-up"></i>Back to top</button>
-<input class="sidebar-toggle" id="pst-primary-sidebar-checkbox" type="checkbox"/>
-<label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-<input class="sidebar-toggle" id="pst-secondary-sidebar-checkbox" type="checkbox"/>
-<label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+<i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+<input class="sidebar-toggle" id="__primary" name="__primary" type="checkbox"/>
+<label class="overlay overlay-primary" for="__primary"></label>
+<input class="sidebar-toggle" id="__secondary" name="__secondary" type="checkbox"/>
+<label class="overlay overlay-secondary" for="__secondary"></label>
 <div class="search-button__wrapper">
 <div class="search-button__overlay"></div>
 <div class="search-button__search-container">
@@ -67,26 +72,55 @@
 <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
 </div>
-<div class="pst-async-banner-revealer d-none">
-<aside aria-label="Version warning" class="d-none d-print-none" id="bd-header-version-warning"></aside>
-</div>
-<header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<nav class="bd-header navbar navbar-expand-lg bd-navbar">
 <div class="bd-header__inner bd-page-width">
-<button aria-label="Site navigation" class="pst-navbar-icon sidebar-toggle primary-toggle">
+<label class="sidebar-toggle primary-toggle" for="__primary">
 <span class="fa-solid fa-bars"></span>
-</button>
+</label>
 <div class="col-lg-3 navbar-header-items__start">
 <div class="navbar-item">
 <a class="navbar-brand logo" href="../index.html">
-<img alt="TimeXAI  documentation - Home" class="logo__image only-light" src="../_static/logo.png"/>
-<script>document.write(`<img src="../_static/logo_dark.png" class="logo__image only-dark" alt="TimeXAI  documentation - Home"/>`);</script>
+<img alt="Logo image" class="logo__image only-light" src="../_static/logo.png"/>
+<script>document.write(`<img src="../_static/logo_dark.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
 </a></div>
 </div>
 <div class="col-lg-9 navbar-header-items">
 <div class="me-auto navbar-header-items__center">
-<div class="navbar-item">
-<nav>
+<div class="navbar-item"><nav class="navbar-nav">
+<p aria-label="Site Navigation" aria-level="1" class="sidebar-header-items__title" role="heading">
+    Site Navigation
+  </p>
 <ul class="bd-navbar-elements navbar-nav">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../getting_started/index.html">
+                        Getting Started
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../archive/index.html">
+                        XGenTS Archive
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../ess_datasets/index.html">
+                        ESS dataset
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../community.html">
+                        Community
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../contributing/index.html">
+                        Contributing
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../about.html">
+                        About us
+                      </a>
+</li>
 </ul>
 </nav></div>
 </div>
@@ -94,7 +128,7 @@
 <div class="navbar-item navbar-persistent--container">
 <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -105,16 +139,16 @@
 <div class="navbar-item">
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
-<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links navbar-nav">
 <li class="nav-item">
-<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i>
+<a class="nav-link" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><span><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i></span>
 <span class="sr-only">GitHub</span></a>
 </li>
 </ul></div>
@@ -123,7 +157,7 @@ document.write(`
 <div class="navbar-persistent--mobile">
 <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -131,19 +165,51 @@ document.write(`
  `);
  </script>
 </div>
-<button aria-label="On this page" class="pst-navbar-icon sidebar-toggle secondary-toggle">
+<label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
 <span class="fa-solid fa-outdent"></span>
-</button>
+</label>
 </div>
-</header>
+</nav>
 <div class="bd-container">
 <div class="bd-container__inner bd-page-width">
-<div class="bd-sidebar-primary bd-sidebar">
+<div class="bd-sidebar-primary bd-sidebar hide-on-wide">
 <div class="sidebar-header-items sidebar-primary__section">
 <div class="sidebar-header-items__center">
-<div class="navbar-item">
-<nav>
+<div class="navbar-item"><nav class="navbar-nav">
+<p aria-label="Site Navigation" aria-level="1" class="sidebar-header-items__title" role="heading">
+    Site Navigation
+  </p>
 <ul class="bd-navbar-elements navbar-nav">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../getting_started/index.html">
+                        Getting Started
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../archive/index.html">
+                        XGenTS Archive
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../ess_datasets/index.html">
+                        ESS dataset
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../community.html">
+                        Community
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../contributing/index.html">
+                        Contributing
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../about.html">
+                        About us
+                      </a>
+</li>
 </ul>
 </nav></div>
 </div>
@@ -151,40 +217,33 @@ document.write(`
 <div class="navbar-item">
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
-<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links navbar-nav">
 <li class="nav-item">
-<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i>
+<a class="nav-link" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><span><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i></span>
 <span class="sr-only">GitHub</span></a>
 </li>
 </ul></div>
 </div>
 </div>
-<div class="sidebar-primary-items__start sidebar-primary__section">
-<div class="sidebar-primary-item">
-<nav aria-label="Section Navigation" class="bd-docs-nav bd-links">
-<p aria-level="1" class="bd-links__title" role="heading">Section Navigation</p>
-<div class="bd-toc-item navbar-nav"></div>
-</nav></div>
-</div>
 <div class="sidebar-primary-items__end sidebar-primary__section">
 </div>
 <div id="rtd-footer-container"></div>
 </div>
-<main class="bd-main" id="main-content" role="main">
+<main class="bd-main" id="main-content">
 <div class="bd-content">
 <div class="bd-article-container">
-<div class="bd-header-article d-print-none">
+<div class="bd-header-article">
 <div class="header-article-items header-article__inner">
 <div class="header-article-items__start">
 <div class="header-article-item">
-<nav aria-label="Breadcrumb" class="d-print-none">
+<nav aria-label="Breadcrumb">
 <ul class="bd-breadcrumbs">
 <li class="breadcrumb-item breadcrumb-home">
 <a aria-label="Home" class="nav-link" href="../index.html">
@@ -199,10 +258,10 @@ document.write(`
 </div>
 </div>
 <div id="searchbox"></div>
-<article class="bd-article">
+<article class="bd-article" role="main">
 <section class="tex2jax_ignore mathjax_ignore" id="plotting-with-bokeh">
-<span id="id1"></span><h1>Plotting with Bokeh<a class="headerlink" href="#plotting-with-bokeh" title="Link to this heading">#</a></h1>
-<p>XGenTS has the option to use <span class="xref std std-doc">Bokeh</span> as backend which offers interactive plots. Although most of the functions in the <span class="xref std std-ref">plot</span> module work seamlessly with any backend, some advanced plots may require the use of backend specific features. In this guide, advanced plotting with Bokeh will be covered.</p>
+<span id="id1"></span><h1>Plotting with Bokeh<a class="headerlink" href="#plotting-with-bokeh" title="Permalink to this heading">#</a></h1>
+<p>XGenTS has the option to use <a class="reference external" href="https://docs.bokeh.org/en/latest/index.html" title="(in Bokeh v3.3.0)"><span class="xref std std-doc">Bokeh</span></a> as backend which offers interactive plots. Although most of the functions in the <span class="xref std std-ref">plot</span> module work seamlessly with any backend, some advanced plots may require the use of backend specific features. In this guide, advanced plotting with Bokeh will be covered.</p>
 <p>This page can be downloaded as a <a class="reference download internal" download="" href="../_downloads/92976026cc0d264a0f1d9d5bc638bbbc/plotting_with_bokeh.ipynb"><code class="xref download myst-nb docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">notebook</span></code></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -231,13 +290,14 @@ document.write(`
 </div>
 </div>
 </div>
-<p>:::{note}
-To display the plots as output in a Jupyter notebook, it’s required to call the function  <code class="xref py py-func docutils literal notranslate"><span class="pre">XGenTS.output_notebook()</span></code> beforehand.
-:::</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To display the plots as output in a Jupyter notebook, it’s required to call the function  <code class="xref py py-func docutils literal notranslate"><span class="pre">XGenTS.output_notebook()</span></code> beforehand.</p>
+</div>
 <section id="customizing-plots">
-<h2>Customizing plots<a class="headerlink" href="#customizing-plots" title="Link to this heading">#</a></h2>
+<h2>Customizing plots<a class="headerlink" href="#customizing-plots" title="Permalink to this heading">#</a></h2>
 <section id="using-backend-kwargs">
-<span id="bokeh-backend-kwargs"></span><h3>Using <code class="docutils literal notranslate"><span class="pre">backend_kwargs</span></code><a class="headerlink" href="#using-backend-kwargs" title="Link to this heading">#</a></h3>
+<span id="bokeh-backend-kwargs"></span><h3>Using <code class="docutils literal notranslate"><span class="pre">backend_kwargs</span></code><a class="headerlink" href="#using-backend-kwargs" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">backend_kwargs</span></code> argument can be very useful for some specific configuration. That is parameters available in <code class="xref py py-class docutils literal notranslate"><span class="pre">bokeh:bokeh.plotting.figure.Figure</span></code>. As the options available depends on the backend, this parameter is not as flexible as creating custom axes.</p>
 <p>As an example, the following code changes the color background and the plot width.</p>
 <div class="cell docutils container">
@@ -261,38 +321,39 @@ To display the plots as output in a Jupyter notebook, it’s required to call th
 </div>
 </section>
 <section id="the-parameter-show">
-<span id="bokeh-show"></span><h3>The parameter <code class="docutils literal notranslate"><span class="pre">show</span></code><a class="headerlink" href="#the-parameter-show" title="Link to this heading">#</a></h3>
+<span id="bokeh-show"></span><h3>The parameter <code class="docutils literal notranslate"><span class="pre">show</span></code><a class="headerlink" href="#the-parameter-show" title="Permalink to this heading">#</a></h3>
 <p>The parameter <code class="docutils literal notranslate"><span class="pre">show</span></code> is used to control whether the plot is displayed or not. This behavior can be useful when a plot will be displayed in a grid as the example in the following section.</p>
 </section>
 <section id="defining-custom-axes">
-<span id="bokeh-ax"></span><h3>Defining custom axes<a class="headerlink" href="#defining-custom-axes" title="Link to this heading">#</a></h3>
+<span id="bokeh-ax"></span><h3>Defining custom axes<a class="headerlink" href="#defining-custom-axes" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">ax</span></code> argument of any <code class="docutils literal notranslate"><span class="pre">plot</span></code> function allows to use created axes manually. In the example, this parameter allows to arrange 2 different plots in a grid, set limit to the x axis and share the axes’ ranges between the two plots.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.io</span> <span class="kn">import</span> <span class="n">show</span>
-<span class="kn">from</span> <span class="nn">bokeh.layouts</span> <span class="kn">import</span> <span class="n">row</span>
-<span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">figure</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/io.html#module-bokeh.io" title="bokeh.io"><span class="nn">bokeh.io</span></a> <span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/io.html#bokeh.io.show" title="bokeh.io.show"><span class="n">show</span></a>
+<span class="kn">from</span> <a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/layouts.html#module-bokeh.layouts" title="bokeh.layouts"><span class="nn">bokeh.layouts</span></a> <span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/layouts.html#bokeh.layouts.row" title="bokeh.layouts.row"><span class="n">row</span></a>
+<span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">figure</span></a>
 
 <span class="c1"># load data</span>
 <span class="n">observed_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">observed_data</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
 <span class="c1"># create axes</span>
-<span class="n">f1</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">x_range</span><span class="o">=</span><span class="p">(</span><span class="n">observed_data</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">observed_data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">f2</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">x_range</span><span class="o">=</span><span class="n">f1</span><span class="o">.</span><span class="n">x_range</span><span class="p">,</span> <span class="n">y_range</span><span class="o">=</span><span class="n">f1</span><span class="o">.</span><span class="n">y_range</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">f1</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">figure</span></a><span class="p">(</span><span class="n">x_range</span><span class="o">=</span><span class="p">(</span><span class="n">observed_data</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">observed_data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+<a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">f2</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">figure</span></a><span class="p">(</span><span class="n">x_range</span><span class="o">=</span><span class="n">f1</span><span class="o">.</span><span class="n">x_range</span><span class="p">,</span> <span class="n">y_range</span><span class="o">=</span><span class="n">f1</span><span class="o">.</span><span class="n">y_range</span><span class="p">)</span>
 <span class="c1"># plot</span>
-<span class="n">az</span><span class="o">.</span><span class="n">plot_ppc</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s2">"prior"</span><span class="p">,</span> <span class="n">num_pp_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">f1</span><span class="p">)</span>
-<span class="n">az</span><span class="o">.</span><span class="n">plot_ppc</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s2">"posterior"</span><span class="p">,</span> <span class="n">num_pp_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">f2</span><span class="p">)</span>
+<span class="n">az</span><span class="o">.</span><span class="n">plot_ppc</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s2">"prior"</span><span class="p">,</span> <span class="n">num_pp_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">f1</span></a><span class="p">)</span>
+<span class="n">az</span><span class="o">.</span><span class="n">plot_ppc</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s2">"posterior"</span><span class="p">,</span> <span class="n">num_pp_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">f2</span></a><span class="p">)</span>
 
-<span class="n">az</span><span class="o">.</span><span class="n">show_layout</span><span class="p">([[</span><span class="n">f1</span><span class="p">],</span> <span class="p">[</span><span class="n">f2</span><span class="p">]])</span>
+<span class="n">az</span><span class="o">.</span><span class="n">show_layout</span><span class="p">([[</span><a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">f1</span></a><span class="p">],</span> <span class="p">[</span><a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">f2</span></a><span class="p">]])</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>:::{note}
-<code class="xref py py-func docutils literal notranslate"><span class="pre">XGenTS.show_layout()</span></code> creates a bokeh layout and calls shows if <code class="docutils literal notranslate"><span class="pre">show=True</span></code>, which is the default value.
-:::</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="xref py py-func docutils literal notranslate"><span class="pre">XGenTS.show_layout()</span></code> creates a bokeh layout and calls shows if <code class="docutils literal notranslate"><span class="pre">show=True</span></code>, which is the default value.</p>
+</div>
 </section>
 <section id="extending-xgents-bokeh-plots">
-<h3>Extending XGenTS-Bokeh plots<a class="headerlink" href="#extending-xgents-bokeh-plots" title="Link to this heading">#</a></h3>
+<h3>Extending XGenTS-Bokeh plots<a class="headerlink" href="#extending-xgents-bokeh-plots" title="Permalink to this heading">#</a></h3>
 <p>XGenTS plot returns a <code class="xref py py-class docutils literal notranslate"><span class="pre">Figure</span></code> object, therefore different Bokeh plots can be added to a plot created using XGenTS:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -302,11 +363,11 @@ To display the plots as output in a Jupyter notebook, it’s required to call th
 <span class="n">Y</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">observed_data</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">values</span>
 <span class="n">y_pp</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">posterior_predictive</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">values</span>
 <span class="c1"># plot</span>
-<span class="n">f1</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">toolbar_location</span><span class="o">=</span><span class="s2">"below"</span><span class="p">)</span>
-<span class="n">az</span><span class="o">.</span><span class="n">plot_hdi</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_pp</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"#b5a7b6"</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">f1</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">f1</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">figure</span></a><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">toolbar_location</span><span class="o">=</span><span class="s2">"below"</span><span class="p">)</span>
+<span class="n">az</span><span class="o">.</span><span class="n">plot_hdi</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_pp</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"#b5a7b6"</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">f1</span></a><span class="p">)</span>
 <span class="n">f1</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">"circle"</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s2">"#0d7591"</span><span class="p">)</span>
 
-<span class="n">show</span><span class="p">(</span><span class="n">f1</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/io.html#bokeh.io.show" title="bokeh.io.show"><span class="n">show</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">f1</span></a><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -317,14 +378,14 @@ To display the plots as output in a Jupyter notebook, it’s required to call th
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load data</span>
 <span class="n">observed_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">observed_data</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">values</span>
 <span class="c1"># create axes</span>
-<span class="n">f1</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">toolbar_location</span><span class="o">=</span><span class="s2">"below"</span><span class="p">)</span>
-<span class="n">f2</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">toolbar_location</span><span class="o">=</span><span class="s2">"below"</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">f1</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">figure</span></a><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">toolbar_location</span><span class="o">=</span><span class="s2">"below"</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">f2</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">figure</span></a><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">toolbar_location</span><span class="o">=</span><span class="s2">"below"</span><span class="p">)</span>
 <span class="c1"># plot</span>
-<span class="n">az</span><span class="o">.</span><span class="n">plot_hdi</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_pp</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"#b5a7b6"</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">f1</span><span class="p">)</span>
+<span class="n">az</span><span class="o">.</span><span class="n">plot_hdi</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_pp</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"#b5a7b6"</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">f1</span></a><span class="p">)</span>
 <span class="n">f1</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_pp</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">color</span><span class="o">=</span><span class="s2">"black"</span><span class="p">)</span>
 <span class="n">f2</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">"circle"</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s2">"#0d7591"</span><span class="p">)</span>
 
-<span class="n">show</span><span class="p">(</span><span class="n">row</span><span class="p">(</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">))</span>
+<a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/io.html#bokeh.io.show" title="bokeh.io.show"><span class="n">show</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/layouts.html#bokeh.layouts.row" title="bokeh.layouts.row"><span class="n">row</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">f1</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html#bokeh.plotting.figure" title="bokeh.plotting._figure.figure"><span class="n">f2</span></a><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -332,32 +393,35 @@ To display the plots as output in a Jupyter notebook, it’s required to call th
 </section>
 </section>
 <section id="bokeh-with-jupyter">
-<h2>Bokeh with Jupyter<a class="headerlink" href="#bokeh-with-jupyter" title="Link to this heading">#</a></h2>
-<p>:::{note}
-In Juptyer notebooks, XGenTS offers <code class="xref py py-func docutils literal notranslate"><span class="pre">XGenTS.output_notebook()</span></code> which is a wrapper over <code class="xref py py-func docutils literal notranslate"><span class="pre">bokeh.io.output.output_notebook()</span></code>.</p>
-<p>To use Bokeh with JupyterLab, JupyterLab and widgets, please refer to this <span class="xref std std-ref">user guide</span>.
-:::</p>
+<h2>Bokeh with Jupyter<a class="headerlink" href="#bokeh-with-jupyter" title="Permalink to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Juptyer notebooks, XGenTS offers <code class="xref py py-func docutils literal notranslate"><span class="pre">XGenTS.output_notebook()</span></code> which is a wrapper over <a class="reference external" href="https://docs.bokeh.org/en/latest/docs/reference/io.html#bokeh.io.output.output_notebook" title="(in Bokeh v3.3.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">bokeh.io.output.output_notebook()</span></code></a>.</p>
+<p>To use Bokeh with JupyterLab, JupyterLab and widgets, please refer to this <span class="xref std std-ref">user guide</span>.</p>
+</div>
 </section>
 <section id="server-mode">
-<h2>Server mode<a class="headerlink" href="#server-mode" title="Link to this heading">#</a></h2>
-<p>:::{note}
-In the examples above, bokeh is being used in <code class="docutils literal notranslate"><span class="pre">Standalone</span></code> mode.
-Bokeh can be also used to create interactive web applications. For more details see <span class="xref std std-ref">Running a Bokeh server</span>.
-:::</p>
+<h2>Server mode<a class="headerlink" href="#server-mode" title="Permalink to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the examples above, bokeh is being used in <code class="docutils literal notranslate"><span class="pre">Standalone</span></code> mode.
+Bokeh can be also used to create interactive web applications. For more details see <span class="xref std std-ref">Running a Bokeh server</span>.</p>
+</div>
 </section>
 </section>
 </article>
-<footer class="prev-next-footer d-print-none">
+<footer class="prev-next-footer">
+<!-- Previous / next buttons -->
 <div class="prev-next-area">
 </div>
 </footer>
 </div>
 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 <div class="sidebar-secondary-item">
-<div class="page-toc tocsection onthispage" id="pst-page-navigation-heading-2">
+<div class="page-toc tocsection onthispage">
 <i class="fa-solid fa-list"></i> On this page
   </div>
-<nav aria-labelledby="pst-page-navigation-heading-2" class="bd-toc-nav page-toc">
+<nav class="bd-toc-nav page-toc">
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customizing-plots">Customizing plots</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-backend-kwargs">Using <code class="docutils literal notranslate"><span class="pre">backend_kwargs</span></code></a></li>
@@ -374,7 +438,7 @@ Bokeh can be also used to create interactive web applications. For more details 
 <div id="searchbox"></div></div>
 <div class="sidebar-secondary-item">
 <div class="tocsection editthispage">
-<a href="https://github.com/TimeXAI-devs/TimeXAI/edit/main/docs/source/dush/plotting_with_bokeh.md">
+<a href="https://github.com/XGenTS-devs/XGenTS/edit/main/docs/source/dush/plotting_with_bokeh.md">
 <i class="fa-solid fa-pencil"></i>
       
       
@@ -400,11 +464,11 @@ Bokeh can be also used to create interactive web applications. For more details 
 </div>
 </div>
 <!-- Scripts loaded after <body> so the DOM is not blocked -->
-<script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 <script>
   $(document).ready(function () {
-    const content = $('<div class="alert-danger">TimeXAI docs will now be available at <a href="https://python.TimeXAI.org">python.TimeXAI.org</a>!</div>')
+    const content = $('<div class="alert-danger">XGenTS docs will now be available at <a href="https://python.XGenTS.org">python.XGenTS.org</a>!</div>')
     $('#banner').append(content);
   })
 </script>
@@ -414,15 +478,14 @@ Bokeh can be also used to create interactive web applications. For more details 
 <div class="footer-item">
 <p class="copyright">
     
-      © Copyright 2023, TimeXAI devs.
+      © Copyright 2023, XGenTS devs.
       <br/>
 </p>
 </div>
 </div>
 <div class="footer-items__end">
-<div class="footer-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+<div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
 </p></div>
 </div>
 </div>

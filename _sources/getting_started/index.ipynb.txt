@@ -15,7 +15,7 @@
    "source": [
     "# Getting Started 🤗\n",
     "\n",
-    "#### Install TimeXAI using ```pip```\n",
+    "#### Install XGen Time Series using ```pip```\n",
     "\n",
     "```python\n",
     "pip install xgents\n",

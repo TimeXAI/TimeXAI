@@ -1,65 +1,72 @@
 
 <!DOCTYPE html>
 
-<html data-content_root="../" data-theme="light" lang="en">
+<html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Working with InferenceData — TimeXAI  documentation</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.19: https://docutils.sourceforge.io/" name="generator"/>
+<title>Working with InferenceData — XGenTS  documentation</title>
 <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
 <!-- Loaded before other Sphinx assets -->
-<link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
-<link href="../_static/pygments.css?v=581237fb" rel="stylesheet" type="text/css"/>
-<link href="../_static/plot_directive.css?v=7f9a90b1" rel="stylesheet" type="text/css"/>
-<link href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" rel="stylesheet" type="text/css"/>
-<link href="../_static/copybutton.css?v=76b2166b" rel="stylesheet" type="text/css"/>
-<link href="../_static/sphinx-codeautolink.css?v=125d5c1c" rel="stylesheet" type="text/css"/>
-<link href="../_static/jupyter-sphinx.css?v=572af1d6" rel="stylesheet" type="text/css"/>
+<link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/plot_directive.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/copybutton.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-codeautolink.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/jupyter-sphinx.css" rel="stylesheet" type="text/css"/>
 <link href="../_static/thebelab.css" rel="stylesheet" type="text/css"/>
-<link href="../_static/sphinx-design.min.css?v=95c83b7e" rel="stylesheet" type="text/css"/>
-<link href="../_static/custom.css?v=45766ed9" rel="stylesheet" type="text/css"/>
+<link href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/custom.css" rel="stylesheet" type="text/css"/>
 <!-- Pre-loaded scripts that we'll load fully later -->
-<link as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" rel="preload"/>
-<link as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" rel="preload"/>
-<script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/documentation_options.js?v=fb0c83f7"></script>
-<script src="../_static/doctools.js?v=a6d80eb4"></script>
-<script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-<script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-<script src="../_static/copybutton.js?v=30646c52"></script>
+<link as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" rel="preload"/>
+<link as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" rel="preload"/>
+<script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/sphinx_highlight.js"></script>
+<script src="../_static/clipboard.min.js"></script>
+<script src="../_static/copybutton.js"></script>
 <script src="../_static/thebelab-helper.js"></script>
-<script src="../_static/design-tabs.js?v=f930bc37"></script>
+<script src="../_static/design-tabs.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
 <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
 <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script>DOCUMENTATION_OPTIONS.pagename = 'ess_datasets/WorkingWithInferenceData';</script>
-<link href="../_static/favicon.ico" rel="icon"/>
+<link href="../_static/favicon.ico" rel="shortcut icon"/>
 <link href="../about.html" rel="author" title="About these documents"/>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="../search.html" rel="search" title="Search"/>
+<link href="../community.html" rel="next" title="Community"/>
+<link href="ConversionGuideEmcee.html" rel="prev" title="Converting emcee objects to InferenceData"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="en" name="docsearch:language"/>
 <meta content="True" name="docbuild:last-update"/>
 </head>
 <body data-bs-root-margin="0px 0px -60%" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-default-mode="light" data-offset="180">
-<div class="skip-link d-print-none" id="pst-skip-link"><a href="#main-content">Skip to main content</a></div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div id="pst-scroll-pixel-helper"></div>
 <button class="btn rounded-pill" id="pst-back-to-top" type="button">
-<i class="fa-solid fa-arrow-up"></i>Back to top</button>
-<input class="sidebar-toggle" id="pst-primary-sidebar-checkbox" type="checkbox"/>
-<label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-<input class="sidebar-toggle" id="pst-secondary-sidebar-checkbox" type="checkbox"/>
-<label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+<i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+<input class="sidebar-toggle" id="__primary" name="__primary" type="checkbox"/>
+<label class="overlay overlay-primary" for="__primary"></label>
+<input class="sidebar-toggle" id="__secondary" name="__secondary" type="checkbox"/>
+<label class="overlay overlay-secondary" for="__secondary"></label>
 <div class="search-button__wrapper">
 <div class="search-button__overlay"></div>
 <div class="search-button__search-container">
@@ -69,26 +76,55 @@
 <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
 </div>
-<div class="pst-async-banner-revealer d-none">
-<aside aria-label="Version warning" class="d-none d-print-none" id="bd-header-version-warning"></aside>
-</div>
-<header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<nav class="bd-header navbar navbar-expand-lg bd-navbar">
 <div class="bd-header__inner bd-page-width">
-<button aria-label="Site navigation" class="pst-navbar-icon sidebar-toggle primary-toggle">
+<label class="sidebar-toggle primary-toggle" for="__primary">
 <span class="fa-solid fa-bars"></span>
-</button>
+</label>
 <div class="col-lg-3 navbar-header-items__start">
 <div class="navbar-item">
 <a class="navbar-brand logo" href="../index.html">
-<img alt="TimeXAI  documentation - Home" class="logo__image only-light" src="../_static/logo.png"/>
-<script>document.write(`<img src="../_static/logo_dark.png" class="logo__image only-dark" alt="TimeXAI  documentation - Home"/>`);</script>
+<img alt="Logo image" class="logo__image only-light" src="../_static/logo.png"/>
+<script>document.write(`<img src="../_static/logo_dark.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
 </a></div>
 </div>
 <div class="col-lg-9 navbar-header-items">
 <div class="me-auto navbar-header-items__center">
-<div class="navbar-item">
-<nav>
+<div class="navbar-item"><nav class="navbar-nav">
+<p aria-label="Site Navigation" aria-level="1" class="sidebar-header-items__title" role="heading">
+    Site Navigation
+  </p>
 <ul class="bd-navbar-elements navbar-nav">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../getting_started/index.html">
+                        Getting Started
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../archive/index.html">
+                        XGenTS Archive
+                      </a>
+</li>
+<li class="nav-item current active">
+<a class="nav-link nav-internal" href="index.html">
+                        ESS dataset
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../community.html">
+                        Community
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../contributing/index.html">
+                        Contributing
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../about.html">
+                        About us
+                      </a>
+</li>
 </ul>
 </nav></div>
 </div>
@@ -96,7 +132,7 @@
 <div class="navbar-item navbar-persistent--container">
 <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -107,16 +143,16 @@
 <div class="navbar-item">
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
-<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links navbar-nav">
 <li class="nav-item">
-<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i>
+<a class="nav-link" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><span><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i></span>
 <span class="sr-only">GitHub</span></a>
 </li>
 </ul></div>
@@ -125,7 +161,7 @@ document.write(`
 <div class="navbar-persistent--mobile">
 <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -133,19 +169,51 @@ document.write(`
  `);
  </script>
 </div>
-<button aria-label="On this page" class="pst-navbar-icon sidebar-toggle secondary-toggle">
+<label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
 <span class="fa-solid fa-outdent"></span>
-</button>
+</label>
 </div>
-</header>
+</nav>
 <div class="bd-container">
 <div class="bd-container__inner bd-page-width">
 <div class="bd-sidebar-primary bd-sidebar">
 <div class="sidebar-header-items sidebar-primary__section">
 <div class="sidebar-header-items__center">
-<div class="navbar-item">
-<nav>
+<div class="navbar-item"><nav class="navbar-nav">
+<p aria-label="Site Navigation" aria-level="1" class="sidebar-header-items__title" role="heading">
+    Site Navigation
+  </p>
 <ul class="bd-navbar-elements navbar-nav">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../getting_started/index.html">
+                        Getting Started
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../archive/index.html">
+                        XGenTS Archive
+                      </a>
+</li>
+<li class="nav-item current active">
+<a class="nav-link nav-internal" href="index.html">
+                        ESS dataset
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../community.html">
+                        Community
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../contributing/index.html">
+                        Contributing
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../about.html">
+                        About us
+                      </a>
+</li>
 </ul>
 </nav></div>
 </div>
@@ -153,46 +221,56 @@ document.write(`
 <div class="navbar-item">
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
-<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links navbar-nav">
 <li class="nav-item">
-<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i>
+<a class="nav-link" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><span><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i></span>
 <span class="sr-only">GitHub</span></a>
 </li>
 </ul></div>
 </div>
 </div>
 <div class="sidebar-primary-items__start sidebar-primary__section">
-<div class="sidebar-primary-item">
-<nav aria-label="Section Navigation" class="bd-docs-nav bd-links">
+<div class="sidebar-primary-item"><nav aria-label="Section Navigation" class="bd-docs-nav bd-links">
 <p aria-level="1" class="bd-links__title" role="heading">Section Navigation</p>
-<div class="bd-toc-item navbar-nav"></div>
+<div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">How to use?</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Installation, XGenTS Quickstart 🤗</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XarrayforXGenTS.html">Introduction to xarray, InferenceData, and netCDF for XGenTS</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="CreatingInferenceData.html">Creating InferenceData</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ConversionGuideEmcee.html">Converting emcee objects to InferenceData</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Working with InferenceData</a></li>
+</ul>
+</div>
 </nav></div>
 </div>
 <div class="sidebar-primary-items__end sidebar-primary__section">
 </div>
 <div id="rtd-footer-container"></div>
 </div>
-<main class="bd-main" id="main-content" role="main">
+<main class="bd-main" id="main-content">
 <div class="bd-content">
 <div class="bd-article-container">
-<div class="bd-header-article d-print-none">
+<div class="bd-header-article">
 <div class="header-article-items header-article__inner">
 <div class="header-article-items__start">
 <div class="header-article-item">
-<nav aria-label="Breadcrumb" class="d-print-none">
+<nav aria-label="Breadcrumb">
 <ul class="bd-breadcrumbs">
 <li class="breadcrumb-item breadcrumb-home">
 <a aria-label="Home" class="nav-link" href="../index.html">
 <i class="fa-solid fa-home"></i>
 </a>
 </li>
+<li class="breadcrumb-item"><a class="nav-link" href="index.html">ESS Dataset: A Novel Curated Dataset for Fine-grained Analysis XGen-ESS</a></li>
 <li aria-current="page" class="breadcrumb-item active">Working...</li>
 </ul>
 </nav>
@@ -201,13 +279,13 @@ document.write(`
 </div>
 </div>
 <div id="searchbox"></div>
-<article class="bd-article">
+<article class="bd-article" role="main">
 <section class="tex2jax_ignore mathjax_ignore" id="working-with-inferencedata">
-<span id="id1"></span><h1>Working with InferenceData<a class="headerlink" href="#working-with-inferencedata" title="Link to this heading">#</a></h1>
+<span id="id1"></span><h1>Working with InferenceData<a class="headerlink" href="#working-with-inferencedata" title="Permalink to this heading">#</a></h1>
 <p>Here we present a collection of common manipulations you can use while working with <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">timexai</span> <span class="k">as</span> <span class="nn">xg</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xgen</span> <span class="k">as</span> <span class="nn">xg</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://docs.xarray.dev/en/stable/index.html#module-xarray" title="xarray"><span class="nn">xarray</span></a> <span class="k">as</span> <span class="nn">xr</span>
 
@@ -216,11 +294,11 @@ document.write(`
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">display_expand_data=False</span></code> makes the default view for <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v2024.7.1.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a> fold the data values to a single line. To explore the values, click on the <span class="fas fa-database"></span> icon on the left of the view, right under the <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> text. It has no effect on <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> objects that already default to folded views.</p>
+<p><code class="docutils literal notranslate"><span class="pre">display_expand_data=False</span></code> makes the default view for <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v2023.10.1.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a> fold the data values to a single line. To explore the values, click on the <span class="fas fa-database"></span> icon on the left of the view, right under the <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> text. It has no effect on <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> objects that already default to folded views.</p>
 <p><code class="docutils literal notranslate"><span class="pre">display_expand_attrs=False</span></code> folds the attributes in both <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> and <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> objects to keep the views shorter. In this page we print DataArrays and Datasets several times and they always have the same attributes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idata</span> <span class="o">=</span> <span class="n">az</span><span class="o">.</span><span class="n">load_TimeXAI_data</span><span class="p">(</span><span class="s2">"centered_eight"</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idata</span> <span class="o">=</span> <span class="n">az</span><span class="o">.</span><span class="n">load_XGenTS_data</span><span class="p">(</span><span class="s2">"centered_eight"</span><span class="p">)</span>
 <span class="n">idata</span>
 </pre></div>
 </div>
@@ -229,7 +307,7 @@ document.write(`
 <div class="output text_html">
 <div>
 <div class="xr-header">
-<div class="xr-obj-type">TimeXAI.InferenceData</div>
+<div class="xr-obj-type">XGenTS.InferenceData</div>
 </div>
 <ul class="xr-sections group-sections">
 <li class="xr-section-item">
@@ -2562,7 +2640,7 @@ dl.xr-attrs {
 .xr-wrap{width:700px!important;} </style></div></div>
 </div>
 <section id="get-the-dataset-corresponding-to-a-single-group">
-<h2>Get the dataset corresponding to a single group<a class="headerlink" href="#get-the-dataset-corresponding-to-a-single-group" title="Link to this heading">#</a></h2>
+<h2>Get the dataset corresponding to a single group<a class="headerlink" href="#get-the-dataset-corresponding-to-a-single-group" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">post</span> <span class="o">=</span> <span class="n">idata</span><span class="o">.</span><span class="n">posterior</span>
@@ -2963,13 +3041,14 @@ Attributes: (3)</pre><div class="xr-wrap" style="display:none"><div class="xr-he
        [ 5.137247,  4.264381,  2.141432, ...,  2.811842, 12.179657,  4.452967],
        [ 0.50007 ,  0.50007 ,  0.902267, ...,  8.345631,  7.71079 ,  5.406798]])</pre></div></li></ul></div></li><li class="xr-section-item"><input class="xr-section-summary-in" id="section-5503fa8d-60a4-4475-8241-4727a8a7b314" type="checkbox"/><label class="xr-section-summary" for="section-5503fa8d-60a4-4475-8241-4727a8a7b314">Attributes: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2019-06-21T17:36:34.398087</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.7</dd></dl></div></li></ul></div></div></div></div>
 </div>
-<p>:::{tip}
-You’ll have noticed we stored the posterior group in a new variable: <code class="docutils literal notranslate"><span class="pre">post</span></code>. As <code class="docutils literal notranslate"><span class="pre">.copy()</span></code> was not called, now using <code class="docutils literal notranslate"><span class="pre">idata.posterior</span></code> or <code class="docutils literal notranslate"><span class="pre">post</span></code> is equivalent.</p>
-<p>Use this to keep your code short yet easy to read. Store the groups you’ll need very often as separate variables to use explicitly, but don’t delete the InferenceData parent. You’ll need it for many TimeXAI functions to work properly. For example: <code class="xref py py-func docutils literal notranslate"><span class="pre">plot_pair()</span></code> needs data from <code class="docutils literal notranslate"><span class="pre">sample_stats</span></code> group to show divergences, <code class="xref py py-func docutils literal notranslate"><span class="pre">compare()</span></code> needs data from both <code class="docutils literal notranslate"><span class="pre">log_likelihood</span></code> and <code class="docutils literal notranslate"><span class="pre">posterior</span></code> groups, <code class="xref py py-func docutils literal notranslate"><span class="pre">plot_loo_pit()</span></code> needs not 2 but 3 groups: <code class="docutils literal notranslate"><span class="pre">log_likelihood</span></code>, <code class="docutils literal notranslate"><span class="pre">posterior_predictive</span></code> and <code class="docutils literal notranslate"><span class="pre">posterior</span></code>.
-:::</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You’ll have noticed we stored the posterior group in a new variable: <code class="docutils literal notranslate"><span class="pre">post</span></code>. As <code class="docutils literal notranslate"><span class="pre">.copy()</span></code> was not called, now using <code class="docutils literal notranslate"><span class="pre">idata.posterior</span></code> or <code class="docutils literal notranslate"><span class="pre">post</span></code> is equivalent.</p>
+<p>Use this to keep your code short yet easy to read. Store the groups you’ll need very often as separate variables to use explicitly, but don’t delete the InferenceData parent. You’ll need it for many XGenTS functions to work properly. For example: <code class="xref py py-func docutils literal notranslate"><span class="pre">plot_pair()</span></code> needs data from <code class="docutils literal notranslate"><span class="pre">sample_stats</span></code> group to show divergences, <code class="xref py py-func docutils literal notranslate"><span class="pre">compare()</span></code> needs data from both <code class="docutils literal notranslate"><span class="pre">log_likelihood</span></code> and <code class="docutils literal notranslate"><span class="pre">posterior</span></code> groups, <code class="xref py py-func docutils literal notranslate"><span class="pre">plot_loo_pit()</span></code> needs not 2 but 3 groups: <code class="docutils literal notranslate"><span class="pre">log_likelihood</span></code>, <code class="docutils literal notranslate"><span class="pre">posterior_predictive</span></code> and <code class="docutils literal notranslate"><span class="pre">posterior</span></code>.</p>
+</div>
 </section>
 <section id="add-a-new-variable">
-<h2>Add a new variable<a class="headerlink" href="#add-a-new-variable" title="Link to this heading">#</a></h2>
+<h2>Add a new variable<a class="headerlink" href="#add-a-new-variable" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">post</span><span class="p">[</span><span class="s2">"log_tau"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">post</span><span class="p">[</span><span class="s2">"tau"</span><span class="p">])</span>
@@ -3380,7 +3459,7 @@ Attributes: (3)</pre><div class="xr-wrap" style="display:none"><div class="xr-he
 </div>
 </section>
 <section id="combine-chains-and-draws">
-<h2>Combine chains and draws<a class="headerlink" href="#combine-chains-and-draws" title="Link to this heading">#</a></h2>
+<h2>Combine chains and draws<a class="headerlink" href="#combine-chains-and-draws" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stacked</span> <span class="o">=</span> <span class="n">az</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">idata</span><span class="p">)</span>
@@ -3770,7 +3849,7 @@ Attributes: (3)</pre><div class="xr-wrap" style="display:none"><div class="xr-he
        5.40679834])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>log_tau</span></div><div class="xr-var-dims">(sample)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">1.316 0.7301 1.309 ... 2.043 1.688</div><input class="xr-var-attrs-in" disabled="" id="attrs-aaede3d0-5ecc-4788-b18a-a8efa6b9b87b" type="checkbox"/><label for="attrs-aaede3d0-5ecc-4788-b18a-a8efa6b9b87b" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-9c624ae5-cbb7-43fc-8ebd-6e1203619941" type="checkbox"/><label for="data-9c624ae5-cbb7-43fc-8ebd-6e1203619941" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([1.31643534, 0.73014592, 1.30914153, ..., 2.12173817, 2.04262066,
        1.68765711])</pre></div></li></ul></div></li><li class="xr-section-item"><input class="xr-section-summary-in" id="section-6fa4d68e-032f-4332-a9e4-c63736dfdc72" type="checkbox"/><label class="xr-section-summary" for="section-6fa4d68e-032f-4332-a9e4-c63736dfdc72">Attributes: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2019-06-21T17:36:34.398087</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.7</dd></dl></div></li></ul></div></div></div></div>
 </div>
-<p>You can also use <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.Dataset.stack.html#xarray.Dataset.stack" title="(in xarray v2024.7.1.dev0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">xarray.Dataset.stack()</span></code></a> if you only want to combine the chain and draw dimensions. <code class="xref py py-func docutils literal notranslate"><span class="pre">TimeXAI.extract()</span></code> is a convenience function aimed at taking care of the most common subsetting operations with MCMC samples. It can:</p>
+<p>You can also use <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.Dataset.stack.html#xarray.Dataset.stack" title="(in xarray v2023.10.1.dev0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">xarray.Dataset.stack()</span></code></a> if you only want to combine the chain and draw dimensions. <code class="xref py py-func docutils literal notranslate"><span class="pre">XGenTS.extract()</span></code> is a convenience function aimed at taking care of the most common subsetting operations with MCMC samples. It can:</p>
 <ul class="simple">
 <li><p>Combine chains and draws</p></li>
 <li><p>Return a subset of variables (with optional filtering with regular expressions or string matching)</p></li>
@@ -3779,7 +3858,7 @@ Attributes: (3)</pre><div class="xr-wrap" style="display:none"><div class="xr-he
 </ul>
 </section>
 <section id="get-a-random-subset-of-the-samples">
-<span id="idata-random-subset"></span><h2>Get a random subset of the samples<a class="headerlink" href="#get-a-random-subset-of-the-samples" title="Link to this heading">#</a></h2>
+<span id="idata-random-subset"></span><h2>Get a random subset of the samples<a class="headerlink" href="#get-a-random-subset-of-the-samples" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">az</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">idata</span><span class="p">,</span> <span class="n">num_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
@@ -4275,12 +4354,13 @@ Attributes: (3)</pre><div class="xr-wrap" style="display:none"><div class="xr-he
         0.97891867,  1.11633673,  0.62271662,  1.49776436,  1.92984277,
         0.62876859,  0.49204055,  1.74172635,  1.78196142,  0.45878854])</pre></div></li></ul></div></li><li class="xr-section-item"><input class="xr-section-summary-in" id="section-a5dc7959-6457-45bc-867b-0008cc58ea4b" type="checkbox"/><label class="xr-section-summary" for="section-a5dc7959-6457-45bc-867b-0008cc58ea4b">Attributes: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2019-06-21T17:36:34.398087</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.7</dd></dl></div></li></ul></div></div></div></div>
 </div>
-<p>:::{tip}
-Use a random seed to get the same subset from multiple groups: <code class="docutils literal notranslate"><span class="pre">az.extract(idata,</span> <span class="pre">num_samples=100,</span> <span class="pre">rng=3)</span></code> and <code class="docutils literal notranslate"><span class="pre">az.extract(idata,</span> <span class="pre">group="log_likelihood",</span> <span class="pre">num_samples=100,</span> <span class="pre">rng=3)</span></code> will continue to have matching samples
-:::</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use a random seed to get the same subset from multiple groups: <code class="docutils literal notranslate"><span class="pre">az.extract(idata,</span> <span class="pre">num_samples=100,</span> <span class="pre">rng=3)</span></code> and <code class="docutils literal notranslate"><span class="pre">az.extract(idata,</span> <span class="pre">group="log_likelihood",</span> <span class="pre">num_samples=100,</span> <span class="pre">rng=3)</span></code> will continue to have matching samples</p>
+</div>
 </section>
 <section id="obtain-a-numpy-array-for-a-given-parameter">
-<h2>Obtain a NumPy array for a given parameter<a class="headerlink" href="#obtain-a-numpy-array-for-a-given-parameter" title="Link to this heading">#</a></h2>
+<h2>Obtain a NumPy array for a given parameter<a class="headerlink" href="#obtain-a-numpy-array-for-a-given-parameter" title="Permalink to this heading">#</a></h2>
 <p>Let’s say we want to get the values for <code class="docutils literal notranslate"><span class="pre">mu</span></code> as a NumPy array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4297,7 +4377,7 @@ Use a random seed to get the same subset from multiple groups: <code class="docu
 </div>
 </section>
 <section id="get-the-dimension-lengths">
-<h2>Get the dimension lengths<a class="headerlink" href="#get-the-dimension-lengths" title="Link to this heading">#</a></h2>
+<h2>Get the dimension lengths<a class="headerlink" href="#get-the-dimension-lengths" title="Permalink to this heading">#</a></h2>
 <p>Let’s check how many groups are in our hierarchical model.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4313,7 +4393,7 @@ Use a random seed to get the same subset from multiple groups: <code class="docu
 </div>
 </section>
 <section id="get-coordinate-values">
-<h2>Get coordinate values<a class="headerlink" href="#get-coordinate-values" title="Link to this heading">#</a></h2>
+<h2>Get coordinate values<a class="headerlink" href="#get-coordinate-values" title="Permalink to this heading">#</a></h2>
 <p>What are the names of the groups in our hierarchical model? You can access them from the coordinate name <code class="docutils literal notranslate"><span class="pre">school</span></code> in this case</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4682,8 +4762,8 @@ Coordinates:
 </div>
 </section>
 <section id="get-a-subset-of-chains">
-<h2>Get a subset of chains<a class="headerlink" href="#get-a-subset-of-chains" title="Link to this heading">#</a></h2>
-<p>Let’s keep only chain 0 and 2 here. For the subset to take effect on all relevant InferenceData groups: posterior, sample_stats, log_likelihood, posterior_predictive we will use the <code class="xref py py-meth docutils literal notranslate"><span class="pre">TimeXAI.InferenceData.sel()</span></code>, the method of InferenceData instead of <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.Dataset.sel.html#xarray.Dataset.sel" title="(in xarray v2024.7.1.dev0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">xarray.Dataset.sel()</span></code></a>.</p>
+<h2>Get a subset of chains<a class="headerlink" href="#get-a-subset-of-chains" title="Permalink to this heading">#</a></h2>
+<p>Let’s keep only chain 0 and 2 here. For the subset to take effect on all relevant InferenceData groups: posterior, sample_stats, log_likelihood, posterior_predictive we will use the <code class="xref py py-meth docutils literal notranslate"><span class="pre">XGenTS.InferenceData.sel()</span></code>, the method of InferenceData instead of <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.Dataset.sel.html#xarray.Dataset.sel" title="(in xarray v2023.10.1.dev0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">xarray.Dataset.sel()</span></code></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idata</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">chain</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
@@ -4694,7 +4774,7 @@ Coordinates:
 <div class="output text_html">
 <div>
 <div class="xr-header">
-<div class="xr-obj-type">TimeXAI.InferenceData</div>
+<div class="xr-obj-type">XGenTS.InferenceData</div>
 </div>
 <ul class="xr-sections group-sections">
 <li class="xr-section-item">
@@ -7003,7 +7083,7 @@ dl.xr-attrs {
 </div>
 </section>
 <section id="remove-the-first-n-draws-burn-in">
-<h2>Remove the first n draws (burn-in)<a class="headerlink" href="#remove-the-first-n-draws-burn-in" title="Link to this heading">#</a></h2>
+<h2>Remove the first n draws (burn-in)<a class="headerlink" href="#remove-the-first-n-draws-burn-in" title="Permalink to this heading">#</a></h2>
 <p>Let’s say we want to remove the first 100 samples, from all the chains and all <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code> groups with draws.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -7015,7 +7095,7 @@ dl.xr-attrs {
 <div class="output text_html">
 <div>
 <div class="xr-header">
-<div class="xr-obj-type">TimeXAI.InferenceData</div>
+<div class="xr-obj-type">XGenTS.InferenceData</div>
 </div>
 <ul class="xr-sections group-sections">
 <li class="xr-section-item">
@@ -9362,7 +9442,7 @@ dl.xr-attrs {
 <div class="output text_html">
 <div>
 <div class="xr-header">
-<div class="xr-obj-type">TimeXAI.InferenceData</div>
+<div class="xr-obj-type">XGenTS.InferenceData</div>
 </div>
 <ul class="xr-sections group-sections">
 <li class="xr-section-item">
@@ -11704,7 +11784,7 @@ dl.xr-attrs {
 </div>
 </section>
 <section id="compute-posterior-mean-values-along-draw-and-chain-dimensions">
-<h2>Compute posterior mean values along <code class="docutils literal notranslate"><span class="pre">draw</span></code> and <code class="docutils literal notranslate"><span class="pre">chain</span></code> dimensions<a class="headerlink" href="#compute-posterior-mean-values-along-draw-and-chain-dimensions" title="Link to this heading">#</a></h2>
+<h2>Compute posterior mean values along <code class="docutils literal notranslate"><span class="pre">draw</span></code> and <code class="docutils literal notranslate"><span class="pre">chain</span></code> dimensions<a class="headerlink" href="#compute-posterior-mean-values-along-draw-and-chain-dimensions" title="Permalink to this heading">#</a></h2>
 <p>To compute the mean value of the posterior samples, do the following:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -12446,10 +12526,10 @@ Data variables:
 </div>
 </section>
 <section id="compute-and-store-posterior-pushforward-quantities">
-<h2>Compute and store posterior pushforward quantities<a class="headerlink" href="#compute-and-store-posterior-pushforward-quantities" title="Link to this heading">#</a></h2>
+<h2>Compute and store posterior pushforward quantities<a class="headerlink" href="#compute-and-store-posterior-pushforward-quantities" title="Permalink to this heading">#</a></h2>
 <p>We use “posterior pushfoward quantities” to refer to quantities that are not variables in the posterior but deterministic computations using posterior variables.</p>
-<p>You can use xarray for these pushforward operations and store them as a new variable in the posterior group. You’ll then be able to plot them with TimeXAI functions, calculate stats and diagnostics on them (like the <code class="xref py py-func docutils literal notranslate"><span class="pre">mcse()</span></code>) or save and share the inferencedata object with the pushforward quantities included.</p>
-<p>Compute the rolling mean of <span class="math notranslate nohighlight">\(\log(\tau)\)</span> with <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.rolling.html#xarray.DataArray.rolling" title="(in xarray v2024.7.1.dev0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">xarray.DataArray.rolling()</span></code></a>, storing the result in the posterior</p>
+<p>You can use xarray for these pushforward operations and store them as a new variable in the posterior group. You’ll then be able to plot them with XGenTS functions, calculate stats and diagnostics on them (like the <code class="xref py py-func docutils literal notranslate"><span class="pre">mcse()</span></code>) or save and share the inferencedata object with the pushforward quantities included.</p>
+<p>Compute the rolling mean of <span class="math notranslate nohighlight">\(\log(\tau)\)</span> with <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.rolling.html#xarray.DataArray.rolling" title="(in xarray v2023.10.1.dev0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">xarray.DataArray.rolling()</span></code></a>, storing the result in the posterior</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">post</span><span class="p">[</span><span class="s2">"mlogtau"</span><span class="p">]</span> <span class="o">=</span> <span class="n">post</span><span class="p">[</span><span class="s2">"log_tau"</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">({</span><span class="s2">"draw"</span><span class="p">:</span> <span class="mi">50</span><span class="p">})</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -12460,7 +12540,7 @@ Data variables:
 <p>Using xarray for pusforward calculations has all the advantages of working with xarray. It also inherits the disadvantages of working with xarray, but we believe those to be outweighed by the advantages, and we have already shown how to extract the data as NumPy arrays. Working with InferenceData is working mainly with xarray objects and this is what is shown in this guide.</p>
 <p>Some examples of these advantages are specifying operations with named dimensions instead of positional ones (as seen in some previous sections),
 automatic alignment and broadcasting of arrays (as we’ll see now),
-or integration with Dask (as shown in the <span class="xref std std-ref">dask_for_TimeXAI</span> guide).</p>
+or integration with Dask (as shown in the <a class="reference internal" href="../dush/Dask.html#dask-for-xgents"><span class="std std-ref">Dask for XGenTS</span></a> guide).</p>
 <p>In this cell you will compute pairwise differences between schools on their mean effects (variable <code class="docutils literal notranslate"><span class="pre">theta</span></code>).
 To do so, substract the variable theta after renaming the school dimension to the original variable.
 Xarray then aligns and broadcasts the two variables because they have different dimensions, and
@@ -12473,13 +12553,13 @@ the result is a 4d variable with all the pointwise differences.</p>
 </div>
 </div>
 </div>
-<p>:::{note}
-:class: dropdown</p>
+<div class="dropdown admonition note">
+<p class="admonition-title">Note</p>
 <p>This same operation using NumPy would require manual alignment of the two arrays to make sure they broadcast correctly. The could would be something like:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">theta_school_diff</span> <span class="o">=</span> <span class="n">theta</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">-</span> <span class="n">theta</span><span class="p">[:,</span> <span class="p">:,</span> <span class="kc">None</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<p>:::</p>
+</div>
 <p>The <code class="docutils literal notranslate"><span class="pre">theta_shool_diff</span></code> variable in the posterior has kept the named dimensions and coordinates:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -12941,7 +13021,7 @@ Attributes: (3)</pre><div class="xr-wrap" style="display:none"><div class="xr-he
 </div>
 </section>
 <section id="advanced-subsetting">
-<h2>Advanced subsetting<a class="headerlink" href="#advanced-subsetting" title="Link to this heading">#</a></h2>
+<h2>Advanced subsetting<a class="headerlink" href="#advanced-subsetting" title="Permalink to this heading">#</a></h2>
 <p>To select the value corresponding to the difference between the Choate and Deerfield schools do:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -13316,7 +13396,7 @@ Coordinates:
        [ -0.87207578,  -0.87207578,   0.16841636, ...,   2.42358369,
           2.61345911,  -0.11369765]])</pre></div></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-213c1d25-013e-4019-8d03-7c7b7270f42a" type="checkbox"/><label class="xr-section-summary" for="section-213c1d25-013e-4019-8d03-7c7b7270f42a">Coordinates: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">chain</span></div><div class="xr-var-dims">(chain)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3</div><input class="xr-var-attrs-in" disabled="" id="attrs-8c4c6923-0fe8-42fd-a8d9-8287c377c8ea" type="checkbox"/><label for="attrs-8c4c6923-0fe8-42fd-a8d9-8287c377c8ea" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-4f40a19e-ef47-47c4-8df5-a0577522b734" type="checkbox"/><label for="data-4f40a19e-ef47-47c4-8df5-a0577522b734" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([0, 1, 2, 3])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">draw</span></div><div class="xr-var-dims">(draw)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3 4 5 ... 495 496 497 498 499</div><input class="xr-var-attrs-in" disabled="" id="attrs-20887fb9-b2b9-4f16-80c4-e2f93a864d9e" type="checkbox"/><label for="attrs-20887fb9-b2b9-4f16-80c4-e2f93a864d9e" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-51565594-1c09-4daf-b872-4cd6e4f4c565" type="checkbox"/><label for="data-51565594-1c09-4daf-b872-4cd6e4f4c565" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([  0,   1,   2, ..., 497, 498, 499])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>school</span></div><div class="xr-var-dims">()</div><div class="xr-var-dtype">&lt;U6</div><div class="xr-var-preview xr-preview">'Choate'</div><input class="xr-var-attrs-in" disabled="" id="attrs-a5b25159-10f0-459c-b477-d5e59a6dbc02" type="checkbox"/><label for="attrs-a5b25159-10f0-459c-b477-d5e59a6dbc02" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-030fe555-6f70-48a2-9ac6-a1d4bc48b3c2" type="checkbox"/><label for="data-030fe555-6f70-48a2-9ac6-a1d4bc48b3c2" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array('Choate', dtype='&lt;U6')</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>school_bis</span></div><div class="xr-var-dims">()</div><div class="xr-var-dtype">&lt;U9</div><div class="xr-var-preview xr-preview">'Deerfield'</div><input class="xr-var-attrs-in" disabled="" id="attrs-016c5adb-493c-42ff-997b-20bc0917ae04" type="checkbox"/><label for="attrs-016c5adb-493c-42ff-997b-20bc0917ae04" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-55639d7a-cc5e-4b43-b753-778087334e23" type="checkbox"/><label for="data-55639d7a-cc5e-4b43-b753-778087334e23" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array('Deerfield', dtype='&lt;U9')</pre></div></li></ul></div></li><li class="xr-section-item"><input class="xr-section-summary-in" disabled="" id="section-370c1936-8357-4134-ac1a-b2cb24217651" type="checkbox"/><label class="xr-section-summary" for="section-370c1936-8357-4134-ac1a-b2cb24217651" title="Expand/collapse section">Attributes: <span>(0)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"></dl></div></li></ul></div></div></div></div>
 </div>
-<p>For more advanced subsetting (the equivalent to what is sometimes called “fancy indexing” in NumPy) you need to provide the indices as <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v2024.7.1.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataArray</span></code></a> objects:</p>
+<p>For more advanced subsetting (the equivalent to what is sometimes called “fancy indexing” in NumPy) you need to provide the indices as <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v2023.10.1.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataArray</span></code></a> objects:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">school_idx</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="xarray.DataArray"><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span></a><span class="p">([</span><span class="s2">"Choate"</span><span class="p">,</span> <span class="s2">"Hotchkiss"</span><span class="p">,</span> <span class="s2">"Mt. Hermon"</span><span class="p">],</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s2">"pairwise_school_diff"</span><span class="p">])</span>
@@ -14132,7 +14212,7 @@ Coordinates:
 </div>
 </section>
 <section id="add-new-chains-using-concat">
-<h2>Add new chains using concat<a class="headerlink" href="#add-new-chains-using-concat" title="Link to this heading">#</a></h2>
+<h2>Add new chains using concat<a class="headerlink" href="#add-new-chains-using-concat" title="Permalink to this heading">#</a></h2>
 <p>After checking the <code class="xref py py-func docutils literal notranslate"><span class="pre">mcse()</span></code> and realizing you need more samples, you rerun the model with two chains
 and obtain an <code class="docutils literal notranslate"><span class="pre">idata_rerun</span></code> object.</p>
 <div class="cell docutils container">
@@ -14146,7 +14226,7 @@ and obtain an <code class="docutils literal notranslate"><span class="pre">idata
 </div>
 </div>
 </div>
-<p>You can combine the two into a single InferenceData object using <code class="xref py py-func docutils literal notranslate"><span class="pre">TimeXAI.concat()</span></code>:</p>
+<p>You can combine the two into a single InferenceData object using <code class="xref py py-func docutils literal notranslate"><span class="pre">XGenTS.concat()</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idata_complete</span> <span class="o">=</span> <span class="n">az</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">idata</span><span class="p">,</span> <span class="n">idata_rerun</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s2">"chain"</span><span class="p">)</span>
@@ -14162,7 +14242,7 @@ and obtain an <code class="docutils literal notranslate"><span class="pre">idata
 </div>
 </section>
 <section id="add-groups-to-inferencedata-objects">
-<h2>Add groups to InferenceData objects<a class="headerlink" href="#add-groups-to-inferencedata-objects" title="Link to this heading">#</a></h2>
+<h2>Add groups to InferenceData objects<a class="headerlink" href="#add-groups-to-inferencedata-objects" title="Permalink to this heading">#</a></h2>
 <p>You can also add new groups to InferenceData objects with the <code class="xref py py-meth docutils literal notranslate"><span class="pre">extend()</span></code> (if the new groups are already in an InferenceData object) or with <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_groups()</span></code> (if the new groups are dictionaries or <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> objects).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -14180,7 +14260,7 @@ and obtain an <code class="docutils literal notranslate"><span class="pre">idata
 <div class="output text_html">
 <div>
 <div class="xr-header">
-<div class="xr-obj-type">TimeXAI.InferenceData</div>
+<div class="xr-obj-type">XGenTS.InferenceData</div>
 </div>
 <ul class="xr-sections group-sections">
 <li class="xr-section-item">
@@ -15429,7 +15509,7 @@ Attributes: (2)</pre><div class="xr-wrap" style="display:none"><div class="xr-he
         ...,
         [ 1.57846099,  0.24653314],
         [ 0.64302486,  1.42710376],
-        [-1.01529472, -0.28215614]]])</pre></div></li></ul></div></li><li class="xr-section-item"><input class="xr-section-summary-in" id="section-7f701334-95b0-40fd-ba25-766ff389c50d" type="checkbox"/><label class="xr-section-summary" for="section-7f701334-95b0-40fd-ba25-766ff389c50d">Attributes: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-03-05T03:51:18.666162</dd><dt><span>TimeXAI_version :</span></dt><dd>0.11.4</dd></dl></div></li></ul></div></div><br/></div>
+        [-1.01529472, -0.28215614]]])</pre></div></li></ul></div></li><li class="xr-section-item"><input class="xr-section-summary-in" id="section-7f701334-95b0-40fd-ba25-766ff389c50d" type="checkbox"/><label class="xr-section-summary" for="section-7f701334-95b0-40fd-ba25-766ff389c50d">Attributes: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-03-05T03:51:18.666162</dd><dt><span>XGenTS_version :</span></dt><dd>0.11.4</dd></dl></div></li></ul></div></div><br/></div>
 </ul>
 </div>
 </li>
@@ -16973,17 +17053,32 @@ dl.xr-attrs {
 </section>
 </section>
 </article>
-<footer class="prev-next-footer d-print-none">
+<footer class="prev-next-footer">
+<!-- Previous / next buttons -->
 <div class="prev-next-area">
+<a class="left-prev" href="ConversionGuideEmcee.html" title="previous page">
+<i class="fa-solid fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title">Converting emcee objects to InferenceData</p>
+</div>
+</a>
+<a class="right-next" href="../community.html" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title">Community</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
 </div>
 </footer>
 </div>
 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 <div class="sidebar-secondary-item">
-<div class="page-toc tocsection onthispage" id="pst-page-navigation-heading-2">
+<div class="page-toc tocsection onthispage">
 <i class="fa-solid fa-list"></i> On this page
   </div>
-<nav aria-labelledby="pst-page-navigation-heading-2" class="bd-toc-nav page-toc">
+<nav class="bd-toc-nav page-toc">
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-the-dataset-corresponding-to-a-single-group">Get the dataset corresponding to a single group</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-new-variable">Add a new variable</a></li>
@@ -17005,7 +17100,7 @@ dl.xr-attrs {
 <div id="searchbox"></div></div>
 <div class="sidebar-secondary-item">
 <div class="tocsection editthispage">
-<a href="https://github.com/TimeXAI-devs/TimeXAI/edit/main/docs/source/ess_datasets/WorkingWithInferenceData.ipynb">
+<a href="https://github.com/XGenTS-devs/XGenTS/edit/main/docs/source/ess_datasets/WorkingWithInferenceData.ipynb">
 <i class="fa-solid fa-pencil"></i>
       
       
@@ -17031,11 +17126,11 @@ dl.xr-attrs {
 </div>
 </div>
 <!-- Scripts loaded after <body> so the DOM is not blocked -->
-<script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 <script>
   $(document).ready(function () {
-    const content = $('<div class="alert-danger">TimeXAI docs will now be available at <a href="https://python.TimeXAI.org">python.TimeXAI.org</a>!</div>')
+    const content = $('<div class="alert-danger">XGenTS docs will now be available at <a href="https://python.XGenTS.org">python.XGenTS.org</a>!</div>')
     $('#banner').append(content);
   })
 </script>
@@ -17045,15 +17140,14 @@ dl.xr-attrs {
 <div class="footer-item">
 <p class="copyright">
     
-      © Copyright 2023, TimeXAI devs.
+      © Copyright 2023, XGenTS devs.
       <br>
 </br></p>
 </div>
 </div>
 <div class="footer-items__end">
-<div class="footer-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+<div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
 </p></div>
 </div>
 </div>

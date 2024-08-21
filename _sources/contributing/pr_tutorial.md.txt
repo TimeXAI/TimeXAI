@@ -1,16 +1,16 @@
 # Pull request step-by-step
 
-The preferred workflow for contributing to TimeXAI is to fork
-the [GitHub repository](https://github.com/TimeXAI-devs/TimeXAI/),
+The preferred workflow for contributing to XGenTS is to fork
+the [GitHub repository](https://github.com/XGenTS-devs/XGenTS/),
 clone it to your local machine, and develop on a feature branch.
 
 (pr_steps)=
 ## Steps
 
-1. Fork the [project repository](https://github.com/TimeXAI-devs/TimeXAI/) by clicking on the 'Fork' button near the top right of the main repository page. This creates a copy of the code under your GitHub user account.
+1. Fork the [project repository](https://github.com/XGenTS-devs/XGenTS/) by clicking on the 'Fork' button near the top right of the main repository page. This creates a copy of the code under your GitHub user account.
 
 (fork_step_pr)=
-2. Clone your fork of the TimeXAI repo from your GitHub account to your local disk.
+2. Clone your fork of the XGenTS repo from your GitHub account to your local disk.
 
    ::::{tab-set}
 
@@ -18,7 +18,7 @@ clone it to your local machine, and develop on a feature branch.
    :sync: ssh
 
    ```
-   git clone git@github.com:<your GitHub handle>/TimeXAI.git
+   git clone git@github.com:<your GitHub handle>/XGenTS.git
    ```
    :::
 
@@ -26,13 +26,13 @@ clone it to your local machine, and develop on a feature branch.
    :sync: https
 
    ```
-   git clone https://github.com/<your GitHub handle>/TimeXAI.git
+   git clone https://github.com/<your GitHub handle>/XGenTS.git
    ```
    :::
 
    ::::
 
-3. Navigate to your TimeXAI directory and add the base repository as a remote:
+3. Navigate to your XGenTS directory and add the base repository as a remote:
 
    ::::{tab-set}
 
@@ -40,8 +40,8 @@ clone it to your local machine, and develop on a feature branch.
    :sync: ssh
 
    ```
-   cd TimeXAI
-   git remote add upstream git@github.com:TimeXAI-devs/TimeXAI.git
+   cd XGenTS
+   git remote add upstream git@github.com:XGenTS-devs/XGenTS.git
    ```
    :::
 
@@ -49,8 +49,8 @@ clone it to your local machine, and develop on a feature branch.
    :sync: https
 
    ```
-   cd TimeXAI
-   git remote add upstream https://github.com/TimeXAI-devs/TimeXAI.git
+   cd XGenTS
+   git remote add upstream https://github.com/XGenTS-devs/XGenTS.git
    ```
    :::
 
@@ -98,7 +98,7 @@ clone it to your local machine, and develop on a feature branch.
    git push -u origin my-feature
    ```
 
-7. Go to the GitHub web page of your fork of the TimeXAI repo. Click the 'Pull request' button to send your changes to the project's maintainers for review. This will send an email to the committers.
+7. Go to the GitHub web page of your fork of the XGenTS repo. Click the 'Pull request' button to send your changes to the project's maintainers for review. This will send an email to the committers.
 
    :::{tip}
    Now that the PR is ready to submit, check the {ref}`pr_checklist`.

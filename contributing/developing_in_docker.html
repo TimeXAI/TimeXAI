@@ -1,14 +1,15 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" data-theme="light">
+<html lang="en" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Developing in Docker &#8212; TimeXAI  documentation</title>
+    <title>Developing in Docker &#8212; XGenTS  documentation</title>
   
   
   
@@ -18,45 +19,50 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=581237fb" />
-    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-codeautolink.css?v=125d5c1c" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css?v=572af1d6" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-codeautolink.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=45766ed9" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
-    <script src="../_static/documentation_options.js?v=fb0c83f7"></script>
-    <script src="../_static/doctools.js?v=a6d80eb4"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     <script src="../_static/thebelab-helper.js"></script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contributing/developing_in_docker';</script>
-    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Documentation toolchain" href="doc_toolchain.html" />
+    <link rel="prev" title="Written content formatting reference" href="syntax_guide.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
     <meta name="docbuild:last-update" content="True"/>
@@ -67,23 +73,28 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -105,25 +116,17 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
 <div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
     <span class="fa-solid fa-bars"></span>
-  </button>
+  </label>
   
   
   <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -131,12 +134,11 @@
   
   
   
-  
     
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="TimeXAI  documentation - Home"/>
-    <script>document.write(`<img src="../_static/logo_dark.png" class="logo__image only-dark" alt="TimeXAI  documentation - Home"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo_dark.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -147,10 +149,56 @@
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item">
-<nav>
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
   <ul class="bd-navbar-elements navbar-nav">
     
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../archive/index.html">
+                        XGenTS Archive
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../ess_datasets/index.html">
+                        ESS dataset
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../community.html">
+                        Community
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Contributing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about.html">
+                        About us
+                      </a>
+                    </li>
+                
   </ul>
 </nav></div>
       
@@ -161,10 +209,9 @@
       
         <div class="navbar-item navbar-persistent--container">
           
-
  <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -175,18 +222,17 @@
       
       
         <div class="navbar-item">
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links"
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -197,7 +243,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/XgenTimeSeries/xgen-timeseries" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+          <a href="https://github.com/XgenTimeSeries/xgen-timeseries" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">GitHub</span></a>
         </li>
 </ul></div>
@@ -208,10 +254,9 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
-
  <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -222,23 +267,18 @@ document.write(`
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
       <span class="fa-solid fa-outdent"></span>
-    </button>
+    </label>
   
 </div>
 
-    </header>
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      
-      
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -247,15 +287,58 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          
-          
-            <div class="navbar-item">
-<nav>
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
   <ul class="bd-navbar-elements navbar-nav">
     
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../archive/index.html">
+                        XGenTS Archive
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../ess_datasets/index.html">
+                        ESS dataset
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../community.html">
+                        Community
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Contributing
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about.html">
+                        About us
+                      </a>
+                    </li>
+                
   </ul>
 </nav></div>
-          
         
       </div>
     
@@ -264,18 +347,17 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links"
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -286,7 +368,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/XgenTimeSeries/xgen-timeseries" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+          <a href="https://github.com/XgenTimeSeries/xgen-timeseries" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">GitHub</span></a>
         </li>
 </ul></div>
@@ -294,6 +376,50 @@ document.write(`
       </div>
     
   </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Contribution types</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="issue_reports.html">Issue reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translate.html">Translate XGenTS website and documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="issue_triaging.html">Issue Triaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outreach.html">Outreach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="review_prs.html">Review PRs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing_prs.html">Contributing code via pull requests</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pr_tutorial.html">Pull request step-by-step</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">How-to guides</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="sphinx_doc_build.html">Building the documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updating_example_data.html">Updating the example data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_benchmarks.html">Running the benchmark suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_to_release.html">How to make a new release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_to_add_to_example_gallery.html">How to add to the Example Gallery</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pr_checklist.html">Pull request checklist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Library architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_structure.html">Documentation content structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docstrings.html">Docstring style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syntax_guide.html">Written content formatting reference</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Developing in Docker</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">In depth explanations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="doc_toolchain.html">Documentation toolchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotting_backends.html">Plotting backends</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
@@ -304,13 +430,13 @@ document.write(`
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -319,7 +445,7 @@ document.write(`
 
 
 
-<nav aria-label="Breadcrumb" class="d-print-none">
+<nav aria-label="Breadcrumb">
   <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
@@ -327,6 +453,9 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Contributing to XGenTS</a></li>
+    
     <li class="breadcrumb-item active" aria-current="page">Developing in Docker</li>
   </ul>
 </nav>
@@ -342,20 +471,20 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="developing-in-docker">
-<span id="id1"></span><h1>Developing in Docker<a class="headerlink" href="#developing-in-docker" title="Link to this heading">#</a></h1>
+<span id="id1"></span><h1>Developing in Docker<a class="headerlink" href="#developing-in-docker" title="Permalink to this heading">#</a></h1>
 <p>We have provided a Dockerfile which helps for isolating build problems, and local development.
 Install <a class="reference external" href="https://www.docker.com/">Docker</a> for your operating system, clone <a class="reference external" href="https://github.com/XGenTS-devs/XGenTS">this</a> repo. Docker will generate an environment with your local copy of <code class="docutils literal notranslate"><span class="pre">XGenTS</span></code> with all the packages in Dockerfile.</p>
 <section id="container-sh-container-ps1">
-<h2>container.sh &amp; container.ps1<a class="headerlink" href="#container-sh-container-ps1" title="Link to this heading">#</a></h2>
+<h2>container.sh &amp; container.ps1<a class="headerlink" href="#container-sh-container-ps1" title="Permalink to this heading">#</a></h2>
 <p>Predefined docker commands can be run with a <code class="docutils literal notranslate"><span class="pre">./scripts/container.sh</span></code> (on Linux and macOS)
 and with <code class="docutils literal notranslate"><span class="pre">./scripts/container.ps1</span></code>. The scripts enable developers easily to call predefined docker commands.
 Users can use one or multiple flags.</p>
 <p>They are executed in the following order: clear-cache, build, test, docs, shell, notebook, lab</p>
 <section id="for-linux-and-macos">
-<h3>For Linux and macOS<a class="headerlink" href="#for-linux-and-macos" title="Link to this heading">#</a></h3>
+<h3>For Linux and macOS<a class="headerlink" href="#for-linux-and-macos" title="Permalink to this heading">#</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ./scripts/container.sh --clear-cache
 $ ./scripts/container.sh --build
 
@@ -368,7 +497,7 @@ $ ./scripts/container.sh --lab
 </div>
 </section>
 <section id="for-windows">
-<h3>For Windows<a class="headerlink" href="#for-windows" title="Link to this heading">#</a></h3>
+<h3>For Windows<a class="headerlink" href="#for-windows" title="Permalink to this heading">#</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ powershell.exe -File ./scripts/container.ps1 --clear-cache
 $ powershell.exe -File ./scripts/container.ps1 --build
 
@@ -382,7 +511,7 @@ $ powershell.exe -File ./scripts/container.ps1 --lab
 </section>
 </section>
 <section id="testing-in-docker">
-<h2>Testing in Docker<a class="headerlink" href="#testing-in-docker" title="Link to this heading">#</a></h2>
+<h2>Testing in Docker<a class="headerlink" href="#testing-in-docker" title="Permalink to this heading">#</a></h2>
 <p>Testing the code using docker consists of executing the same file(<code class="docutils literal notranslate"><span class="pre">./scripts/container.ps1</span></code>) 3 times (you may need root privileges to run it).</p>
 <ol class="arabic simple">
 <li><p>First run <code class="docutils literal notranslate"><span class="pre">./scripts/container.sh</span> <span class="pre">--clear-cache</span></code>.</p></li>
@@ -400,10 +529,10 @@ docker), try running <code class="docutils literal notranslate"><span class="pre
 command.</p>
 </section>
 <section id="using-the-docker-image-interactively">
-<h2>Using the Docker image interactively<a class="headerlink" href="#using-the-docker-image-interactively" title="Link to this heading">#</a></h2>
+<h2>Using the Docker image interactively<a class="headerlink" href="#using-the-docker-image-interactively" title="Permalink to this heading">#</a></h2>
 <p>Once the Docker image is built with <code class="docutils literal notranslate"><span class="pre">./scripts/container.sh</span> <span class="pre">--build</span></code>, interactive containers can also be run. Therefore, code can be edited and executed using the docker container, but modifying directly the working directory of the host machine.</p>
 <section id="id2">
-<h3>For Linux and macOS<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<h3>For Linux and macOS<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <p>To start a bash shell inside Docker, run:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ docker run --mount type=bind,source=&quot;$(pwd)&quot;,target=/opt/XGenTS/ -it XGenTS bash
 </pre></div>
@@ -416,7 +545,7 @@ $ docker exec -it jupyter-dock bash -c &quot;jupyter notebook --ip 0.0.0.0 --no-
 </div>
 </section>
 <section id="id3">
-<h3>For Windows<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<h3>For Windows<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <p>For Windows, use %CD% on cmd.exe and $pwd.Path on powershell.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ docker run --mount type=bind,source=%CD%,target=/opt/XGenTS/ -it XGenTS bash
 </pre></div>
@@ -431,7 +560,7 @@ $ docker exec -it jupyter-dock bash -c &quot;jupyter notebook --ip 0.0.0.0 --no-
 </section>
 </section>
 <section id="building-documentation-with-docker">
-<span id="building-doc-with-docker"></span><h2>Building documentation with Docker<a class="headerlink" href="#building-documentation-with-docker" title="Link to this heading">#</a></h2>
+<span id="building-doc-with-docker"></span><h2>Building documentation with Docker<a class="headerlink" href="#building-documentation-with-docker" title="Permalink to this heading">#</a></h2>
 <p>The documentation can be built with Docker by running <code class="docutils literal notranslate"><span class="pre">./scripts/container.sh</span> <span class="pre">--docs</span></code>. The
 <code class="docutils literal notranslate"><span class="pre">./scripts/container.sh</span> <span class="pre">--build</span></code> needs to be executed once before running the doc build command.
 The docker image contains by default all dependencies needed
@@ -448,9 +577,27 @@ container, they can be checked at <code class="docutils literal notranslate"><sp
               
               
               
-                <footer class="prev-next-footer d-print-none">
-                  
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="syntax_guide.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Written content formatting reference</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="doc_toolchain.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Documentation toolchain</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -460,14 +607,11 @@ container, they can be checked at <code class="docutils literal notranslate"><sp
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-
   <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
+  <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+  <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#container-sh-container-ps1">container.sh &amp; container.ps1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-linux-and-macos">For Linux and macOS</a></li>
@@ -490,7 +634,7 @@ container, they can be checked at <code class="docutils literal notranslate"><sp
   <div class="sidebar-secondary-item">
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/TimeXAI-devs/TimeXAI/edit/main/docs/source/contributing/developing_in_docker.md">
+    <a href="https://github.com/XGenTS-devs/XGenTS/edit/main/docs/source/contributing/developing_in_docker.md">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -503,7 +647,6 @@ container, they can be checked at <code class="docutils literal notranslate"><sp
 </div>
 
   <div class="sidebar-secondary-item">
-
   <div class="tocsection sourcelink">
     <a href="../_sources/contributing/developing_in_docker.md.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
@@ -525,13 +668,13 @@ container, they can be checked at <code class="docutils literal notranslate"><sp
   
 
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
 
 <script>
   $(document).ready(function () {
-    const content = $('<div class="alert-danger">TimeXAI docs will now be available at <a href="https://python.TimeXAI.org">python.TimeXAI.org</a>!</div>')
+    const content = $('<div class="alert-danger">XGenTS docs will now be available at <a href="https://python.XGenTS.org">python.XGenTS.org</a>!</div>')
     $('#banner').append(content);
   })
 </script>
@@ -542,10 +685,9 @@ container, they can be checked at <code class="docutils literal notranslate"><sp
     <div class="footer-items__start">
       
         <div class="footer-item">
-
   <p class="copyright">
     
-      © Copyright 2023, TimeXAI devs.
+      © Copyright 2023, XGenTS devs.
       <br/>
     
   </p>
@@ -557,9 +699,8 @@ container, they can be checked at <code class="docutils literal notranslate"><sp
   
     <div class="footer-items__end">
       
-        <div class="footer-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
 </p></div>
       
     </div>

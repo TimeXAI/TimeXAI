@@ -1,63 +1,70 @@
 
 <!DOCTYPE html>
 
-<html data-content_root="../" data-theme="light" lang="en">
+<html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Installation, TimeXAI Quickstart 🤗 — TimeXAI  documentation</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.19: https://docutils.sourceforge.io/" name="generator"/>
+<title>Installation, XGenTS Quickstart 🤗 — XGenTS  documentation</title>
 <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
 <!-- Loaded before other Sphinx assets -->
-<link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
-<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
-<link href="../_static/pygments.css?v=581237fb" rel="stylesheet" type="text/css"/>
-<link href="../_static/plot_directive.css?v=7f9a90b1" rel="stylesheet" type="text/css"/>
-<link href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" rel="stylesheet" type="text/css"/>
-<link href="../_static/copybutton.css?v=76b2166b" rel="stylesheet" type="text/css"/>
-<link href="../_static/sphinx-codeautolink.css?v=125d5c1c" rel="stylesheet" type="text/css"/>
-<link href="../_static/jupyter-sphinx.css?v=572af1d6" rel="stylesheet" type="text/css"/>
+<link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet"/>
+<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/plot_directive.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/copybutton.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-codeautolink.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/jupyter-sphinx.css" rel="stylesheet" type="text/css"/>
 <link href="../_static/thebelab.css" rel="stylesheet" type="text/css"/>
-<link href="../_static/sphinx-design.min.css?v=95c83b7e" rel="stylesheet" type="text/css"/>
-<link href="../_static/custom.css?v=45766ed9" rel="stylesheet" type="text/css"/>
+<link href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/custom.css" rel="stylesheet" type="text/css"/>
 <!-- Pre-loaded scripts that we'll load fully later -->
-<link as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" rel="preload"/>
-<link as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" rel="preload"/>
-<script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/documentation_options.js?v=fb0c83f7"></script>
-<script src="../_static/doctools.js?v=a6d80eb4"></script>
-<script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-<script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-<script src="../_static/copybutton.js?v=30646c52"></script>
+<link as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" rel="preload"/>
+<link as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" rel="preload"/>
+<script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/sphinx_highlight.js"></script>
+<script src="../_static/clipboard.min.js"></script>
+<script src="../_static/copybutton.js"></script>
 <script src="../_static/thebelab-helper.js"></script>
-<script src="../_static/design-tabs.js?v=f930bc37"></script>
+<script src="../_static/design-tabs.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
 <script>DOCUMENTATION_OPTIONS.pagename = 'ess_datasets/Introduction';</script>
-<link href="../_static/favicon.ico" rel="icon"/>
+<link href="../_static/favicon.ico" rel="shortcut icon"/>
 <link href="../about.html" rel="author" title="About these documents"/>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="../search.html" rel="search" title="Search"/>
+<link href="XarrayforXGenTS.html" rel="next" title="Introduction to xarray, InferenceData, and netCDF for XGenTS"/>
+<link href="index.html" rel="prev" title="ESS Dataset: A Novel Curated Dataset for Fine-grained Analysis XGen-ESS"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="en" name="docsearch:language"/>
 <meta content="True" name="docbuild:last-update"/>
 </head>
 <body data-bs-root-margin="0px 0px -60%" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-default-mode="light" data-offset="180">
-<div class="skip-link d-print-none" id="pst-skip-link"><a href="#main-content">Skip to main content</a></div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div id="pst-scroll-pixel-helper"></div>
 <button class="btn rounded-pill" id="pst-back-to-top" type="button">
-<i class="fa-solid fa-arrow-up"></i>Back to top</button>
-<input class="sidebar-toggle" id="pst-primary-sidebar-checkbox" type="checkbox"/>
-<label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-<input class="sidebar-toggle" id="pst-secondary-sidebar-checkbox" type="checkbox"/>
-<label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+<i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+<input class="sidebar-toggle" id="__primary" name="__primary" type="checkbox"/>
+<label class="overlay overlay-primary" for="__primary"></label>
+<input class="sidebar-toggle" id="__secondary" name="__secondary" type="checkbox"/>
+<label class="overlay overlay-secondary" for="__secondary"></label>
 <div class="search-button__wrapper">
 <div class="search-button__overlay"></div>
 <div class="search-button__search-container">
@@ -67,26 +74,55 @@
 <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
 </div>
-<div class="pst-async-banner-revealer d-none">
-<aside aria-label="Version warning" class="d-none d-print-none" id="bd-header-version-warning"></aside>
-</div>
-<header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<nav class="bd-header navbar navbar-expand-lg bd-navbar">
 <div class="bd-header__inner bd-page-width">
-<button aria-label="Site navigation" class="pst-navbar-icon sidebar-toggle primary-toggle">
+<label class="sidebar-toggle primary-toggle" for="__primary">
 <span class="fa-solid fa-bars"></span>
-</button>
+</label>
 <div class="col-lg-3 navbar-header-items__start">
 <div class="navbar-item">
 <a class="navbar-brand logo" href="../index.html">
-<img alt="TimeXAI  documentation - Home" class="logo__image only-light" src="../_static/logo.png"/>
-<script>document.write(`<img src="../_static/logo_dark.png" class="logo__image only-dark" alt="TimeXAI  documentation - Home"/>`);</script>
+<img alt="Logo image" class="logo__image only-light" src="../_static/logo.png"/>
+<script>document.write(`<img src="../_static/logo_dark.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
 </a></div>
 </div>
 <div class="col-lg-9 navbar-header-items">
 <div class="me-auto navbar-header-items__center">
-<div class="navbar-item">
-<nav>
+<div class="navbar-item"><nav class="navbar-nav">
+<p aria-label="Site Navigation" aria-level="1" class="sidebar-header-items__title" role="heading">
+    Site Navigation
+  </p>
 <ul class="bd-navbar-elements navbar-nav">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../getting_started/index.html">
+                        Getting Started
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../archive/index.html">
+                        XGenTS Archive
+                      </a>
+</li>
+<li class="nav-item current active">
+<a class="nav-link nav-internal" href="index.html">
+                        ESS dataset
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../community.html">
+                        Community
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../contributing/index.html">
+                        Contributing
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../about.html">
+                        About us
+                      </a>
+</li>
 </ul>
 </nav></div>
 </div>
@@ -94,7 +130,7 @@
 <div class="navbar-item navbar-persistent--container">
 <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -105,16 +141,16 @@
 <div class="navbar-item">
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
-<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links navbar-nav">
 <li class="nav-item">
-<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i>
+<a class="nav-link" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><span><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i></span>
 <span class="sr-only">GitHub</span></a>
 </li>
 </ul></div>
@@ -123,7 +159,7 @@ document.write(`
 <div class="navbar-persistent--mobile">
 <script>
  document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -131,19 +167,51 @@ document.write(`
  `);
  </script>
 </div>
-<button aria-label="On this page" class="pst-navbar-icon sidebar-toggle secondary-toggle">
+<label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
 <span class="fa-solid fa-outdent"></span>
-</button>
+</label>
 </div>
-</header>
+</nav>
 <div class="bd-container">
 <div class="bd-container__inner bd-page-width">
 <div class="bd-sidebar-primary bd-sidebar">
 <div class="sidebar-header-items sidebar-primary__section">
 <div class="sidebar-header-items__center">
-<div class="navbar-item">
-<nav>
+<div class="navbar-item"><nav class="navbar-nav">
+<p aria-label="Site Navigation" aria-level="1" class="sidebar-header-items__title" role="heading">
+    Site Navigation
+  </p>
 <ul class="bd-navbar-elements navbar-nav">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../getting_started/index.html">
+                        Getting Started
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../archive/index.html">
+                        XGenTS Archive
+                      </a>
+</li>
+<li class="nav-item current active">
+<a class="nav-link nav-internal" href="index.html">
+                        ESS dataset
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../community.html">
+                        Community
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../contributing/index.html">
+                        Contributing
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../about.html">
+                        About us
+                      </a>
+</li>
 </ul>
 </nav></div>
 </div>
@@ -151,46 +219,56 @@ document.write(`
 <div class="navbar-item">
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script></div>
-<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<div class="navbar-item"><ul aria-label="Icon Links" class="navbar-icon-links navbar-nav">
 <li class="nav-item">
-<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i>
+<a class="nav-link" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/XgenTimeSeries/xgen-timeseries" rel="noopener" target="_blank" title="GitHub"><span><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i></span>
 <span class="sr-only">GitHub</span></a>
 </li>
 </ul></div>
 </div>
 </div>
 <div class="sidebar-primary-items__start sidebar-primary__section">
-<div class="sidebar-primary-item">
-<nav aria-label="Section Navigation" class="bd-docs-nav bd-links">
+<div class="sidebar-primary-item"><nav aria-label="Section Navigation" class="bd-docs-nav bd-links">
 <p aria-level="1" class="bd-links__title" role="heading">Section Navigation</p>
-<div class="bd-toc-item navbar-nav"></div>
+<div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">How to use?</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Installation, XGenTS Quickstart 🤗</a></li>
+<li class="toctree-l1"><a class="reference internal" href="XarrayforXGenTS.html">Introduction to xarray, InferenceData, and netCDF for XGenTS</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="CreatingInferenceData.html">Creating InferenceData</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ConversionGuideEmcee.html">Converting emcee objects to InferenceData</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="WorkingWithInferenceData.html">Working with InferenceData</a></li>
+</ul>
+</div>
 </nav></div>
 </div>
 <div class="sidebar-primary-items__end sidebar-primary__section">
 </div>
 <div id="rtd-footer-container"></div>
 </div>
-<main class="bd-main" id="main-content" role="main">
+<main class="bd-main" id="main-content">
 <div class="bd-content">
 <div class="bd-article-container">
-<div class="bd-header-article d-print-none">
+<div class="bd-header-article">
 <div class="header-article-items header-article__inner">
 <div class="header-article-items__start">
 <div class="header-article-item">
-<nav aria-label="Breadcrumb" class="d-print-none">
+<nav aria-label="Breadcrumb">
 <ul class="bd-breadcrumbs">
 <li class="breadcrumb-item breadcrumb-home">
 <a aria-label="Home" class="nav-link" href="../index.html">
 <i class="fa-solid fa-home"></i>
 </a>
 </li>
+<li class="breadcrumb-item"><a class="nav-link" href="index.html">ESS Dataset: A Novel Curated Dataset for Fine-grained Analysis XGen-ESS</a></li>
 <li aria-current="page" class="breadcrumb-item active">Installation...</li>
 </ul>
 </nav>
@@ -199,9 +277,9 @@ document.write(`
 </div>
 </div>
 <div id="searchbox"></div>
-<article class="bd-article">
-<section class="tex2jax_ignore mathjax_ignore" id="installation-timexai-quickstart">
-<span id="quickstart"></span><h1>Installation, TimeXAI Quickstart 🤗<a class="headerlink" href="#installation-timexai-quickstart" title="Link to this heading">#</a></h1>
+<article class="bd-article" role="main">
+<section class="tex2jax_ignore mathjax_ignore" id="installation-xgents-quickstart">
+<span id="quickstart"></span><h1>Installation, XGenTS Quickstart 🤗<a class="headerlink" href="#installation-xgents-quickstart" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xgen</span> <span class="k">as</span> <span class="nn">xg</span>
@@ -211,8 +289,8 @@ document.write(`
 </div>
 </div>
 <section id="get-started-with-plotting">
-<h2>Get started with plotting<a class="headerlink" href="#get-started-with-plotting" title="Link to this heading">#</a></h2>
-<p>TimeXAI is designed to be used with libraries like <a class="reference external" href="https://pystan.readthedocs.io">PyStan</a> and <a class="reference external" href="https://docs.pymc.io">PyMC3</a>, but works fine with raw NumPy arrays.</p>
+<h2>Get started with plotting<a class="headerlink" href="#get-started-with-plotting" title="Permalink to this heading">#</a></h2>
+<p>XGenTS is designed to be used with libraries like <a class="reference external" href="https://pystan.readthedocs.io">PyStan</a> and <a class="reference external" href="https://docs.pymc.io">PyMC3</a>, but works fine with raw NumPy arrays.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">az</span><span class="o">.</span><span class="n">plot_posterior</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100_000</span><span class="p">));</span>
@@ -223,7 +301,7 @@ document.write(`
 <img alt="../_images/4b3afe122c38ad424c3a5a4101eb863d22b971f347b8eb367c0559d25bbd4b84.png" src="../_images/4b3afe122c38ad424c3a5a4101eb863d22b971f347b8eb367c0559d25bbd4b84.png"/>
 </div>
 </div>
-<p>Plotting a dictionary of arrays, TimeXAI will interpret each key as the name of a different random variable. Each row of an array is treated as an independent series of draws from the variable, called a <em>chain</em>. Below, we have 10 chains of 50 draws, each for four different distributions.</p>
+<p>Plotting a dictionary of arrays, XGenTS will interpret each key as the name of a different random variable. Each row of an array is treated as an independent series of draws from the variable, called a <em>chain</em>. Below, we have 10 chains of 50 draws, each for four different distributions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
@@ -243,9 +321,9 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="timexai-rcparams">
-<h2>TimeXAI rcParams<a class="headerlink" href="#timexai-rcparams" title="Link to this heading">#</a></h2>
-<p>You may have noticed that for both <code class="xref py py-func docutils literal notranslate"><span class="pre">plot_posterior()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">plot_forest()</span></code>, the Highest Density Interval (HDI) is 94%, which you may find weird at first. This particular value is a friendly reminder of the arbitrary nature of choosing any single value without further justification, including common values like 95%, 50% and even our own default, 94%. TimeXAI includes default values for a few parameters, you can access them with <code class="docutils literal notranslate"><span class="pre">az.rcParams</span></code>. To change the default HDI value to let’s say 90% you can do:</p>
+<section id="xgents-rcparams">
+<h2>XGenTS rcParams<a class="headerlink" href="#xgents-rcparams" title="Permalink to this heading">#</a></h2>
+<p>You may have noticed that for both <code class="xref py py-func docutils literal notranslate"><span class="pre">plot_posterior()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">plot_forest()</span></code>, the Highest Density Interval (HDI) is 94%, which you may find weird at first. This particular value is a friendly reminder of the arbitrary nature of choosing any single value without further justification, including common values like 95%, 50% and even our own default, 94%. XGenTS includes default values for a few parameters, you can access them with <code class="docutils literal notranslate"><span class="pre">az.rcParams</span></code>. To change the default HDI value to let’s say 90% you can do:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">az</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">"stats.hdi_prob"</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.90</span>
@@ -347,7 +425,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
     </div>
 </div></div>
 </div>
-<p>Most TimeXAI functions work fine with <code class="docutils literal notranslate"><span class="pre">trace</span></code> objects from PyMC3 while it is recommended to covert to inferenceData before plotting:</p>
+<p>Most XGenTS functions work fine with <code class="docutils literal notranslate"><span class="pre">trace</span></code> objects from PyMC3 while it is recommended to covert to inferenceData before plotting:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">az</span><span class="o">.</span><span class="n">plot_autocorr</span><span class="p">(</span><span class="n">centered_eight_trace</span><span class="p">,</span> <span class="n">var_names</span><span class="o">=</span><span class="p">[</span><span class="s2">"mu"</span><span class="p">,</span> <span class="s2">"tau"</span><span class="p">]);</span>
@@ -356,7 +434,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Got error No model on context stack. trying to find log_likelihood in translation.
-/Users/yilinxia/opt/miniconda3/envs/TimeXAI/lib/python3.8/site-packages/TimeXAI/data/io_pymc3_3x.py:98: FutureWarning: Using `from_pymc3` without the model will be deprecated in a future release. Not using the model will return less accurate and less useful results. Make sure you use the model argument or call from_pymc3 within a model context.
+/Users/yilinxia/opt/miniconda3/envs/XGenTS/lib/python3.8/site-packages/XGenTS/data/io_pymc3_3x.py:98: FutureWarning: Using `from_pymc3` without the model will be deprecated in a future release. Not using the model will return less accurate and less useful results. Make sure you use the model argument or call from_pymc3 within a model context.
   warnings.warn(
 </pre></div>
 </div>
@@ -364,9 +442,9 @@ The estimated number of effective samples is smaller than 200 for some parameter
 </div>
 </div>
 <section id="convert-to-inferencedata">
-<h3>Convert to InferenceData<a class="headerlink" href="#convert-to-inferencedata" title="Link to this heading">#</a></h3>
-<p>For much more powerful querying, analysis and plotting, we can use built-in TimeXAI utilities to convert PyMC3 objects to xarray datasets. Note we are also giving some information about labelling.</p>
-<p>TimeXAI is built to work with <a class="reference internal" href="../getting_started/CreatingInferenceData.html#creating-inferencedata"><span class="std std-ref">InferenceData</span></a>. The more <em>groups</em> it has access to, the more powerful analyses it can perform. You can check the <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code> structure specification <a class="reference internal" href="../schema/schema.html#schema"><span class="std std-ref">here</span></a>. Given below is a plot of the trace, which is common in PyMC3 workflows. Don’t forget to note the intelligent labels.</p>
+<h3>Convert to InferenceData<a class="headerlink" href="#convert-to-inferencedata" title="Permalink to this heading">#</a></h3>
+<p>For much more powerful querying, analysis and plotting, we can use built-in XGenTS utilities to convert PyMC3 objects to xarray datasets. Note we are also giving some information about labelling.</p>
+<p>XGenTS is built to work with <a class="reference internal" href="../getting_started/CreatingInferenceData.html#creating-inferencedata"><span class="std std-ref">InferenceData</span></a>. The more <em>groups</em> it has access to, the more powerful analyses it can perform. You can check the <code class="docutils literal notranslate"><span class="pre">InferenceData</span></code> structure specification <a class="reference internal" href="../schema/schema.html#schema"><span class="std std-ref">here</span></a>. Given below is a plot of the trace, which is common in PyMC3 workflows. Don’t forget to note the intelligent labels.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">az</span><span class="o">.</span><span class="n">from_pymc3</span><span class="p">(</span>
@@ -385,7 +463,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 <div class="output text_html">
 <div>
 <div class="xr-header">
-<div class="xr-obj-type">TimeXAI.InferenceData</div>
+<div class="xr-obj-type">XGenTS.InferenceData</div>
 </div>
 <ul class="xr-sections group-sections">
 <li class="xr-section-item">
@@ -757,7 +835,7 @@ Data variables:
     tau      (chain, draw) float64 4.318 6.168 5.434 2.579 ... 2.299 6.237 5.914
 Attributes:
     created_at:                 2022-04-15T05:26:48.456950
-    TimeXAI_version:              0.12.0
+    XGenTS_version:              0.12.0
     inference_library:          pymc3
     inference_library_version:  3.11.5
     sampling_time:              13.786029815673828
@@ -816,7 +894,7 @@ Attributes:
        [ 5.09386531,  6.94315969,  7.65834365, ...,  8.31296143,
          6.80928935,  3.848819  ],
        [ 7.13191747,  7.97228244,  2.83204967, ...,  2.29897627,
-         6.23694218,  5.91435416]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-080e6a07-8bc1-42d9-87fa-af4f119d4b12" type="checkbox"/><label class="xr-section-summary" for="section-080e6a07-8bc1-42d9-87fa-af4f119d4b12">Attributes: <span>(6)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:48.456950</dd><dt><span>TimeXAI_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.11.5</dd><dt><span>sampling_time :</span></dt><dd>13.786029815673828</dd><dt><span>tuning_steps :</span></dt><dd>1000</dd></dl></div></li></ul></div></div><br/></div>
+         6.23694218,  5.91435416]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-080e6a07-8bc1-42d9-87fa-af4f119d4b12" type="checkbox"/><label class="xr-section-summary" for="section-080e6a07-8bc1-42d9-87fa-af4f119d4b12">Attributes: <span>(6)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:48.456950</dd><dt><span>XGenTS_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.11.5</dd><dt><span>sampling_time :</span></dt><dd>13.786029815673828</dd><dt><span>tuning_steps :</span></dt><dd>1000</dd></dl></div></li></ul></div></div><br/></div>
 </ul>
 </div>
 </li>
@@ -1187,7 +1265,7 @@ Data variables:
     obs      (chain, draw, school) float64 3.892 -3.475 -4.494 ... -25.62 -7.858
 Attributes:
     created_at:                 2022-04-15T05:26:48.654469
-    TimeXAI_version:              0.12.0
+    XGenTS_version:              0.12.0
     inference_library:          pymc3
     inference_library_version:  3.11.5</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input class="xr-section-summary-in" disabled="" id="section-a6f9e254-c313-45f3-90c3-140cf262e346" type="checkbox"/><label class="xr-section-summary" for="section-a6f9e254-c313-45f3-90c3-140cf262e346" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">chain</span>: 4</li><li><span class="xr-has-index">draw</span>: 1000</li><li><span class="xr-has-index">school</span>: 8</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-d96b0eab-ba08-418a-b37f-5a028961c7fe" type="checkbox"/><label class="xr-section-summary" for="section-d96b0eab-ba08-418a-b37f-5a028961c7fe">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">chain</span></div><div class="xr-var-dims">(chain)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3</div><input class="xr-var-attrs-in" disabled="" id="attrs-e7cb8740-a3ff-4038-8de6-8868af817e6f" type="checkbox"/><label for="attrs-e7cb8740-a3ff-4038-8de6-8868af817e6f" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-719c4c7c-736a-480c-aa2d-f9a48021b227" type="checkbox"/><label for="data-719c4c7c-736a-480c-aa2d-f9a48021b227" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([0, 1, 2, 3])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">draw</span></div><div class="xr-var-dims">(draw)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3 4 5 ... 995 996 997 998 999</div><input class="xr-var-attrs-in" disabled="" id="attrs-e479e27c-8333-4112-a771-ae7a25a55f3a" type="checkbox"/><label for="attrs-e479e27c-8333-4112-a771-ae7a25a55f3a" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-fb222918-aed7-4e37-afaa-0214abb83937" type="checkbox"/><label for="data-fb222918-aed7-4e37-afaa-0214abb83937" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([  0,   1,   2, ..., 997, 998, 999])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">school</span></div><div class="xr-var-dims">(school)</div><div class="xr-var-dtype">&lt;U16</div><div class="xr-var-preview xr-preview">'Choate' ... 'Mt. Hermon'</div><input class="xr-var-attrs-in" disabled="" id="attrs-19a09abd-320b-4579-b9ac-eb23ea0cf30e" type="checkbox"/><label for="attrs-19a09abd-320b-4579-b9ac-eb23ea0cf30e" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-92b382c6-96f8-4bf3-a0e8-325c73d3038a" type="checkbox"/><label for="data-92b382c6-96f8-4bf3-a0e8-325c73d3038a" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(['Choate', 'Deerfield', 'Phillips Andover', 'Phillips Exeter',
        'Hotchkiss', 'Lawrenceville', "St. Paul's", 'Mt. Hermon'], dtype='&lt;U16')</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-795befbf-d1eb-4e8f-9801-085af5225a67" type="checkbox"/><label class="xr-section-summary" for="section-795befbf-d1eb-4e8f-9801-085af5225a67">Data variables: <span>(1)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>obs</span></div><div class="xr-var-dims">(chain, draw, school)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">3.892 -3.475 ... -25.62 -7.858</div><input class="xr-var-attrs-in" disabled="" id="attrs-652a4285-11d2-47b3-b78f-d210282ef2be" type="checkbox"/><label for="attrs-652a4285-11d2-47b3-b78f-d210282ef2be" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-6b36cec3-63d5-45db-9af5-5f7ad97b0314" type="checkbox"/><label for="data-6b36cec3-63d5-45db-9af5-5f7ad97b0314" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[[ 3.89197544e+00, -3.47539690e+00, -4.49439069e+00, ...,
@@ -1230,7 +1308,7 @@ Attributes:
         [ 6.47953216e+00, -3.24026999e+00,  3.26419088e+01, ...,
           7.11206103e+00,  9.76000507e+00,  2.46580357e+01],
         [ 3.12896972e+01,  3.05466603e+01, -3.12671294e+01, ...,
-          2.99534823e+01, -2.56182864e+01, -7.85823146e+00]]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-8f26d8d3-3726-4396-b336-3f8e74cf5dff" type="checkbox"/><label class="xr-section-summary" for="section-8f26d8d3-3726-4396-b336-3f8e74cf5dff">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:48.654469</dd><dt><span>TimeXAI_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.11.5</dd></dl></div></li></ul></div></div><br/></div>
+          2.99534823e+01, -2.56182864e+01, -7.85823146e+00]]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-8f26d8d3-3726-4396-b336-3f8e74cf5dff" type="checkbox"/><label class="xr-section-summary" for="section-8f26d8d3-3726-4396-b336-3f8e74cf5dff">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:48.654469</dd><dt><span>XGenTS_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.11.5</dd></dl></div></li></ul></div></div><br/></div>
 </ul>
 </div>
 </li>
@@ -1601,7 +1679,7 @@ Data variables:
     obs      (chain, draw, school) float64 -4.611 -3.294 ... -6.887 -3.992
 Attributes:
     created_at:                 2022-04-15T05:26:48.652469
-    TimeXAI_version:              0.12.0
+    XGenTS_version:              0.12.0
     inference_library:          pymc3
     inference_library_version:  3.11.5</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input class="xr-section-summary-in" disabled="" id="section-399758f9-f130-47c1-a554-effcc463b107" type="checkbox"/><label class="xr-section-summary" for="section-399758f9-f130-47c1-a554-effcc463b107" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">chain</span>: 4</li><li><span class="xr-has-index">draw</span>: 1000</li><li><span class="xr-has-index">school</span>: 8</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-ddbdd40c-e1d0-4ceb-8c63-a42b6e4f4f57" type="checkbox"/><label class="xr-section-summary" for="section-ddbdd40c-e1d0-4ceb-8c63-a42b6e4f4f57">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">chain</span></div><div class="xr-var-dims">(chain)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3</div><input class="xr-var-attrs-in" disabled="" id="attrs-515045fa-e29f-4de0-bcd3-8246984e2c3f" type="checkbox"/><label for="attrs-515045fa-e29f-4de0-bcd3-8246984e2c3f" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-b9d0f7c0-9235-41c1-bcf2-2cabf9b8e271" type="checkbox"/><label for="data-b9d0f7c0-9235-41c1-bcf2-2cabf9b8e271" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([0, 1, 2, 3])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">draw</span></div><div class="xr-var-dims">(draw)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3 4 5 ... 995 996 997 998 999</div><input class="xr-var-attrs-in" disabled="" id="attrs-9df6bff6-07f1-460e-92ee-2b005da2a729" type="checkbox"/><label for="attrs-9df6bff6-07f1-460e-92ee-2b005da2a729" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-44683067-65ac-4828-ac1d-8189a8320077" type="checkbox"/><label for="data-44683067-65ac-4828-ac1d-8189a8320077" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([  0,   1,   2, ..., 997, 998, 999])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">school</span></div><div class="xr-var-dims">(school)</div><div class="xr-var-dtype">&lt;U16</div><div class="xr-var-preview xr-preview">'Choate' ... 'Mt. Hermon'</div><input class="xr-var-attrs-in" disabled="" id="attrs-65178f1d-b7e3-4097-ba9a-e32d80791ba0" type="checkbox"/><label for="attrs-65178f1d-b7e3-4097-ba9a-e32d80791ba0" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-dccd6c58-3531-400e-8a4d-d19a2fe66621" type="checkbox"/><label for="data-dccd6c58-3531-400e-8a4d-d19a2fe66621" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(['Choate', 'Deerfield', 'Phillips Andover', 'Phillips Exeter',
        'Hotchkiss', 'Lawrenceville', "St. Paul's", 'Mt. Hermon'], dtype='&lt;U16')</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-67c2656f-2126-4c90-9d37-673415d45487" type="checkbox"/><label class="xr-section-summary" for="section-67c2656f-2126-4c90-9d37-673415d45487">Data variables: <span>(1)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>obs</span></div><div class="xr-var-dims">(chain, draw, school)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">-4.611 -3.294 ... -6.887 -3.992</div><input class="xr-var-attrs-in" disabled="" id="attrs-f313b488-062b-44b8-8b00-25087147639b" type="checkbox"/><label for="attrs-f313b488-062b-44b8-8b00-25087147639b" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-3169f17e-4afa-47c6-92ef-2d312655c828" type="checkbox"/><label for="data-3169f17e-4afa-47c6-92ef-2d312655c828" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[[-4.61050298, -3.29441455, -3.79237436, ..., -3.53641638,
@@ -1644,7 +1722,7 @@ Attributes:
         [-4.31661036, -3.52946462, -3.81772589, ..., -3.4146781 ,
          -5.72495572, -3.95860641],
         [-4.75824139, -3.24574557, -3.71308349, ..., -3.36891127,
-         -6.88658335, -3.99235432]]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-113dd3fc-6b3c-4e71-97bb-759ec8d70ed1" type="checkbox"/><label class="xr-section-summary" for="section-113dd3fc-6b3c-4e71-97bb-759ec8d70ed1">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:48.652469</dd><dt><span>TimeXAI_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.11.5</dd></dl></div></li></ul></div></div><br/></div>
+         -6.88658335, -3.99235432]]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-113dd3fc-6b3c-4e71-97bb-759ec8d70ed1" type="checkbox"/><label class="xr-section-summary" for="section-113dd3fc-6b3c-4e71-97bb-759ec8d70ed1">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:48.652469</dd><dt><span>XGenTS_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.11.5</dd></dl></div></li></ul></div></div><br/></div>
 </ul>
 </div>
 </li>
@@ -2026,7 +2104,7 @@ Data variables: (12/13)
     step_size           (chain, draw) float64 0.4712 0.4712 ... 0.4006 0.4006
 Attributes:
     created_at:                 2022-04-15T05:26:48.462552
-    TimeXAI_version:              0.12.0
+    XGenTS_version:              0.12.0
     inference_library:          pymc3
     inference_library_version:  3.11.5
     sampling_time:              13.786029815673828
@@ -2105,7 +2183,7 @@ Attributes:
        [0.55337819, 0.55337819, 0.55337819, ..., 0.55337819, 0.55337819,
         0.55337819],
        [0.40058279, 0.40058279, 0.40058279, ..., 0.40058279, 0.40058279,
-        0.40058279]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-484b542b-ee8c-4159-ac52-1b5a7da8500e" type="checkbox"/><label class="xr-section-summary" for="section-484b542b-ee8c-4159-ac52-1b5a7da8500e">Attributes: <span>(6)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:48.462552</dd><dt><span>TimeXAI_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.11.5</dd><dt><span>sampling_time :</span></dt><dd>13.786029815673828</dd><dt><span>tuning_steps :</span></dt><dd>1000</dd></dl></div></li></ul></div></div><br/></div>
+        0.40058279]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-484b542b-ee8c-4159-ac52-1b5a7da8500e" type="checkbox"/><label class="xr-section-summary" for="section-484b542b-ee8c-4159-ac52-1b5a7da8500e">Attributes: <span>(6)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:48.462552</dd><dt><span>XGenTS_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.11.5</dd><dt><span>sampling_time :</span></dt><dd>13.786029815673828</dd><dt><span>tuning_steps :</span></dt><dd>1000</dd></dl></div></li></ul></div></div><br/></div>
 </ul>
 </div>
 </li>
@@ -2479,7 +2557,7 @@ Data variables:
     mu         (chain, draw) float64 -5.671 -2.992 -5.939 ... 11.19 1.339 1.965
 Attributes:
     created_at:                 2022-04-15T05:26:48.656780
-    TimeXAI_version:              0.12.0
+    XGenTS_version:              0.12.0
     inference_library:          pymc3
     inference_library_version:  3.11.5</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input class="xr-section-summary-in" disabled="" id="section-f4386534-b408-4928-bda0-126c87604854" type="checkbox"/><label class="xr-section-summary" for="section-f4386534-b408-4928-bda0-126c87604854" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">chain</span>: 1</li><li><span class="xr-has-index">draw</span>: 500</li><li><span class="xr-has-index">school</span>: 8</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-1d2ee1d9-08b5-4e6c-9378-abcd6704a9c1" type="checkbox"/><label class="xr-section-summary" for="section-1d2ee1d9-08b5-4e6c-9378-abcd6704a9c1">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">chain</span></div><div class="xr-var-dims">(chain)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0</div><input class="xr-var-attrs-in" disabled="" id="attrs-64cd19c6-96c6-4648-bdd1-d7a0fdecb660" type="checkbox"/><label for="attrs-64cd19c6-96c6-4648-bdd1-d7a0fdecb660" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-b50a5c70-194e-44be-982f-21a1aeb5f41f" type="checkbox"/><label for="data-b50a5c70-194e-44be-982f-21a1aeb5f41f" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([0])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">draw</span></div><div class="xr-var-dims">(draw)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3 4 5 ... 495 496 497 498 499</div><input class="xr-var-attrs-in" disabled="" id="attrs-235eb1ee-097b-41da-9ac0-4b26537db3e8" type="checkbox"/><label for="attrs-235eb1ee-097b-41da-9ac0-4b26537db3e8" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-1f0bf295-9cce-42ae-9348-f9e9bcb8b979" type="checkbox"/><label for="data-1f0bf295-9cce-42ae-9348-f9e9bcb8b979" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([  0,   1,   2, ..., 497, 498, 499])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">school</span></div><div class="xr-var-dims">(school)</div><div class="xr-var-dtype">&lt;U16</div><div class="xr-var-preview xr-preview">'Choate' ... 'Mt. Hermon'</div><input class="xr-var-attrs-in" disabled="" id="attrs-129214d8-1141-43ef-ae73-85d41088457e" type="checkbox"/><label for="attrs-129214d8-1141-43ef-ae73-85d41088457e" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-1331e7bf-548c-4407-bc59-94baae51dceb" type="checkbox"/><label for="data-1331e7bf-548c-4407-bc59-94baae51dceb" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(['Choate', 'Deerfield', 'Phillips Andover', 'Phillips Exeter',
        'Hotchkiss', 'Lawrenceville', "St. Paul's", 'Mt. Hermon'], dtype='&lt;U16')</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-e686a337-97ee-4125-b17c-a105ff360d4d" type="checkbox"/><label class="xr-section-summary" for="section-e686a337-97ee-4125-b17c-a105ff360d4d">Data variables: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>tau_log__</span></div><div class="xr-var-dims">(chain, draw)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">0.7613 2.303 1.944 ... 1.664 3.069</div><input class="xr-var-attrs-in" disabled="" id="attrs-45f0e428-a64a-49d9-ad67-f91c6abba4a4" type="checkbox"/><label for="attrs-45f0e428-a64a-49d9-ad67-f91c6abba4a4" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-a6c7528b-7781-4dba-be95-104cdf5e7158" type="checkbox"/><label for="data-a6c7528b-7781-4dba-be95-104cdf5e7158" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[ 7.61345408e-01,  2.30303944e+00,  1.94414114e+00,
@@ -2614,7 +2692,7 @@ Attributes:
         -8.51202706e-01,  6.01767513e+00,  3.20978070e+00,
         -3.25066013e+00,  4.32675174e+00, -9.39309354e+00,
          3.07580515e+00,  1.69654241e+00,  1.11911807e+01,
-         1.33908553e+00,  1.96494493e+00]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-2e0b4ea0-2752-407c-9ac4-193ff7a6380b" type="checkbox"/><label class="xr-section-summary" for="section-2e0b4ea0-2752-407c-9ac4-193ff7a6380b">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:48.656780</dd><dt><span>TimeXAI_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.11.5</dd></dl></div></li></ul></div></div><br/></div>
+         1.33908553e+00,  1.96494493e+00]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-2e0b4ea0-2752-407c-9ac4-193ff7a6380b" type="checkbox"/><label class="xr-section-summary" for="section-2e0b4ea0-2752-407c-9ac4-193ff7a6380b">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:48.656780</dd><dt><span>XGenTS_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.11.5</dd></dl></div></li></ul></div></div><br/></div>
 </ul>
 </div>
 </li>
@@ -2985,7 +3063,7 @@ Data variables:
     obs      (chain, draw, school) float64 -12.02 -21.44 -9.397 ... 39.53 -42.67
 Attributes:
     created_at:                 2022-04-15T05:26:48.658653
-    TimeXAI_version:              0.12.0
+    XGenTS_version:              0.12.0
     inference_library:          pymc3
     inference_library_version:  3.11.5</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input class="xr-section-summary-in" disabled="" id="section-cdc3eeca-679e-46cc-b4ee-53ddbfc3557f" type="checkbox"/><label class="xr-section-summary" for="section-cdc3eeca-679e-46cc-b4ee-53ddbfc3557f" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">chain</span>: 1</li><li><span class="xr-has-index">draw</span>: 500</li><li><span class="xr-has-index">school</span>: 8</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-3986bf20-1dfd-4c24-9fca-50dc5373fc6d" type="checkbox"/><label class="xr-section-summary" for="section-3986bf20-1dfd-4c24-9fca-50dc5373fc6d">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">chain</span></div><div class="xr-var-dims">(chain)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0</div><input class="xr-var-attrs-in" disabled="" id="attrs-36446bc8-4746-4102-af71-739a11435101" type="checkbox"/><label for="attrs-36446bc8-4746-4102-af71-739a11435101" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-59cef841-e04f-4a20-9534-7797ef0e3620" type="checkbox"/><label for="data-59cef841-e04f-4a20-9534-7797ef0e3620" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([0])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">draw</span></div><div class="xr-var-dims">(draw)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3 4 5 ... 495 496 497 498 499</div><input class="xr-var-attrs-in" disabled="" id="attrs-674617d0-5954-4f66-a348-b20cfcc415e1" type="checkbox"/><label for="attrs-674617d0-5954-4f66-a348-b20cfcc415e1" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-e6643a5a-1879-4d00-920b-02b910f3f0bd" type="checkbox"/><label for="data-e6643a5a-1879-4d00-920b-02b910f3f0bd" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([  0,   1,   2, ..., 497, 498, 499])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">school</span></div><div class="xr-var-dims">(school)</div><div class="xr-var-dtype">&lt;U16</div><div class="xr-var-preview xr-preview">'Choate' ... 'Mt. Hermon'</div><input class="xr-var-attrs-in" disabled="" id="attrs-0ab11318-830a-495b-a08d-88f0dd22cd66" type="checkbox"/><label for="attrs-0ab11318-830a-495b-a08d-88f0dd22cd66" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-3d23a05c-ad2d-4e2a-a718-2fc07b6c5ac3" type="checkbox"/><label for="data-3d23a05c-ad2d-4e2a-a718-2fc07b6c5ac3" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(['Choate', 'Deerfield', 'Phillips Andover', 'Phillips Exeter',
        'Hotchkiss', 'Lawrenceville', "St. Paul's", 'Mt. Hermon'], dtype='&lt;U16')</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-ea49569a-2b0a-497e-9613-bd6fbca80293" type="checkbox"/><label class="xr-section-summary" for="section-ea49569a-2b0a-497e-9613-bd6fbca80293">Data variables: <span>(1)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>obs</span></div><div class="xr-var-dims">(chain, draw, school)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">-12.02 -21.44 ... 39.53 -42.67</div><input class="xr-var-attrs-in" disabled="" id="attrs-2bf12557-5d44-47ad-95cf-b5cc0355c213" type="checkbox"/><label for="attrs-2bf12557-5d44-47ad-95cf-b5cc0355c213" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-305b311c-4b00-4585-852a-c4d35135c236" type="checkbox"/><label for="data-305b311c-4b00-4585-852a-c4d35135c236" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[[-12.0177098 , -21.4428818 ,  -9.39706428, ...,   0.0607126 ,
@@ -3000,7 +3078,7 @@ Attributes:
         [ -8.16935722,  -3.4544725 ,  23.35732596, ...,  26.3265578 ,
            1.59141583,  13.60046927],
         [-23.36866302,  38.92331314,  -1.94383522, ...,  10.28784457,
-          39.52708582, -42.66937293]]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-65ad3d60-d959-4af5-bec5-770411ca0a0a" type="checkbox"/><label class="xr-section-summary" for="section-65ad3d60-d959-4af5-bec5-770411ca0a0a">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:48.658653</dd><dt><span>TimeXAI_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.11.5</dd></dl></div></li></ul></div></div><br/></div>
+          39.52708582, -42.66937293]]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-65ad3d60-d959-4af5-bec5-770411ca0a0a" type="checkbox"/><label class="xr-section-summary" for="section-65ad3d60-d959-4af5-bec5-770411ca0a0a">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:48.658653</dd><dt><span>XGenTS_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.11.5</dd></dl></div></li></ul></div></div><br/></div>
 </ul>
 </div>
 </li>
@@ -3369,10 +3447,10 @@ Data variables:
     obs      (school) float64 28.0 8.0 -3.0 7.0 -1.0 1.0 18.0 12.0
 Attributes:
     created_at:                 2022-04-15T05:26:48.659375
-    TimeXAI_version:              0.12.0
+    XGenTS_version:              0.12.0
     inference_library:          pymc3
     inference_library_version:  3.11.5</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input class="xr-section-summary-in" disabled="" id="section-47499a36-5fe1-4023-9b6f-8423949baa98" type="checkbox"/><label class="xr-section-summary" for="section-47499a36-5fe1-4023-9b6f-8423949baa98" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">school</span>: 8</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-6d19f2e6-c8ea-40fd-a667-dacf2190dbe5" type="checkbox"/><label class="xr-section-summary" for="section-6d19f2e6-c8ea-40fd-a667-dacf2190dbe5">Coordinates: <span>(1)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">school</span></div><div class="xr-var-dims">(school)</div><div class="xr-var-dtype">&lt;U16</div><div class="xr-var-preview xr-preview">'Choate' ... 'Mt. Hermon'</div><input class="xr-var-attrs-in" disabled="" id="attrs-59c579ee-0098-4ee1-bc5d-c0eab88da71b" type="checkbox"/><label for="attrs-59c579ee-0098-4ee1-bc5d-c0eab88da71b" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-56f5560d-dc66-4971-b272-5971abd303fe" type="checkbox"/><label for="data-56f5560d-dc66-4971-b272-5971abd303fe" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(['Choate', 'Deerfield', 'Phillips Andover', 'Phillips Exeter',
-       'Hotchkiss', 'Lawrenceville', "St. Paul's", 'Mt. Hermon'], dtype='&lt;U16')</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-b09949cf-cf8f-473e-b676-c4264f5c7e94" type="checkbox"/><label class="xr-section-summary" for="section-b09949cf-cf8f-473e-b676-c4264f5c7e94">Data variables: <span>(1)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>obs</span></div><div class="xr-var-dims">(school)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">28.0 8.0 -3.0 7.0 ... 1.0 18.0 12.0</div><input class="xr-var-attrs-in" disabled="" id="attrs-8b57a25c-1032-4140-bad8-56f8a418bec1" type="checkbox"/><label for="attrs-8b57a25c-1032-4140-bad8-56f8a418bec1" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-7e6f7cc3-3bc6-4131-a5b0-6e5d88bed787" type="checkbox"/><label for="data-7e6f7cc3-3bc6-4131-a5b0-6e5d88bed787" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([28.,  8., -3.,  7., -1.,  1., 18., 12.])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-91c6707b-97b7-4691-82e5-9b386f99d374" type="checkbox"/><label class="xr-section-summary" for="section-91c6707b-97b7-4691-82e5-9b386f99d374">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:48.659375</dd><dt><span>TimeXAI_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.11.5</dd></dl></div></li></ul></div></div><br/></div>
+       'Hotchkiss', 'Lawrenceville', "St. Paul's", 'Mt. Hermon'], dtype='&lt;U16')</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-b09949cf-cf8f-473e-b676-c4264f5c7e94" type="checkbox"/><label class="xr-section-summary" for="section-b09949cf-cf8f-473e-b676-c4264f5c7e94">Data variables: <span>(1)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>obs</span></div><div class="xr-var-dims">(school)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">28.0 8.0 -3.0 7.0 ... 1.0 18.0 12.0</div><input class="xr-var-attrs-in" disabled="" id="attrs-8b57a25c-1032-4140-bad8-56f8a418bec1" type="checkbox"/><label for="attrs-8b57a25c-1032-4140-bad8-56f8a418bec1" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-7e6f7cc3-3bc6-4131-a5b0-6e5d88bed787" type="checkbox"/><label for="data-7e6f7cc3-3bc6-4131-a5b0-6e5d88bed787" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([28.,  8., -3.,  7., -1.,  1., 18., 12.])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-91c6707b-97b7-4691-82e5-9b386f99d374" type="checkbox"/><label class="xr-section-summary" for="section-91c6707b-97b7-4691-82e5-9b386f99d374">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:48.659375</dd><dt><span>XGenTS_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>pymc3</dd><dt><span>inference_library_version :</span></dt><dd>3.11.5</dd></dl></div></li></ul></div></div><br/></div>
 </ul>
 </div>
 </li>
@@ -3732,8 +3810,8 @@ dl.xr-attrs {
 </section>
 </section>
 <section id="plotting-with-pystan-objects">
-<h2>Plotting with PyStan objects<a class="headerlink" href="#plotting-with-pystan-objects" title="Link to this heading">#</a></h2>
-<p>TimeXAI is built with first class support for <a class="reference external" href="https://pystan.readthedocs.io/en/latest/">PyStan</a> objects, and can plot raw <code class="docutils literal notranslate"><span class="pre">fit</span></code> objects in a reasonable manner. Here is the same centered eight schools model:</p>
+<h2>Plotting with PyStan objects<a class="headerlink" href="#plotting-with-pystan-objects" title="Permalink to this heading">#</a></h2>
+<p>XGenTS is built with first class support for <a class="reference external" href="https://pystan.readthedocs.io/en/latest/">PyStan</a> objects, and can plot raw <code class="docutils literal notranslate"><span class="pre">fit</span></code> objects in a reasonable manner. Here is the same centered eight schools model:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nest_asyncio</span>
@@ -3848,7 +3926,7 @@ dl.xr-attrs {
 <div class="output text_html">
 <div>
 <div class="xr-header">
-<div class="xr-obj-type">TimeXAI.InferenceData</div>
+<div class="xr-obj-type">XGenTS.InferenceData</div>
 </div>
 <ul class="xr-sections group-sections">
 <li class="xr-section-item">
@@ -4220,7 +4298,7 @@ Data variables:
     theta    (chain, draw, school) float64 -1.166 -0.1457 ... 0.7122 1.992
 Attributes:
     created_at:                 2022-04-15T05:26:56.712787
-    TimeXAI_version:              0.12.0
+    XGenTS_version:              0.12.0
     inference_library:          stan
     inference_library_version:  3.4.0
     num_chains:                 4
@@ -4282,7 +4360,7 @@ Attributes:
         [ 2.38621050e+00,  7.31991929e+00,  1.34191158e+00, ...,
          -3.36833961e+00,  3.84815474e+00,  3.69253428e+00],
         [-2.51098234e+00, -3.79332185e+00,  1.98985001e+00, ...,
-          4.01277654e+00,  7.12161371e-01,  1.99214790e+00]]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-8114bbcb-1316-4ea9-a13d-8ff7c4c436bc" type="checkbox"/><label class="xr-section-summary" for="section-8114bbcb-1316-4ea9-a13d-8ff7c4c436bc">Attributes: <span>(9)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:56.712787</dd><dt><span>TimeXAI_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>stan</dd><dt><span>inference_library_version :</span></dt><dd>3.4.0</dd><dt><span>num_chains :</span></dt><dd>4</dd><dt><span>num_samples :</span></dt><dd>1000</dd><dt><span>num_thin :</span></dt><dd>1</dd><dt><span>num_warmup :</span></dt><dd>1000</dd><dt><span>save_warmup :</span></dt><dd>0</dd></dl></div></li></ul></div></div><br/></div>
+          4.01277654e+00,  7.12161371e-01,  1.99214790e+00]]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-8114bbcb-1316-4ea9-a13d-8ff7c4c436bc" type="checkbox"/><label class="xr-section-summary" for="section-8114bbcb-1316-4ea9-a13d-8ff7c4c436bc">Attributes: <span>(9)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:56.712787</dd><dt><span>XGenTS_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>stan</dd><dt><span>inference_library_version :</span></dt><dd>3.4.0</dd><dt><span>num_chains :</span></dt><dd>4</dd><dt><span>num_samples :</span></dt><dd>1000</dd><dt><span>num_thin :</span></dt><dd>1</dd><dt><span>num_warmup :</span></dt><dd>1000</dd><dt><span>save_warmup :</span></dt><dd>0</dd></dl></div></li></ul></div></div><br/></div>
 </ul>
 </div>
 </li>
@@ -4653,7 +4731,7 @@ Data variables:
     y_hat    (chain, draw, school) float64 -17.26 12.4 7.823 ... -14.9 -27.98
 Attributes:
     created_at:                 2022-04-15T05:26:56.789583
-    TimeXAI_version:              0.12.0
+    XGenTS_version:              0.12.0
     inference_library:          stan
     inference_library_version:  3.4.0</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input class="xr-section-summary-in" disabled="" id="section-8d0470cb-5bdf-465f-bd08-061b722540ab" type="checkbox"/><label class="xr-section-summary" for="section-8d0470cb-5bdf-465f-bd08-061b722540ab" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">chain</span>: 4</li><li><span class="xr-has-index">draw</span>: 1000</li><li><span class="xr-has-index">school</span>: 8</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-80ea5b8e-9a73-4c27-80fb-d391a7adb11e" type="checkbox"/><label class="xr-section-summary" for="section-80ea5b8e-9a73-4c27-80fb-d391a7adb11e">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">chain</span></div><div class="xr-var-dims">(chain)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3</div><input class="xr-var-attrs-in" disabled="" id="attrs-fda26c63-2821-4679-8eec-21fd5f3d5d9a" type="checkbox"/><label for="attrs-fda26c63-2821-4679-8eec-21fd5f3d5d9a" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-bf141bf5-5a9a-499e-863b-4b10a351ab76" type="checkbox"/><label for="data-bf141bf5-5a9a-499e-863b-4b10a351ab76" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([0, 1, 2, 3])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">draw</span></div><div class="xr-var-dims">(draw)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3 4 5 ... 995 996 997 998 999</div><input class="xr-var-attrs-in" disabled="" id="attrs-02e15e68-5747-4b8c-b570-25804b792d26" type="checkbox"/><label for="attrs-02e15e68-5747-4b8c-b570-25804b792d26" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-a8260354-167f-4220-96cb-a503422fc3d3" type="checkbox"/><label for="data-a8260354-167f-4220-96cb-a503422fc3d3" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([  0,   1,   2, ..., 997, 998, 999])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">school</span></div><div class="xr-var-dims">(school)</div><div class="xr-var-dtype">&lt;U16</div><div class="xr-var-preview xr-preview">'Choate' ... 'Mt. Hermon'</div><input class="xr-var-attrs-in" disabled="" id="attrs-3da5e6a1-0b4d-48c3-befb-4ee48791a7b8" type="checkbox"/><label for="attrs-3da5e6a1-0b4d-48c3-befb-4ee48791a7b8" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-c81877ab-0c72-4e15-90b9-c9e1fc70ea25" type="checkbox"/><label for="data-c81877ab-0c72-4e15-90b9-c9e1fc70ea25" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(['Choate', 'Deerfield', 'Phillips Andover', 'Phillips Exeter',
        'Hotchkiss', 'Lawrenceville', "St. Paul's", 'Mt. Hermon'], dtype='&lt;U16')</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-39d7f5e7-3544-4994-84bf-e9570980913f" type="checkbox"/><label class="xr-section-summary" for="section-39d7f5e7-3544-4994-84bf-e9570980913f">Data variables: <span>(1)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>y_hat</span></div><div class="xr-var-dims">(chain, draw, school)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">-17.26 12.4 7.823 ... -14.9 -27.98</div><input class="xr-var-attrs-in" disabled="" id="attrs-06612b3b-16f7-46a3-ab48-c6d1492b618c" type="checkbox"/><label for="attrs-06612b3b-16f7-46a3-ab48-c6d1492b618c" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-924fc92e-6258-4868-a05f-97a75bcf5c11" type="checkbox"/><label for="data-924fc92e-6258-4868-a05f-97a75bcf5c11" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[[-17.25779147,  12.40262498,   7.82271588, ...,  -8.7384816 ,
@@ -4696,7 +4774,7 @@ Attributes:
         [ 28.40339445,  12.13328205, -38.21887962, ..., -21.5554171 ,
           17.16160043,  21.40088457],
         [ 30.97501199,  -3.91992746,  -2.26244281, ...,  11.71323189,
-         -14.89651212, -27.97748326]]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-60d55bab-c286-41d3-aa33-52eebddbb643" type="checkbox"/><label class="xr-section-summary" for="section-60d55bab-c286-41d3-aa33-52eebddbb643">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:56.789583</dd><dt><span>TimeXAI_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>stan</dd><dt><span>inference_library_version :</span></dt><dd>3.4.0</dd></dl></div></li></ul></div></div><br/></div>
+         -14.89651212, -27.97748326]]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-60d55bab-c286-41d3-aa33-52eebddbb643" type="checkbox"/><label class="xr-section-summary" for="section-60d55bab-c286-41d3-aa33-52eebddbb643">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:56.789583</dd><dt><span>XGenTS_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>stan</dd><dt><span>inference_library_version :</span></dt><dd>3.4.0</dd></dl></div></li></ul></div></div><br/></div>
 </ul>
 </div>
 </li>
@@ -5067,7 +5145,7 @@ Data variables:
     y        (chain, draw, school) float64 -5.517 -3.553 -3.71 ... -4.716 -3.964
 Attributes:
     created_at:                 2022-04-15T05:26:56.767405
-    TimeXAI_version:              0.12.0
+    XGenTS_version:              0.12.0
     inference_library:          stan
     inference_library_version:  3.4.0</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input class="xr-section-summary-in" disabled="" id="section-d747c970-818a-4b13-9fcd-9b8b1ff77777" type="checkbox"/><label class="xr-section-summary" for="section-d747c970-818a-4b13-9fcd-9b8b1ff77777" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">chain</span>: 4</li><li><span class="xr-has-index">draw</span>: 1000</li><li><span class="xr-has-index">school</span>: 8</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-ea59c252-23ca-4021-85dc-52de9d95ea49" type="checkbox"/><label class="xr-section-summary" for="section-ea59c252-23ca-4021-85dc-52de9d95ea49">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">chain</span></div><div class="xr-var-dims">(chain)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3</div><input class="xr-var-attrs-in" disabled="" id="attrs-66a3d86d-fa13-434c-9273-de1e4bf389b5" type="checkbox"/><label for="attrs-66a3d86d-fa13-434c-9273-de1e4bf389b5" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-479fdaa9-019e-4dbd-b1ae-747cc3759be2" type="checkbox"/><label for="data-479fdaa9-019e-4dbd-b1ae-747cc3759be2" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([0, 1, 2, 3])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">draw</span></div><div class="xr-var-dims">(draw)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3 4 5 ... 995 996 997 998 999</div><input class="xr-var-attrs-in" disabled="" id="attrs-921235b8-c27f-48ee-9d34-57403687bce5" type="checkbox"/><label for="attrs-921235b8-c27f-48ee-9d34-57403687bce5" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-92bed174-7ab9-43ac-b25d-f687d34ba420" type="checkbox"/><label for="data-92bed174-7ab9-43ac-b25d-f687d34ba420" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([  0,   1,   2, ..., 997, 998, 999])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">school</span></div><div class="xr-var-dims">(school)</div><div class="xr-var-dtype">&lt;U16</div><div class="xr-var-preview xr-preview">'Choate' ... 'Mt. Hermon'</div><input class="xr-var-attrs-in" disabled="" id="attrs-286696c3-b8a6-4c04-9914-60806ef3c2df" type="checkbox"/><label for="attrs-286696c3-b8a6-4c04-9914-60806ef3c2df" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-e1f0fdac-857a-4eaa-a568-6f41ac3e9914" type="checkbox"/><label for="data-e1f0fdac-857a-4eaa-a568-6f41ac3e9914" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(['Choate', 'Deerfield', 'Phillips Andover', 'Phillips Exeter',
        'Hotchkiss', 'Lawrenceville', "St. Paul's", 'Mt. Hermon'], dtype='&lt;U16')</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-a87d02d7-6fef-4a00-8321-dbc8eda25a0c" type="checkbox"/><label class="xr-section-summary" for="section-a87d02d7-6fef-4a00-8321-dbc8eda25a0c">Data variables: <span>(1)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>y</span></div><div class="xr-var-dims">(chain, draw, school)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">-5.517 -3.553 ... -4.716 -3.964</div><input class="xr-var-attrs-in" disabled="" id="attrs-6642ba67-be17-471e-b113-d1c9b70f39db" type="checkbox"/><label for="attrs-6642ba67-be17-471e-b113-d1c9b70f39db" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-ae820045-efe1-4692-9c11-6a8d29831ca4" type="checkbox"/><label for="data-ae820045-efe1-4692-9c11-6a8d29831ca4" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[[-5.51736886, -3.55328202, -3.70973998, ..., -3.32103403,
@@ -5110,7 +5188,7 @@ Attributes:
         [-5.08491365, -3.22383618, -3.72834795, ..., -3.39568666,
          -4.22289725, -3.91581336],
         [-5.69569994, -3.91693583, -3.74015734, ..., -3.35434134,
-         -4.71587045, -3.96387372]]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-e0228982-19ca-416a-817c-23fc4cc175b8" type="checkbox"/><label class="xr-section-summary" for="section-e0228982-19ca-416a-817c-23fc4cc175b8">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:56.767405</dd><dt><span>TimeXAI_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>stan</dd><dt><span>inference_library_version :</span></dt><dd>3.4.0</dd></dl></div></li></ul></div></div><br/></div>
+         -4.71587045, -3.96387372]]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-e0228982-19ca-416a-817c-23fc4cc175b8" type="checkbox"/><label class="xr-section-summary" for="section-e0228982-19ca-416a-817c-23fc4cc175b8">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:56.767405</dd><dt><span>XGenTS_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>stan</dd><dt><span>inference_library_version :</span></dt><dd>3.4.0</dd></dl></div></li></ul></div></div><br/></div>
 </ul>
 </div>
 </li>
@@ -5486,7 +5564,7 @@ Data variables:
     lp               (chain, draw) float64 -13.65 -10.93 -7.736 ... -17.2 -17.62
 Attributes:
     created_at:                 2022-04-15T05:26:56.743010
-    TimeXAI_version:              0.12.0
+    XGenTS_version:              0.12.0
     inference_library:          stan
     inference_library_version:  3.4.0
     num_chains:                 4
@@ -5530,7 +5608,7 @@ Attributes:
        [-21.67696795, -24.09496483, -19.65497824, ..., -20.72555624,
         -19.60015713, -21.7556259 ],
        [-10.25840142, -13.99905927, -14.22672354, ..., -18.78044287,
-        -17.20034121, -17.61868656]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-3461a76c-6ee9-434d-8fb2-ec0652102307" type="checkbox"/><label class="xr-section-summary" for="section-3461a76c-6ee9-434d-8fb2-ec0652102307">Attributes: <span>(9)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:56.743010</dd><dt><span>TimeXAI_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>stan</dd><dt><span>inference_library_version :</span></dt><dd>3.4.0</dd><dt><span>num_chains :</span></dt><dd>4</dd><dt><span>num_samples :</span></dt><dd>1000</dd><dt><span>num_thin :</span></dt><dd>1</dd><dt><span>num_warmup :</span></dt><dd>1000</dd><dt><span>save_warmup :</span></dt><dd>0</dd></dl></div></li></ul></div></div><br/></div>
+        -17.20034121, -17.61868656]])</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-3461a76c-6ee9-434d-8fb2-ec0652102307" type="checkbox"/><label class="xr-section-summary" for="section-3461a76c-6ee9-434d-8fb2-ec0652102307">Attributes: <span>(9)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>created_at :</span></dt><dd>2022-04-15T05:26:56.743010</dd><dt><span>XGenTS_version :</span></dt><dd>0.12.0</dd><dt><span>inference_library :</span></dt><dd>stan</dd><dt><span>inference_library_version :</span></dt><dd>3.4.0</dd><dt><span>num_chains :</span></dt><dd>4</dd><dt><span>num_samples :</span></dt><dd>1000</dd><dt><span>num_thin :</span></dt><dd>1</dd><dt><span>num_warmup :</span></dt><dd>1000</dd><dt><span>save_warmup :</span></dt><dd>0</dd></dl></div></li></ul></div></div><br/></div>
 </ul>
 </div>
 </li>
@@ -5896,20 +5974,35 @@ working_with_InferenceData
 ::: --></section>
 </section>
 </article>
-<footer class="prev-next-footer d-print-none">
+<footer class="prev-next-footer">
+<!-- Previous / next buttons -->
 <div class="prev-next-area">
+<a class="left-prev" href="index.html" title="previous page">
+<i class="fa-solid fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title">ESS Dataset: A Novel Curated Dataset for Fine-grained Analysis XGen-ESS</p>
+</div>
+</a>
+<a class="right-next" href="XarrayforXGenTS.html" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title">Introduction to xarray, InferenceData, and netCDF for XGenTS</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
 </div>
 </footer>
 </div>
 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 <div class="sidebar-secondary-item">
-<div class="page-toc tocsection onthispage" id="pst-page-navigation-heading-2">
+<div class="page-toc tocsection onthispage">
 <i class="fa-solid fa-list"></i> On this page
   </div>
-<nav aria-labelledby="pst-page-navigation-heading-2" class="bd-toc-nav page-toc">
+<nav class="bd-toc-nav page-toc">
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-started-with-plotting">Get started with plotting</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timexai-rcparams">TimeXAI rcParams</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xgents-rcparams">XGenTS rcParams</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-to-inferencedata">Convert to InferenceData</a></li>
 </ul>
 </li>
@@ -5920,7 +6013,7 @@ working_with_InferenceData
 <div id="searchbox"></div></div>
 <div class="sidebar-secondary-item">
 <div class="tocsection editthispage">
-<a href="https://github.com/TimeXAI-devs/TimeXAI/edit/main/docs/source/ess_datasets/Introduction.ipynb">
+<a href="https://github.com/XGenTS-devs/XGenTS/edit/main/docs/source/ess_datasets/Introduction.ipynb">
 <i class="fa-solid fa-pencil"></i>
       
       
@@ -5946,11 +6039,11 @@ working_with_InferenceData
 </div>
 </div>
 <!-- Scripts loaded after <body> so the DOM is not blocked -->
-<script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 <script>
   $(document).ready(function () {
-    const content = $('<div class="alert-danger">TimeXAI docs will now be available at <a href="https://python.TimeXAI.org">python.TimeXAI.org</a>!</div>')
+    const content = $('<div class="alert-danger">XGenTS docs will now be available at <a href="https://python.XGenTS.org">python.XGenTS.org</a>!</div>')
     $('#banner').append(content);
   })
 </script>
@@ -5960,15 +6053,14 @@ working_with_InferenceData
 <div class="footer-item">
 <p class="copyright">
     
-      © Copyright 2023, TimeXAI devs.
+      © Copyright 2023, XGenTS devs.
       <br>
 </br></p>
 </div>
 </div>
 <div class="footer-items__end">
-<div class="footer-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+<div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
 </p></div>
 </div>
 </div>

@@ -37,14 +37,14 @@ Tutorials and book translations maintained by the Bambi team
 
 ::::{grid-item-card}
 :img-top: https://oriolabril.github.io/oriol_unraveled/images/nb/labeled_arys.png
-:link: https://oriolabril.github.io/oriol_unraveled/categories/#TimeXAI
+:link: https://oriolabril.github.io/oriol_unraveled/categories/#XGenTS
 
 **Oriol unraveled**
 
 Blog mostly on statistics, diversity and open source. I also use the blog as a playground
-to test new pages for TimeXAI docs.
+to test new pages for XGenTS docs.
 +++
-Oriol Abril Pla is an TimeXAI core contributor pursuing his PhD
+Oriol Abril Pla is an XGenTS core contributor pursuing his PhD
 at Helsinki University
 ::::
 :::::
